@@ -1,0 +1,26 @@
+{
+  "status": "BOUND_CHECK_PASS",
+  "scope": "Pinned sphere URDF; Q30 rotations, Q24 internal positions and angles, Q14 output; no physical model uncertainty",
+  "cordic_sin_cos_absolute_bound": 1.291742474929007e-07,
+  "fk_internal_position_bound_m": 2.3578900116828663e-06,
+  "output_rounding_bound_m": 5.285799583645255e-05,
+  "angle_ingress_and_interpolation_bound_m": 8.344650268554688e-07,
+  "total_fk_center_bound_m": 5.605045087499089e-05,
+  "configured_fk_margin_m": 6.103515625e-05,
+  "maximum_chain_length_m": 1.4513653837115479,
+  "global_joint_reach_bound_m": 2.0,
+  "raw_point_ingress_bound_m": 0.0001057159916729051,
+  "raw_coverage_extra_units": 2,
+  "maximum_rep_coverage_units": 2,
+  "matrix_accumulator_abs_bound": 3459456301310949888,
+  "int64_max": 9223372036854775807,
+  "notes": [
+    "Restored user profile keeps representatives only; no discarded-point bbox or voxel coverage.",
+    "A radius is rounded upward. Self-collision inflates both sphere radii.",
+    "Edges use VAMP rake samples, not continuous interval certificates. Independent geometry checks remain external to the planner."
+  ],
+  "conservative_cull_required_m": 1.534048489180298,
+  "configured_cull_m": 1.19,
+  "cull_bound_sufficient": false,
+  "cull_scope": "Restored 1.19m source VCC culling; not a guarantee to retain every point reachable by the full robot chain"
+}

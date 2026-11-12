@@ -1,0 +1,4902 @@
+[
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 1,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0001/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 2,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0002/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 3,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0003/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 4,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0004/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 5,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0005/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 6,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0006/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 7,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0007/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 8,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0008/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 9,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0009/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 10,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0010/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 11,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0011/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 12,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0012/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 13,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0013/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 14,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0014/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 15,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0015/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 16,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0016/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 17,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0017/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 18,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0018/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 19,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0019/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 20,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0020/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 21,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0021/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 22,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0022/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 23,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0023/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 24,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0024/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 25,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0025/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 26,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0026/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 27,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0027/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 28,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0028/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 29,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0029/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 30,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0030/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 31,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0031/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 32,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0032/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 33,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0033/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 34,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0034/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 35,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0035/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 36,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0036/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 37,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0037/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 38,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0038/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 39,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0039/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 40,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0040/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 41,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0041/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 42,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0042/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 43,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0043/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 44,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0044/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 45,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0045/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 46,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0046/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 47,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0047/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 48,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0048/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 49,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0049/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 50,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0050/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 51,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0051/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 52,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0052/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 53,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0053/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 54,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0054/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 55,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0055/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 56,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0056/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 57,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0057/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 58,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0058/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 59,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0059/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 60,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0060/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 61,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0061/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 62,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0062/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 63,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0063/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 64,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0064/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 65,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0065/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 66,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0066/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 67,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0067/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 68,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0068/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 69,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0069/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 70,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0070/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 71,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0071/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 72,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0072/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 73,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0073/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 74,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0074/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 75,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0075/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 76,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0076/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 77,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0077/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 78,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0078/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 79,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0079/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 80,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0080/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 81,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0081/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 82,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0082/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 83,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0083/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 84,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0084/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 85,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0085/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 86,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0086/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 87,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0087/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 88,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0088/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 89,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0089/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 90,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0090/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 91,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0091/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 92,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0092/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 93,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0093/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 94,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0094/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 95,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0095/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 96,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0096/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 97,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0097/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 98,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0098/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 99,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0099/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_small",
+    "source_index": 100,
+    "problem_path": "data/panda_mbm/problems/bookshelf_small/0100/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 1,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0001/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 2,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0002/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 3,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0003/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 4,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0004/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 5,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0005/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 6,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0006/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 7,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0007/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 8,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0008/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 9,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0009/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 10,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0010/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 11,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0011/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 12,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0012/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 13,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0013/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 14,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0014/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 15,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0015/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 16,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0016/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 17,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0017/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 18,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0018/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 19,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0019/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 20,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0020/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 21,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0021/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 22,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0022/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 23,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0023/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 24,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0024/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 25,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0025/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 26,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0026/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 27,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0027/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 28,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0028/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 29,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0029/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 30,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0030/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 31,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0031/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 32,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0032/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 33,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0033/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 34,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0034/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 35,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0035/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 36,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0036/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 37,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0037/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 38,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0038/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 39,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0039/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 40,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0040/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 41,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0041/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 42,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0042/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 43,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0043/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 44,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0044/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 45,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0045/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 46,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0046/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 47,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0047/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 48,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0048/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 49,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0049/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 50,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0050/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 51,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0051/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 52,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0052/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 53,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0053/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 54,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0054/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 55,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0055/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 56,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0056/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 57,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0057/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 58,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0058/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 59,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0059/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 60,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0060/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 61,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0061/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 62,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0062/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 63,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0063/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 64,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0064/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 65,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0065/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 66,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0066/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 67,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0067/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 68,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0068/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 69,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0069/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 70,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0070/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 71,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0071/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 72,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0072/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 73,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0073/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 74,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0074/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 75,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0075/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 76,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0076/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 77,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0077/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 78,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0078/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 79,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0079/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 80,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0080/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 81,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0081/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 82,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0082/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 83,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0083/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 84,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0084/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 85,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0085/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 86,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0086/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 87,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0087/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 88,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0088/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 89,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0089/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 90,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0090/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 91,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0091/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 92,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0092/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 93,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0093/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 94,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0094/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 95,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0095/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 96,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0096/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 97,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0097/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 98,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0098/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 99,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0099/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_tall",
+    "source_index": 100,
+    "problem_path": "data/panda_mbm/problems/bookshelf_tall/0100/problem.json",
+    "primitive_count": 15,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 1,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0001/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 2,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0002/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 3,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0003/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 4,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0004/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 5,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0005/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 6,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0006/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 7,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0007/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 8,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0008/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 9,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0009/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 10,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0010/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 11,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0011/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 12,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0012/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 13,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0013/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 14,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0014/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 15,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0015/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 16,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0016/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 17,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0017/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 18,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0018/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 19,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0019/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 20,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0020/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 21,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0021/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 22,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0022/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 23,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0023/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 24,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0024/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 25,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0025/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 26,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0026/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 27,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0027/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 28,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0028/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 29,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0029/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 30,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0030/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 31,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0031/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 32,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0032/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 33,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0033/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 34,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0034/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 35,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0035/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 36,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0036/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 37,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0037/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 38,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0038/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 39,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0039/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 40,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0040/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 41,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0041/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 42,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0042/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 43,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0043/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 44,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0044/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 45,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0045/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 46,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0046/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 47,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0047/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 48,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0048/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 49,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0049/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 50,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0050/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 51,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0051/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 52,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0052/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 53,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0053/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 54,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0054/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 55,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0055/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 56,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0056/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 57,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0057/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 58,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0058/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 59,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0059/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 60,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0060/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 61,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0061/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 62,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0062/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 63,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0063/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 64,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0064/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 65,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0065/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 66,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0066/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 67,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0067/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 68,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0068/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 69,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0069/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 70,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0070/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 71,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0071/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 72,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0072/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 73,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0073/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 74,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0074/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 75,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0075/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 76,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0076/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 77,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0077/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 78,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0078/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 79,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0079/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 80,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0080/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 81,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0081/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 82,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0082/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 83,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0083/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 84,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0084/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 85,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0085/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 86,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0086/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 87,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0087/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 88,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0088/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 89,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0089/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 90,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0090/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 91,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0091/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 92,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0092/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 93,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0093/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 94,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0094/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 95,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0095/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 96,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0096/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 97,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0097/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 98,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0098/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 99,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0099/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "bookshelf_thin",
+    "source_index": 100,
+    "problem_path": "data/panda_mbm/problems/bookshelf_thin/0100/problem.json",
+    "primitive_count": 21,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 1,
+    "problem_path": "data/panda_mbm/problems/box/0001/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 2,
+    "problem_path": "data/panda_mbm/problems/box/0002/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 3,
+    "problem_path": "data/panda_mbm/problems/box/0003/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 4,
+    "problem_path": "data/panda_mbm/problems/box/0004/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 5,
+    "problem_path": "data/panda_mbm/problems/box/0005/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 6,
+    "problem_path": "data/panda_mbm/problems/box/0006/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 7,
+    "problem_path": "data/panda_mbm/problems/box/0007/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 8,
+    "problem_path": "data/panda_mbm/problems/box/0008/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 9,
+    "problem_path": "data/panda_mbm/problems/box/0009/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 10,
+    "problem_path": "data/panda_mbm/problems/box/0010/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 11,
+    "problem_path": "data/panda_mbm/problems/box/0011/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 12,
+    "problem_path": "data/panda_mbm/problems/box/0012/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 13,
+    "problem_path": "data/panda_mbm/problems/box/0013/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 14,
+    "problem_path": "data/panda_mbm/problems/box/0014/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 15,
+    "problem_path": "data/panda_mbm/problems/box/0015/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 16,
+    "problem_path": "data/panda_mbm/problems/box/0016/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 17,
+    "problem_path": "data/panda_mbm/problems/box/0017/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 18,
+    "problem_path": "data/panda_mbm/problems/box/0018/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 19,
+    "problem_path": "data/panda_mbm/problems/box/0019/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 20,
+    "problem_path": "data/panda_mbm/problems/box/0020/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 21,
+    "problem_path": "data/panda_mbm/problems/box/0021/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 22,
+    "problem_path": "data/panda_mbm/problems/box/0022/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 23,
+    "problem_path": "data/panda_mbm/problems/box/0023/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 24,
+    "problem_path": "data/panda_mbm/problems/box/0024/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 25,
+    "problem_path": "data/panda_mbm/problems/box/0025/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 26,
+    "problem_path": "data/panda_mbm/problems/box/0026/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 27,
+    "problem_path": "data/panda_mbm/problems/box/0027/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 28,
+    "problem_path": "data/panda_mbm/problems/box/0028/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 29,
+    "problem_path": "data/panda_mbm/problems/box/0029/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 30,
+    "problem_path": "data/panda_mbm/problems/box/0030/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 31,
+    "problem_path": "data/panda_mbm/problems/box/0031/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 32,
+    "problem_path": "data/panda_mbm/problems/box/0032/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 33,
+    "problem_path": "data/panda_mbm/problems/box/0033/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 34,
+    "problem_path": "data/panda_mbm/problems/box/0034/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 35,
+    "problem_path": "data/panda_mbm/problems/box/0035/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 36,
+    "problem_path": "data/panda_mbm/problems/box/0036/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 37,
+    "problem_path": "data/panda_mbm/problems/box/0037/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 38,
+    "problem_path": "data/panda_mbm/problems/box/0038/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 39,
+    "problem_path": "data/panda_mbm/problems/box/0039/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 40,
+    "problem_path": "data/panda_mbm/problems/box/0040/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 41,
+    "problem_path": "data/panda_mbm/problems/box/0041/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 42,
+    "problem_path": "data/panda_mbm/problems/box/0042/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 43,
+    "problem_path": "data/panda_mbm/problems/box/0043/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 44,
+    "problem_path": "data/panda_mbm/problems/box/0044/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 45,
+    "problem_path": "data/panda_mbm/problems/box/0045/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 46,
+    "problem_path": "data/panda_mbm/problems/box/0046/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 47,
+    "problem_path": "data/panda_mbm/problems/box/0047/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 48,
+    "problem_path": "data/panda_mbm/problems/box/0048/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 49,
+    "problem_path": "data/panda_mbm/problems/box/0049/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 50,
+    "problem_path": "data/panda_mbm/problems/box/0050/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 51,
+    "problem_path": "data/panda_mbm/problems/box/0051/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 52,
+    "problem_path": "data/panda_mbm/problems/box/0052/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 53,
+    "problem_path": "data/panda_mbm/problems/box/0053/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 54,
+    "problem_path": "data/panda_mbm/problems/box/0054/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 55,
+    "problem_path": "data/panda_mbm/problems/box/0055/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 56,
+    "problem_path": "data/panda_mbm/problems/box/0056/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 57,
+    "problem_path": "data/panda_mbm/problems/box/0057/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 58,
+    "problem_path": "data/panda_mbm/problems/box/0058/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 59,
+    "problem_path": "data/panda_mbm/problems/box/0059/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 60,
+    "problem_path": "data/panda_mbm/problems/box/0060/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 61,
+    "problem_path": "data/panda_mbm/problems/box/0061/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 62,
+    "problem_path": "data/panda_mbm/problems/box/0062/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 63,
+    "problem_path": "data/panda_mbm/problems/box/0063/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 64,
+    "problem_path": "data/panda_mbm/problems/box/0064/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 65,
+    "problem_path": "data/panda_mbm/problems/box/0065/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 66,
+    "problem_path": "data/panda_mbm/problems/box/0066/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 67,
+    "problem_path": "data/panda_mbm/problems/box/0067/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 68,
+    "problem_path": "data/panda_mbm/problems/box/0068/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 69,
+    "problem_path": "data/panda_mbm/problems/box/0069/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 70,
+    "problem_path": "data/panda_mbm/problems/box/0070/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 71,
+    "problem_path": "data/panda_mbm/problems/box/0071/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 72,
+    "problem_path": "data/panda_mbm/problems/box/0072/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 73,
+    "problem_path": "data/panda_mbm/problems/box/0073/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 74,
+    "problem_path": "data/panda_mbm/problems/box/0074/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 75,
+    "problem_path": "data/panda_mbm/problems/box/0075/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 76,
+    "problem_path": "data/panda_mbm/problems/box/0076/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 77,
+    "problem_path": "data/panda_mbm/problems/box/0077/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 78,
+    "problem_path": "data/panda_mbm/problems/box/0078/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 79,
+    "problem_path": "data/panda_mbm/problems/box/0079/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 80,
+    "problem_path": "data/panda_mbm/problems/box/0080/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 81,
+    "problem_path": "data/panda_mbm/problems/box/0081/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 82,
+    "problem_path": "data/panda_mbm/problems/box/0082/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 83,
+    "problem_path": "data/panda_mbm/problems/box/0083/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 84,
+    "problem_path": "data/panda_mbm/problems/box/0084/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 85,
+    "problem_path": "data/panda_mbm/problems/box/0085/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 86,
+    "problem_path": "data/panda_mbm/problems/box/0086/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 87,
+    "problem_path": "data/panda_mbm/problems/box/0087/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 88,
+    "problem_path": "data/panda_mbm/problems/box/0088/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 89,
+    "problem_path": "data/panda_mbm/problems/box/0089/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 90,
+    "problem_path": "data/panda_mbm/problems/box/0090/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 91,
+    "problem_path": "data/panda_mbm/problems/box/0091/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 92,
+    "problem_path": "data/panda_mbm/problems/box/0092/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 93,
+    "problem_path": "data/panda_mbm/problems/box/0093/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 94,
+    "problem_path": "data/panda_mbm/problems/box/0094/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 95,
+    "problem_path": "data/panda_mbm/problems/box/0095/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 96,
+    "problem_path": "data/panda_mbm/problems/box/0096/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 97,
+    "problem_path": "data/panda_mbm/problems/box/0097/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 98,
+    "problem_path": "data/panda_mbm/problems/box/0098/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 99,
+    "problem_path": "data/panda_mbm/problems/box/0099/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "box",
+    "source_index": 100,
+    "problem_path": "data/panda_mbm/problems/box/0100/problem.json",
+    "primitive_count": 7,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 1,
+    "problem_path": "data/panda_mbm/problems/cage/0001/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 2,
+    "problem_path": "data/panda_mbm/problems/cage/0002/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 3,
+    "problem_path": "data/panda_mbm/problems/cage/0003/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 4,
+    "problem_path": "data/panda_mbm/problems/cage/0004/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 5,
+    "problem_path": "data/panda_mbm/problems/cage/0005/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 6,
+    "problem_path": "data/panda_mbm/problems/cage/0006/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 7,
+    "problem_path": "data/panda_mbm/problems/cage/0007/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 8,
+    "problem_path": "data/panda_mbm/problems/cage/0008/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 9,
+    "problem_path": "data/panda_mbm/problems/cage/0009/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 10,
+    "problem_path": "data/panda_mbm/problems/cage/0010/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 11,
+    "problem_path": "data/panda_mbm/problems/cage/0011/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 12,
+    "problem_path": "data/panda_mbm/problems/cage/0012/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 13,
+    "problem_path": "data/panda_mbm/problems/cage/0013/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 14,
+    "problem_path": "data/panda_mbm/problems/cage/0014/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 15,
+    "problem_path": "data/panda_mbm/problems/cage/0015/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 16,
+    "problem_path": "data/panda_mbm/problems/cage/0016/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 17,
+    "problem_path": "data/panda_mbm/problems/cage/0017/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 18,
+    "problem_path": "data/panda_mbm/problems/cage/0018/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 19,
+    "problem_path": "data/panda_mbm/problems/cage/0019/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 20,
+    "problem_path": "data/panda_mbm/problems/cage/0020/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 21,
+    "problem_path": "data/panda_mbm/problems/cage/0021/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 22,
+    "problem_path": "data/panda_mbm/problems/cage/0022/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 23,
+    "problem_path": "data/panda_mbm/problems/cage/0023/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 24,
+    "problem_path": "data/panda_mbm/problems/cage/0024/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 25,
+    "problem_path": "data/panda_mbm/problems/cage/0025/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 26,
+    "problem_path": "data/panda_mbm/problems/cage/0026/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 27,
+    "problem_path": "data/panda_mbm/problems/cage/0027/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 28,
+    "problem_path": "data/panda_mbm/problems/cage/0028/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 29,
+    "problem_path": "data/panda_mbm/problems/cage/0029/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 30,
+    "problem_path": "data/panda_mbm/problems/cage/0030/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 31,
+    "problem_path": "data/panda_mbm/problems/cage/0031/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 32,
+    "problem_path": "data/panda_mbm/problems/cage/0032/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 33,
+    "problem_path": "data/panda_mbm/problems/cage/0033/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 34,
+    "problem_path": "data/panda_mbm/problems/cage/0034/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 35,
+    "problem_path": "data/panda_mbm/problems/cage/0035/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 36,
+    "problem_path": "data/panda_mbm/problems/cage/0036/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 37,
+    "problem_path": "data/panda_mbm/problems/cage/0037/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 38,
+    "problem_path": "data/panda_mbm/problems/cage/0038/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 39,
+    "problem_path": "data/panda_mbm/problems/cage/0039/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 40,
+    "problem_path": "data/panda_mbm/problems/cage/0040/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 41,
+    "problem_path": "data/panda_mbm/problems/cage/0041/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 42,
+    "problem_path": "data/panda_mbm/problems/cage/0042/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 43,
+    "problem_path": "data/panda_mbm/problems/cage/0043/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 44,
+    "problem_path": "data/panda_mbm/problems/cage/0044/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 45,
+    "problem_path": "data/panda_mbm/problems/cage/0045/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 46,
+    "problem_path": "data/panda_mbm/problems/cage/0046/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 47,
+    "problem_path": "data/panda_mbm/problems/cage/0047/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 48,
+    "problem_path": "data/panda_mbm/problems/cage/0048/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 49,
+    "problem_path": "data/panda_mbm/problems/cage/0049/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 50,
+    "problem_path": "data/panda_mbm/problems/cage/0050/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 51,
+    "problem_path": "data/panda_mbm/problems/cage/0051/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 52,
+    "problem_path": "data/panda_mbm/problems/cage/0052/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 53,
+    "problem_path": "data/panda_mbm/problems/cage/0053/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 54,
+    "problem_path": "data/panda_mbm/problems/cage/0054/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 55,
+    "problem_path": "data/panda_mbm/problems/cage/0055/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 56,
+    "problem_path": "data/panda_mbm/problems/cage/0056/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 57,
+    "problem_path": "data/panda_mbm/problems/cage/0057/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 58,
+    "problem_path": "data/panda_mbm/problems/cage/0058/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 59,
+    "problem_path": "data/panda_mbm/problems/cage/0059/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 60,
+    "problem_path": "data/panda_mbm/problems/cage/0060/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 61,
+    "problem_path": "data/panda_mbm/problems/cage/0061/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 62,
+    "problem_path": "data/panda_mbm/problems/cage/0062/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 63,
+    "problem_path": "data/panda_mbm/problems/cage/0063/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 64,
+    "problem_path": "data/panda_mbm/problems/cage/0064/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 65,
+    "problem_path": "data/panda_mbm/problems/cage/0065/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 66,
+    "problem_path": "data/panda_mbm/problems/cage/0066/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 67,
+    "problem_path": "data/panda_mbm/problems/cage/0067/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 68,
+    "problem_path": "data/panda_mbm/problems/cage/0068/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 69,
+    "problem_path": "data/panda_mbm/problems/cage/0069/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 70,
+    "problem_path": "data/panda_mbm/problems/cage/0070/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 71,
+    "problem_path": "data/panda_mbm/problems/cage/0071/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 72,
+    "problem_path": "data/panda_mbm/problems/cage/0072/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 73,
+    "problem_path": "data/panda_mbm/problems/cage/0073/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 74,
+    "problem_path": "data/panda_mbm/problems/cage/0074/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 75,
+    "problem_path": "data/panda_mbm/problems/cage/0075/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 76,
+    "problem_path": "data/panda_mbm/problems/cage/0076/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 77,
+    "problem_path": "data/panda_mbm/problems/cage/0077/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 78,
+    "problem_path": "data/panda_mbm/problems/cage/0078/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 79,
+    "problem_path": "data/panda_mbm/problems/cage/0079/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 80,
+    "problem_path": "data/panda_mbm/problems/cage/0080/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 81,
+    "problem_path": "data/panda_mbm/problems/cage/0081/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 82,
+    "problem_path": "data/panda_mbm/problems/cage/0082/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 83,
+    "problem_path": "data/panda_mbm/problems/cage/0083/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 84,
+    "problem_path": "data/panda_mbm/problems/cage/0084/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 85,
+    "problem_path": "data/panda_mbm/problems/cage/0085/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 86,
+    "problem_path": "data/panda_mbm/problems/cage/0086/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 87,
+    "problem_path": "data/panda_mbm/problems/cage/0087/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 88,
+    "problem_path": "data/panda_mbm/problems/cage/0088/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 89,
+    "problem_path": "data/panda_mbm/problems/cage/0089/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 90,
+    "problem_path": "data/panda_mbm/problems/cage/0090/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 91,
+    "problem_path": "data/panda_mbm/problems/cage/0091/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 92,
+    "problem_path": "data/panda_mbm/problems/cage/0092/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 93,
+    "problem_path": "data/panda_mbm/problems/cage/0093/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 94,
+    "problem_path": "data/panda_mbm/problems/cage/0094/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 95,
+    "problem_path": "data/panda_mbm/problems/cage/0095/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 96,
+    "problem_path": "data/panda_mbm/problems/cage/0096/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 97,
+    "problem_path": "data/panda_mbm/problems/cage/0097/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 98,
+    "problem_path": "data/panda_mbm/problems/cage/0098/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 99,
+    "problem_path": "data/panda_mbm/problems/cage/0099/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "cage",
+    "source_index": 100,
+    "problem_path": "data/panda_mbm/problems/cage/0100/problem.json",
+    "primitive_count": 8,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 1,
+    "problem_path": "data/panda_mbm/problems/table_pick/0001/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 2,
+    "problem_path": "data/panda_mbm/problems/table_pick/0002/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 3,
+    "problem_path": "data/panda_mbm/problems/table_pick/0003/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 4,
+    "problem_path": "data/panda_mbm/problems/table_pick/0004/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 5,
+    "problem_path": "data/panda_mbm/problems/table_pick/0005/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 6,
+    "problem_path": "data/panda_mbm/problems/table_pick/0006/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 7,
+    "problem_path": "data/panda_mbm/problems/table_pick/0007/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 8,
+    "problem_path": "data/panda_mbm/problems/table_pick/0008/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 9,
+    "problem_path": "data/panda_mbm/problems/table_pick/0009/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 10,
+    "problem_path": "data/panda_mbm/problems/table_pick/0010/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 11,
+    "problem_path": "data/panda_mbm/problems/table_pick/0011/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 12,
+    "problem_path": "data/panda_mbm/problems/table_pick/0012/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 13,
+    "problem_path": "data/panda_mbm/problems/table_pick/0013/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 14,
+    "problem_path": "data/panda_mbm/problems/table_pick/0014/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 15,
+    "problem_path": "data/panda_mbm/problems/table_pick/0015/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 16,
+    "problem_path": "data/panda_mbm/problems/table_pick/0016/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 17,
+    "problem_path": "data/panda_mbm/problems/table_pick/0017/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 18,
+    "problem_path": "data/panda_mbm/problems/table_pick/0018/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 19,
+    "problem_path": "data/panda_mbm/problems/table_pick/0019/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 20,
+    "problem_path": "data/panda_mbm/problems/table_pick/0020/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 21,
+    "problem_path": "data/panda_mbm/problems/table_pick/0021/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 22,
+    "problem_path": "data/panda_mbm/problems/table_pick/0022/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 23,
+    "problem_path": "data/panda_mbm/problems/table_pick/0023/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 24,
+    "problem_path": "data/panda_mbm/problems/table_pick/0024/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 25,
+    "problem_path": "data/panda_mbm/problems/table_pick/0025/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 26,
+    "problem_path": "data/panda_mbm/problems/table_pick/0026/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 27,
+    "problem_path": "data/panda_mbm/problems/table_pick/0027/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 28,
+    "problem_path": "data/panda_mbm/problems/table_pick/0028/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 29,
+    "problem_path": "data/panda_mbm/problems/table_pick/0029/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 30,
+    "problem_path": "data/panda_mbm/problems/table_pick/0030/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 31,
+    "problem_path": "data/panda_mbm/problems/table_pick/0031/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 32,
+    "problem_path": "data/panda_mbm/problems/table_pick/0032/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 33,
+    "problem_path": "data/panda_mbm/problems/table_pick/0033/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 34,
+    "problem_path": "data/panda_mbm/problems/table_pick/0034/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 35,
+    "problem_path": "data/panda_mbm/problems/table_pick/0035/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 36,
+    "problem_path": "data/panda_mbm/problems/table_pick/0036/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 37,
+    "problem_path": "data/panda_mbm/problems/table_pick/0037/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 38,
+    "problem_path": "data/panda_mbm/problems/table_pick/0038/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 39,
+    "problem_path": "data/panda_mbm/problems/table_pick/0039/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 40,
+    "problem_path": "data/panda_mbm/problems/table_pick/0040/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 41,
+    "problem_path": "data/panda_mbm/problems/table_pick/0041/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 42,
+    "problem_path": "data/panda_mbm/problems/table_pick/0042/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 43,
+    "problem_path": "data/panda_mbm/problems/table_pick/0043/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 44,
+    "problem_path": "data/panda_mbm/problems/table_pick/0044/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 45,
+    "problem_path": "data/panda_mbm/problems/table_pick/0045/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 46,
+    "problem_path": "data/panda_mbm/problems/table_pick/0046/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 47,
+    "problem_path": "data/panda_mbm/problems/table_pick/0047/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 48,
+    "problem_path": "data/panda_mbm/problems/table_pick/0048/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 49,
+    "problem_path": "data/panda_mbm/problems/table_pick/0049/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 50,
+    "problem_path": "data/panda_mbm/problems/table_pick/0050/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 51,
+    "problem_path": "data/panda_mbm/problems/table_pick/0051/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 52,
+    "problem_path": "data/panda_mbm/problems/table_pick/0052/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 53,
+    "problem_path": "data/panda_mbm/problems/table_pick/0053/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 54,
+    "problem_path": "data/panda_mbm/problems/table_pick/0054/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 55,
+    "problem_path": "data/panda_mbm/problems/table_pick/0055/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 56,
+    "problem_path": "data/panda_mbm/problems/table_pick/0056/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 57,
+    "problem_path": "data/panda_mbm/problems/table_pick/0057/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 58,
+    "problem_path": "data/panda_mbm/problems/table_pick/0058/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 59,
+    "problem_path": "data/panda_mbm/problems/table_pick/0059/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 60,
+    "problem_path": "data/panda_mbm/problems/table_pick/0060/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 61,
+    "problem_path": "data/panda_mbm/problems/table_pick/0061/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 62,
+    "problem_path": "data/panda_mbm/problems/table_pick/0062/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 63,
+    "problem_path": "data/panda_mbm/problems/table_pick/0063/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 64,
+    "problem_path": "data/panda_mbm/problems/table_pick/0064/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 65,
+    "problem_path": "data/panda_mbm/problems/table_pick/0065/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 66,
+    "problem_path": "data/panda_mbm/problems/table_pick/0066/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 67,
+    "problem_path": "data/panda_mbm/problems/table_pick/0067/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 68,
+    "problem_path": "data/panda_mbm/problems/table_pick/0068/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 69,
+    "problem_path": "data/panda_mbm/problems/table_pick/0069/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 70,
+    "problem_path": "data/panda_mbm/problems/table_pick/0070/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 71,
+    "problem_path": "data/panda_mbm/problems/table_pick/0071/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 72,
+    "problem_path": "data/panda_mbm/problems/table_pick/0072/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 73,
+    "problem_path": "data/panda_mbm/problems/table_pick/0073/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 74,
+    "problem_path": "data/panda_mbm/problems/table_pick/0074/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 75,
+    "problem_path": "data/panda_mbm/problems/table_pick/0075/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 76,
+    "problem_path": "data/panda_mbm/problems/table_pick/0076/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 77,
+    "problem_path": "data/panda_mbm/problems/table_pick/0077/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 78,
+    "problem_path": "data/panda_mbm/problems/table_pick/0078/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 79,
+    "problem_path": "data/panda_mbm/problems/table_pick/0079/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 80,
+    "problem_path": "data/panda_mbm/problems/table_pick/0080/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 81,
+    "problem_path": "data/panda_mbm/problems/table_pick/0081/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 82,
+    "problem_path": "data/panda_mbm/problems/table_pick/0082/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 83,
+    "problem_path": "data/panda_mbm/problems/table_pick/0083/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 84,
+    "problem_path": "data/panda_mbm/problems/table_pick/0084/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 85,
+    "problem_path": "data/panda_mbm/problems/table_pick/0085/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 86,
+    "problem_path": "data/panda_mbm/problems/table_pick/0086/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 87,
+    "problem_path": "data/panda_mbm/problems/table_pick/0087/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 88,
+    "problem_path": "data/panda_mbm/problems/table_pick/0088/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 89,
+    "problem_path": "data/panda_mbm/problems/table_pick/0089/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 90,
+    "problem_path": "data/panda_mbm/problems/table_pick/0090/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 91,
+    "problem_path": "data/panda_mbm/problems/table_pick/0091/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 92,
+    "problem_path": "data/panda_mbm/problems/table_pick/0092/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 93,
+    "problem_path": "data/panda_mbm/problems/table_pick/0093/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 94,
+    "problem_path": "data/panda_mbm/problems/table_pick/0094/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 95,
+    "problem_path": "data/panda_mbm/problems/table_pick/0095/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 96,
+    "problem_path": "data/panda_mbm/problems/table_pick/0096/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 97,
+    "problem_path": "data/panda_mbm/problems/table_pick/0097/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 98,
+    "problem_path": "data/panda_mbm/problems/table_pick/0098/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 99,
+    "problem_path": "data/panda_mbm/problems/table_pick/0099/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_pick",
+    "source_index": 100,
+    "problem_path": "data/panda_mbm/problems/table_pick/0100/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 1,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0001/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 2,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0002/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 3,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0003/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 4,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0004/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 5,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0005/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 6,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0006/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 7,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0007/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 8,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0008/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 9,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0009/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 10,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0010/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 11,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0011/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 12,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0012/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 13,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0013/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 14,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0014/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 15,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0015/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 16,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0016/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 17,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0017/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 18,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0018/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 19,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0019/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 20,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0020/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 21,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0021/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 22,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0022/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 23,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0023/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 24,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0024/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 25,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0025/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 26,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0026/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 27,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0027/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 28,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0028/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 29,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0029/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 30,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0030/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 31,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0031/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 32,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0032/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 33,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0033/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 34,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0034/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 35,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0035/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 36,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0036/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 37,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0037/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 38,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0038/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 39,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0039/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 40,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0040/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 41,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0041/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 42,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0042/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 43,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0043/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 44,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0044/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 45,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0045/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 46,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0046/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 47,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0047/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 48,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0048/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 49,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0049/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 50,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0050/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 51,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0051/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 52,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0052/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 53,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0053/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 54,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0054/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 55,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0055/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 56,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0056/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 57,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0057/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 58,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0058/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 59,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0059/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 60,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0060/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 61,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0061/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 62,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0062/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 63,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0063/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 64,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0064/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 65,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0065/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 66,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0066/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 67,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0067/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 68,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0068/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 69,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0069/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 70,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0070/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 71,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0071/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 72,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0072/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 73,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0073/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 74,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0074/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 75,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0075/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 76,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0076/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 77,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0077/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 78,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0078/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 79,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0079/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 80,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0080/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 81,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0081/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 82,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0082/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 83,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0083/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 84,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0084/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 85,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0085/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 86,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0086/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 87,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0087/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 88,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0088/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 89,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0089/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 90,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0090/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 91,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0091/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 92,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0092/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 93,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0093/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 94,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0094/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 95,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0095/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 96,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0096/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 97,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0097/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 98,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0098/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 99,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0099/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  },
+  {
+    "scenario": "table_under_pick",
+    "source_index": 100,
+    "problem_path": "data/panda_mbm/problems/table_under_pick/0100/problem.json",
+    "primitive_count": 12,
+    "start_goal_collision_validated": false
+  }
+]

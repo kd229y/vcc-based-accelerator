@@ -1,0 +1,128 @@
+{
+  "scope": "Software golden vectors only; RTL and synthesis are not implemented",
+  "byte_order": "little",
+  "query_count": 512,
+  "fk_case_count": 128,
+  "spheres_per_fk": 59,
+  "query_center_format": "unsigned int16 workspace-relative Q14 xyz; world=(code-32768)/16384",
+  "query_radius_format": "unsigned uint16 Q14",
+  "fk_input_format": "signed int32 Q24 seven angles (software model internal format)",
+  "fk_output_format": "unsigned int16 workspace-relative Q14 59 xyz centers",
+  "seed": 449,
+  "config": {
+    "version": "user_morton_restored_v1",
+    "status": "user_spec_restored_no_raw_voxel_coverage",
+    "source_spec": "docs/source/user_hackmd_original.md",
+    "robot": "panda",
+    "coordinate_fraction_bits": 14,
+    "coordinate_bits": 16,
+    "angle_fraction_bits": 24,
+    "rotation_fraction_bits": 30,
+    "fine_voxel_m": 0.03125,
+    "coarse_voxel_m": 0.125,
+    "workspace_min_m": [
+      -2,
+      -2,
+      -2
+    ],
+    "workspace_max_m": [
+      2,
+      2,
+      2
+    ],
+    "selector_bits": 4,
+    "hash_capacity": 32768,
+    "raw_point_coverage": false,
+    "max_range_m": 1.19,
+    "point_radius_m": 0.0025,
+    "fk_margin_m": 6.103515625e-05,
+    "edge_validation_mode": "vamp_rake",
+    "edge_rake": 8,
+    "edge_resolution": 32,
+    "rrt_max_nodes_per_tree": 4096,
+    "rrt_max_iterations": 300,
+    "state_evaluation_budget": 30000,
+    "rrt_range_rad": 0.35,
+    "rrt_distance_metric": "unweighted_Euclidean_7_joint_angles",
+    "seed": 1,
+    "goal_bias_interval": 0,
+    "trace_capacity": 0,
+    "speculative_sphere_batch": false,
+    "sram_budget_bytes": 4194304,
+    "rounding": "IEEE754 binary32 ingress truncates toward zero to Q14, as source section 6.2.4; integer division nearest ties toward positive infinity; angles same nearest rule",
+    "overflow": "reject out of workspace or unsupported input; explicit capacity status; int64 intermediates within documented bounds",
+    "notes": "Restored user representative-point design, S=4, Q14, 3.125cm fine / 12.5cm coarse grid. No discarded-point bbox or coverage sphere; only coordinate conversion epsilon and derived FK delta. Range culling follows pinned VCC Panda 1.19m. Rake=8/resolution=32 follows pinned VCC validate.hh. Capacities, Q24 angles/Q30 internal FK and budgets remain explicit software-model choices, not finalized user hardware specifications. Previous assistant variant and results are archived and do not measure this profile."
+  },
+  "problem": {
+    "schema": "soc-panda-input-v1",
+    "robot": "panda",
+    "scenario": "synthetic_detour",
+    "source_index": 0,
+    "joint_names": [
+      "panda_joint1",
+      "panda_joint2",
+      "panda_joint3",
+      "panda_joint4",
+      "panda_joint5",
+      "panda_joint6",
+      "panda_joint7"
+    ],
+    "start": [
+      -0.9,
+      -0.785,
+      0.0,
+      -2.356,
+      0.0,
+      1.571,
+      0.785
+    ],
+    "goals": [
+      [
+        0.9,
+        -0.785,
+        0.0,
+        -2.356,
+        0.0,
+        1.571,
+        0.785
+      ]
+    ],
+    "primitives": [
+      {
+        "type": "box",
+        "dimensions": [
+          0.08,
+          0.08,
+          0.08
+        ],
+        "world_from_local": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.3069905041249028
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.07299999420757532
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.4878695582761388
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "object_id": "blocking_box"
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "status": "PASS_TRANSFORM_CONVERSION_ONLY",
+  "primitive_transforms_compared": 8200,
+  "maximum_matrix_element_difference": 6.661338147750939e-16,
+  "reference": "upstream src/vamp/transformations.py float64",
+  "numpy_version": "2.2.6",
+  "fk_or_soc_validation": "NOT_RUN"
+}

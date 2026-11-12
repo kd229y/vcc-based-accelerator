@@ -1,0 +1,25 @@
+{
+  "status": "BOUND_CHECK_PASS",
+  "scope": "Pinned sphere URDF; Q30 rotations, Q24 internal positions and angles, Q13 output; no physical model uncertainty",
+  "cordic_sin_cos_absolute_bound": 1.291742474929007e-07,
+  "fk_internal_position_bound_m": 2.3578900116828663e-06,
+  "output_rounding_bound_m": 0.0001057159916729051,
+  "angle_ingress_and_interpolation_bound_m": 8.344650268554688e-07,
+  "total_fk_center_bound_m": 0.00010890844671144342,
+  "configured_fk_margin_m": 0.000244140625,
+  "maximum_chain_length_m": 1.4513653837115479,
+  "global_joint_reach_bound_m": 2.0,
+  "raw_point_ingress_bound_m": 0.0002114319833458102,
+  "raw_coverage_extra_units": 2,
+  "maximum_rep_coverage_units": 444,
+  "matrix_accumulator_abs_bound": 3459456301310949888,
+  "int64_max": 9223372036854775807,
+  "notes": [
+    "Coverage uses the retained input-point AABB per voxel, not an assertion that arbitrary unsampled solid geometry is occupied.",
+    "A radius is rounded upward. Self-collision inflates both sphere radii.",
+    "Adaptive edge intervals are certified at their midpoint with 2m reach times half the joint variation plus one Q13 unit; uncertified intervals are subdivided or rejected."
+  ],
+  "conservative_cull_required_m": 1.564353664961548,
+  "configured_cull_m": 1.6,
+  "cull_bound_sufficient": true
+}

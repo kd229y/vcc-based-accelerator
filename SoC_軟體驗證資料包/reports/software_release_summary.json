@@ -1,0 +1,212 @@
+{
+  "software_correctness_gate": true,
+  "application_quality_gate": "NOT_ACCEPTABLE_FOR_RTL_FREEZE",
+  "module_tests": {
+    "modules": {
+      "tests_run": 18,
+      "passed": 18,
+      "failures": [],
+      "errors": [],
+      "skipped": [],
+      "elapsed_seconds": 1.1032271000003675,
+      "valid": true
+    },
+    "integration": {
+      "tests_run": 7,
+      "passed": 7,
+      "failures": [],
+      "errors": [],
+      "skipped": [],
+      "elapsed_seconds": 0.041052200000194716,
+      "valid": true
+    }
+  },
+  "regression": {
+    "case_count": 700,
+    "status_counts": {
+      "INVALID_GOAL": 634,
+      "BUDGET_EXHAUSTED": 31,
+      "SUCCESS": 6,
+      "INVALID_START": 29
+    },
+    "analytic_initially_valid_count": 693,
+    "certified_success_count": 6,
+    "independently_rejected_successes": 0,
+    "successful_cpu_total_ns_median": 344309150.0,
+    "successful_cpu_total_ns_p95": 525960225.0,
+    "note": "CPU timings are functional implementation measurements, not predicted silicon latency. Success/timeout counts are retained."
+  },
+  "baseline_status_counts": {
+    "SUCCESS": 543,
+    "BUDGET_EXHAUSTED": 154,
+    "INVALID_GOAL": 3
+  },
+  "baseline_independent_reasons": {
+    "CERTIFIED_SPHERE_ROBOT_ANALYTIC_SCENE": 167,
+    "WAYPOINT_COLLISION": 242,
+    "COLLISION": 114,
+    "NO_SUCCESSFUL_PATH": 157,
+    "GOAL_MISMATCH": 20
+  },
+  "baseline_certified_success_count": 167,
+  "baseline_overflow_flag_count": 0,
+  "analytic_initially_valid_count": 693,
+  "candidate_success_rate_all700": 0.008571428571428572,
+  "candidate_success_rate_analytic_valid": 0.008658008658008658,
+  "cpu_total_ns_all_attempts": {
+    "count": 700,
+    "median": 4955600.0,
+    "p95": 311003489.99999934,
+    "maximum": 723614900.0
+  },
+  "packed_sram_peak_bytes": {
+    "count": 700,
+    "median": 1929236.0,
+    "p95": 2146731.2,
+    "maximum": 2189352.0
+  },
+  "common_certified_successes": 4,
+  "common_candidate_cpu_ns": {
+    "count": 4,
+    "median": 328209900.0,
+    "p95": 427451564.99999994,
+    "maximum": 441801300.0
+  },
+  "common_baseline_cpu_ns": {
+    "count": 4,
+    "median": 1459100.0,
+    "p95": 2691359.9999999995,
+    "maximum": 2904300.0
+  },
+  "endpoint_diagnosis": {
+    "COVERAGE_ONLY": 658,
+    "analytic_valid_rejected": 657,
+    "FILTERED_POINT_ENVIRONMENT": 5
+  },
+  "energy_groups": {
+    "successful": {
+      "case_count": 6,
+      "status": "UNCHARACTERIZED",
+      "energy_j": null,
+      "operation_totals": {
+        "integer_ops": 336528736,
+        "logical_sram_read_bytes": 330669706,
+        "logical_sram_write_bytes": 12951488,
+        "external_read_bytes": 5040000,
+        "external_write_bytes": 0
+      }
+    },
+    "unsuccessful": {
+      "case_count": 694,
+      "status": "UNCHARACTERIZED",
+      "energy_j": null,
+      "operation_totals": {
+        "integer_ops": 2889748506,
+        "logical_sram_read_bytes": 4463639718,
+        "logical_sram_write_bytes": 2358891360,
+        "external_read_bytes": 978960000,
+        "external_write_bytes": 0
+      }
+    }
+  },
+  "source_sha256": {
+    "runner/baseline_regression.py": "52767c243de89b7b565eecc819678de5c54d9a055396a66f8a273f882aa827b8",
+    "runner/build.py": "6eefd837e10e5c931959a3c6daa1db2a24d8b9f7d8314a9c95b92db667987109",
+    "runner/compare_variants.py": "4ecb6597114d3ff263b9bb15084abdea4d2cf23c773b47e974fb6c5698f470f2",
+    "runner/data.py": "eb043298efd6a1ebd1e943bdcaadeba1ba4fcd421967833aac82a98903f25ea1",
+    "runner/design_space.py": "9b2033e82f88e01e1846e9dc6a58c88b8ac764a2e576dbfe408b57b57db7a246",
+    "runner/model.py": "8c75d807381adc78f6c712ec56b1c354ce3e213617f2607ade6dee5b46f14226",
+    "runner/run_validation.py": "616cc6b98ca825dc6a1a31b9eec7c4713ad4bb0e53b840637b235b8d69509115",
+    "soc_model/core.cpp": "068a9c87b6a1601aa0cb3849ad81fd27a42fa580ff2019f8b68bf55996014078",
+    "soc_model/float_morton.cpp": "465bf4128d6a896a9838ca1fd0f3bc1ca1b9e253c9e4d920ca524ee6fc33372f",
+    "soc_model/vcc_baseline.cpp": "6fefb50934f96b3f06594892f64516a971540f58b3d34e953cb82a5841b7688b",
+    "reference/oracles.py": "1d05c7cbee42aa0d29911431e6e0d4cd304c6c810e55322e8d96343c018bde7d",
+    "reference/trace_check.py": "642eb2d8d75eef4139f59388a8256604bf2a483e8737660801cfbfb108035065",
+    "simulation/energy_coefficients.json": "df601ae24f0ec78fb2eaa52cce7800b2f2b7f37f6ee5199cbbc1aaab47441beb",
+    "simulation/system.py": "b8a91fc7e78257255c24bbe45b290e5a881451f41a693b37b1d65cd7c11d08b3",
+    "simulation/timing.py": "099129295c49324e82aa8639251bf1fcb95faf134ef9e5e21364f2d2722be7cd",
+    "simulation/timing_assumptions.json": "ebef039b147c2e40fc5e951d1617156bb500e4da8937d5622c32ba0c4a20c2c4",
+    "tests/test_integration.py": "eaa530ed6bdfcf817a2752c50b145c11455c92c1e9e787fa78ff210494fff9f4",
+    "tests/test_modules.py": "83f3f4c0cdab03797f0a60a637b23d11f7dde60189363e0fc4938cca24bf5cef",
+    "spec/design_v1.json": "b6649764c88f00715a7fabb66832a8bc0d1d5c838a945f83432025f8a7e8304a",
+    "spec/介面與數值規格.md": "dcf798844e39f4b3974d772412f62d482c39abfe11197b87e873de34cc76087d",
+    "tools/analyze_numeric_bounds.py": "f5f241e96e7ff81d3b766f5e45816f752a1824a0251c97d077f758738ed2b478",
+    "tools/baseline_smoke.cpp": "fcf4ea15df0f0b1a2baffc629c3c51240bf8daa8d75a98a0ccc30aa25b0b508a",
+    "tools/check_upstream_transforms.py": "80b9747bf884c6568361b0a873358572c8b083ce033e82826abf13cc3d2fadca",
+    "tools/complete_control_replay.py": "25fb1b05b0671f3db29034cc2c1b2bc088c008eeec116db7776cef5af0b8874f",
+    "tools/debug_baseline.py": "65c8d21a81bfeeac1a374b1dfb447944385e5dc014e85c9219e1dab3da216a29",
+    "tools/diagnose_endpoints.py": "2bb10b962d19609ec6eaf36dd52a57fe53810b6d73249d9f7ea4816cc1a931ef",
+    "tools/export_rtl_vectors.py": "a6cdc9be701a7b269046330e8ea22cad328e05996dab4fad36ec2a1bd2e4b8c9",
+    "tools/finalize_report.py": "c04e1bfc9e058f31536c0756123b008220fc189b44e85105b52b3d8c000d3cdd",
+    "tools/prepare_panda_data.py": "77ecc62eb92a498e938ce170c6cb1d7b60178f0c19710b545dfce773aef15631",
+    "tools/requirements.txt": "0969da99a0bc2a1b71ed50584560f4588a37567ac63af3ddbaf3c4617ca5621a",
+    "tools/revalidate_saved_paths.py": "eace9525e3d2801e1121ed0c6a8b7c08946dc77ae82fad03cc3b16854391fbc0",
+    "tools/verify_package.py": "234a47524c60bb63d5156852bd443b58e45656bbc6d25d86a1fda33110b0c8d7"
+  },
+  "limitations": [
+    "No device energy coefficients or synthesized power/area",
+    "Serial timing baseline, no multi-engine cycle accurate microarchitecture",
+    "Pinned sphere robot and analytic primitive scene scope",
+    "Default coverage differs from filtered-only original proposal",
+    "First goal per problem, fixed single planning seed and fixed budgets",
+    "Full-system baseline Connect and edge semantics differ"
+  ],
+  "control_replay_completion": {
+    "valid": true,
+    "case_count": 1,
+    "cases": [
+      {
+        "case_id": "box_0001",
+        "validation": {
+          "valid": true,
+          "status": "REPLAYED_NEAREST_STEERING_PARENT_RULES",
+          "nearest_checks": 236,
+          "inserts": 77,
+          "scope": "Structural replay and exact nearest/steering rules; collision and FK are checked separately"
+        },
+        "status": "BUDGET_EXHAUSTED",
+        "pointcloud_sha256": "53d67e64d0e638b4b97e52f1235909b45a364c652e8864e3e49ed9316f519dd0",
+        "callback_event_count": 16623804,
+        "control_event_count": 943,
+        "stats": {
+          "input_points": 70000,
+          "kept_points": 6807,
+          "filter_updates": 17610,
+          "hash_probes": 72369,
+          "max_hash_probe": 5,
+          "radix_reads": 20421,
+          "radix_writes": 20421,
+          "queries": 1292647,
+          "global_rejects": 628866,
+          "cells_visited": 9519037,
+          "cell_rejects": 1273025,
+          "distance_tests": 4285498,
+          "fk_calls": 30000,
+          "nn_calls": 236,
+          "nn_distance_tests": 4657,
+          "edge_calls": 237,
+          "edge_samples": 29999,
+          "rrt_nodes": 79,
+          "iterations": 159,
+          "sram_read_requests": 15305379,
+          "sram_write_requests": 70000,
+          "logical_read_bytes": 84125682,
+          "logical_write_bytes": 2240000,
+          "build_cpu_ns": 3814900,
+          "query_cpu_ns": 7748130000,
+          "fk_cpu_ns": 163966700,
+          "plan_cpu_ns": 8044638400,
+          "peak_sram_bytes": 1966896,
+          "trace_dropped": 0,
+          "state_calls": 30001,
+          "culled_points": 0
+        },
+        "wall_seconds": 8.063549099999364,
+        "scope": "All native events delivered; only NN, roots and insertion payloads retained. Operation counts, path and status match release_v1. Detailed memory events are not stored."
+      }
+    ]
+  },
+  "goal_count_distribution": {
+    "1": 700
+  }
+}

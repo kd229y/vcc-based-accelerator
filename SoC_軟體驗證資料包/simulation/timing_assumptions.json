@@ -1,0 +1,16 @@
+{
+  "name": "illustrative_serial_v1_not_device_measurement",
+  "clock_hz": 500000000,
+  "sram_banks": 8,
+  "environment_storage": "resident_sram",
+  "sram_latency_cycles": 2,
+  "query_cache_bytes": 262144,
+  "block_bytes": 64,
+  "external_latency_cycles": 80,
+  "external_bytes_per_cycle": 8,
+  "sort_records_per_cycle": 1,
+  "fk_integer_ops_per_cycle": 4,
+  "nn_integer_ops_per_cycle": 4,
+  "distance_lanes": 4,
+  "source": "User has no target hardware parameters yet; all values are tunable hypotheses."
+}

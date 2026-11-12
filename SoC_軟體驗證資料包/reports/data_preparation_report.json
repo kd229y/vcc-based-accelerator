@@ -1,0 +1,98 @@
+{
+  "source_commit": "96a0d556e9677bb91c755aed7d268fa2772035b9",
+  "source_archive_sha256": "4e1509e99c53da769ee6a338cf1173ecf601e4ec16f24081d3894ef358243b69",
+  "problem_count": 700,
+  "raw_yaml_count": 1400,
+  "scenario_counts": {
+    "bookshelf_small": 100,
+    "bookshelf_tall": 100,
+    "bookshelf_thin": 100,
+    "box": 100,
+    "cage": 100,
+    "table_pick": 100,
+    "table_under_pick": 100
+  },
+  "urdf_collision_sphere_count": 59,
+  "examples": [
+    {
+      "name": "panda_bookshelf_thin_0001",
+      "point_count": 210000,
+      "samples_per_primitive": 10000,
+      "seed": 0,
+      "aabb_min_m": [
+        0.4239159335044018,
+        -0.36160306355439265,
+        -0.7
+      ],
+      "aabb_max_m": [
+        1.210522401069842,
+        0.7615264045249305,
+        0.94
+      ],
+      "max_surface_residual_m": 1.6653345369377348e-16,
+      "sampling": "uniform surface-area sampling; Python random.Random; custom exporter, not byte-identical to upstream NumPy sampler",
+      "occlusion": false,
+      "sensor_noise": false,
+      "filtered": false,
+      "planner_or_soc_executed": false
+    },
+    {
+      "name": "panda_box_0001",
+      "point_count": 70000,
+      "samples_per_primitive": 10000,
+      "seed": 0,
+      "aabb_min_m": [
+        0.15232429158419525,
+        -0.25460959739992856,
+        -0.5262264457751538
+      ],
+      "aabb_max_m": [
+        0.9876042344677209,
+        0.5806455347065672,
+        0.6854374863970751
+      ],
+      "max_surface_residual_m": 1.3183898417423734e-16,
+      "sampling": "uniform surface-area sampling; Python random.Random; custom exporter, not byte-identical to upstream NumPy sampler",
+      "occlusion": false,
+      "sensor_noise": false,
+      "filtered": false,
+      "planner_or_soc_executed": false
+    },
+    {
+      "name": "panda_cage_0001",
+      "point_count": 80000,
+      "samples_per_primitive": 10000,
+      "seed": 0,
+      "aabb_min_m": [
+        0.3476801716038534,
+        -0.5378716900505227,
+        0.15993675870445262
+      ],
+      "aabb_max_m": [
+        1.1441711702663944,
+        0.25566346462516953,
+        0.9099367587044526
+      ],
+      "max_surface_residual_m": 2.220446049250313e-16,
+      "sampling": "uniform surface-area sampling; Python random.Random; custom exporter, not byte-identical to upstream NumPy sampler",
+      "occlusion": false,
+      "sensor_noise": false,
+      "filtered": false,
+      "planner_or_soc_executed": false
+    }
+  ],
+  "checks_performed": [
+    "700 complete scene/request pairs",
+    "7 arm joints present in every start and goal",
+    "positive supported primitive dimensions",
+    "finite sample coordinates",
+    "sample points lie on their source primitive surfaces within 1e-10 m"
+  ],
+  "not_performed": [
+    "VAMP installation or execution",
+    "start/goal collision validity",
+    "SoC functional verification",
+    "path planning or path validation",
+    "timing or power measurement"
+  ]
+}

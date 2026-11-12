@@ -1,0 +1,125 @@
+{
+  "scope": "Software golden vectors only; RTL and synthesis are not implemented",
+  "byte_order": "little",
+  "query_count": 512,
+  "fk_case_count": 128,
+  "spheres_per_fk": 59,
+  "query_center_format": "signed int16 Q13 xyz",
+  "query_radius_format": "unsigned uint16 Q13",
+  "fk_input_format": "signed int32 Q24 seven angles",
+  "fk_output_format": "signed int16 Q13 59 xyz centers",
+  "seed": 449,
+  "config": {
+    "version": "integer_soc_v1",
+    "status": "executable_candidate_not_final_silicon_spec",
+    "robot": "panda",
+    "coordinate_fraction_bits": 13,
+    "coordinate_bits": 16,
+    "angle_fraction_bits": 24,
+    "rotation_fraction_bits": 30,
+    "fine_voxel_m": 0.03125,
+    "coarse_voxel_m": 0.125,
+    "workspace_min_m": [
+      -2,
+      -2,
+      -2
+    ],
+    "workspace_max_m": [
+      2,
+      2,
+      2
+    ],
+    "selector_bits": 4,
+    "hash_capacity": 32768,
+    "raw_point_coverage": true,
+    "max_range_m": 1.6,
+    "point_radius_m": 0.0025,
+    "fk_margin_m": 0.000125,
+    "edge_sweep_margin_m": 0.03,
+    "edge_validation_mode": "integer_adaptive_interval_certificate",
+    "rrt_max_nodes_per_tree": 4096,
+    "rrt_max_iterations": 300,
+    "state_evaluation_budget": 30000,
+    "rrt_range_rad": 0.35,
+    "rrt_distance_metric": "unweighted_Euclidean_7_joint_angles",
+    "seed": 1,
+    "trace_capacity": 0,
+    "speculative_sphere_batch": false,
+    "sram_budget_bytes": 4194304,
+    "rounding": "IEEE754 binary32 ingress floor to Q13; integer division nearest ties toward positive infinity; angles same nearest rule",
+    "overflow": "reject out of workspace or unsupported input; explicit capacity status; int64 intermediates within documented bounds",
+    "notes": "Conservative candidate after independent verification exposed a filtered-point path collision. 1.6m cull bound exceeds pinned sphere-chain length plus maximum radius and certificate margin. 4MiB is a verification capacity envelope, not a measured or final SRAM target. Filtered-only and original VCC remain explicit comparison variants."
+  },
+  "problem": {
+    "schema": "soc-panda-input-v1",
+    "robot": "panda",
+    "scenario": "synthetic_detour",
+    "source_index": 0,
+    "joint_names": [
+      "panda_joint1",
+      "panda_joint2",
+      "panda_joint3",
+      "panda_joint4",
+      "panda_joint5",
+      "panda_joint6",
+      "panda_joint7"
+    ],
+    "start": [
+      -0.9,
+      -0.785,
+      0.0,
+      -2.356,
+      0.0,
+      1.571,
+      0.785
+    ],
+    "goals": [
+      [
+        0.9,
+        -0.785,
+        0.0,
+        -2.356,
+        0.0,
+        1.571,
+        0.785
+      ]
+    ],
+    "primitives": [
+      {
+        "type": "box",
+        "dimensions": [
+          0.08,
+          0.08,
+          0.08
+        ],
+        "world_from_local": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.3069905041249028
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.07299999420757532
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.4878695582761388
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "object_id": "blocking_box"
+      }
+    ]
+  }
+}

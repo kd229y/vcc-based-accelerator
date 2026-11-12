@@ -1,0 +1,33 @@
+{
+  "status": "PASS_DATA_INTEGRITY_ONLY",
+  "upstream_commit": "96a0d556e9677bb91c755aed7d268fa2772035b9",
+  "manifest_file_count": 49709,
+  "manifest_total_bytes": 1029127038,
+  "panda_problem_count": 700,
+  "raw_yaml_count": 1400,
+  "scenario_counts": {
+    "bookshelf_small": 100,
+    "bookshelf_tall": 100,
+    "bookshelf_thin": 100,
+    "box": 100,
+    "cage": 100,
+    "table_pick": 100,
+    "table_under_pick": 100
+  },
+  "resolved_panda_mesh_references": 33,
+  "examples": [
+    {
+      "name": "panda_bookshelf_thin_0001",
+      "point_count": 210000
+    },
+    {
+      "name": "panda_box_0001",
+      "point_count": 70000
+    },
+    {
+      "name": "panda_cage_0001",
+      "point_count": 80000
+    }
+  ],
+  "soc_or_path_validation": "NOT_CHECKED_BY_THIS_TOOL; see runs/user_restored_v1/summary.json and runs/user_restored_regression_v1/summary.json"
+}

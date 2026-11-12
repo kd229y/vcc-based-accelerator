@@ -1,0 +1,3 @@
+[submodule "SoC_軟體驗證資料包/upstream/vamp-vcc"]
+	path = SoC_軟體驗證資料包/upstream/vamp-vcc
+	url = https://github.com/nycu-caslab/vamp-vcc.git

@@ -1,0 +1,31 @@
+# ---- outputs ----
+build/
+hw/sim/out/
+hw/golden/gen_golden
+hw/vivado/out_*/
+hw/vivado/build_*.log
+hw/vivado/detect.tcl
+.Xil/
+*.jou
+*.backup*
+*Zone.Identifier
+__pycache__/
+*.pyc
+hw_baseline_board_verified.tgz
+# personal notes (same convention as PLE-CSE)
+CLAUDE.md
+records/
+
+# ---- software verification package: keep sources, drop generated / large data ----
+SoC_軟體驗證資料包/.venv/
+SoC_軟體驗證資料包/build/*
+!SoC_軟體驗證資料包/build/panda_generated.hh
+!SoC_軟體驗證資料包/build/upstream_fk_scalar.hh
+!SoC_軟體驗證資料包/build/robot_description.json
+!SoC_軟體驗證資料包/build/build_report.json
+SoC_軟體驗證資料包/runs/*
+!SoC_軟體驗證資料包/runs/README.md
+SoC_軟體驗證資料包/experiments/
+SoC_軟體驗證資料包/examples/
+SoC_軟體驗證資料包/third_party/
+SoC_軟體驗證資料包/manifest.json

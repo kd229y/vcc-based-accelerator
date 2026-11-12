@@ -1,0 +1,22 @@
+{
+  "byte_order": "little",
+  "coordinate_fraction_bits": 14,
+  "point_record_bytes": 6,
+  "cell_record_bytes": 20,
+  "point_fields": [
+    "uint16 x relative to -2m",
+    "uint16 y relative to -2m",
+    "uint16 z relative to -2m"
+  ],
+  "cell_fields": [
+    "uint32 start",
+    "uint32 count",
+    "int16 world Q14 lo[3]",
+    "int16 world Q14 hi[3]"
+  ],
+  "dense_cell_id_empty": 65535,
+  "point_count": 34,
+  "cell_count": 2,
+  "padding": "none in scalar v1; a SIMD layout requires a versioned change",
+  "scope": "RTL-ready software vectors; not evidence that RTL exists"
+}

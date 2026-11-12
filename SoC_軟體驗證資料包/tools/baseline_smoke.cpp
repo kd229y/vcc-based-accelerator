@@ -1,0 +1,2 @@
+#include "../soc_model/vcc_baseline.cpp"
+int main(){float q[7]={0,-.785f,0,-2.356f,0,1.571f,.785f};float goal[7]={.2f,-.785f,0,-2.356f,0,1.571f,.785f};float output[7000]{};long long metrics[3]{};std::cerr<<"create\n";auto p=vcc_create(nullptr,0,.031f,1.19f,1.19f,.08f);std::cerr<<"plan\n";auto r=vcc_plan(p,q,goal,q,1,100,500,.35f,output,metrics);std::cerr<<"result "<<r<<" size "<<metrics[2]<<"\n";vcc_destroy(p);}

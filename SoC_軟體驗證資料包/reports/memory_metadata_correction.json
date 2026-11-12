@@ -1,0 +1,3540 @@
+{
+  "scope": "Metadata-only unit conversion; original source mvt.hh point_coord_pool_size = total_floats",
+  "files": [
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0001/vcc_baseline.json",
+      "old_float_count": 12288,
+      "bytes": 49152
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0002/vcc_baseline.json",
+      "old_float_count": 10152,
+      "bytes": 40608
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0003/vcc_baseline.json",
+      "old_float_count": 9456,
+      "bytes": 37824
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0004/vcc_baseline.json",
+      "old_float_count": 10104,
+      "bytes": 40416
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0005/vcc_baseline.json",
+      "old_float_count": 11400,
+      "bytes": 45600
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0006/vcc_baseline.json",
+      "old_float_count": 12600,
+      "bytes": 50400
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0007/vcc_baseline.json",
+      "old_float_count": 11616,
+      "bytes": 46464
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0008/vcc_baseline.json",
+      "old_float_count": 8880,
+      "bytes": 35520
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0009/vcc_baseline.json",
+      "old_float_count": 9432,
+      "bytes": 37728
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0010/vcc_baseline.json",
+      "old_float_count": 5088,
+      "bytes": 20352
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0011/vcc_baseline.json",
+      "old_float_count": 6984,
+      "bytes": 27936
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0012/vcc_baseline.json",
+      "old_float_count": 9816,
+      "bytes": 39264
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0013/vcc_baseline.json",
+      "old_float_count": 14832,
+      "bytes": 59328
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0014/vcc_baseline.json",
+      "old_float_count": 12456,
+      "bytes": 49824
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0015/vcc_baseline.json",
+      "old_float_count": 12912,
+      "bytes": 51648
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0016/vcc_baseline.json",
+      "old_float_count": 13896,
+      "bytes": 55584
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0017/vcc_baseline.json",
+      "old_float_count": 11616,
+      "bytes": 46464
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0018/vcc_baseline.json",
+      "old_float_count": 13320,
+      "bytes": 53280
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0019/vcc_baseline.json",
+      "old_float_count": 11088,
+      "bytes": 44352
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0020/vcc_baseline.json",
+      "old_float_count": 12936,
+      "bytes": 51744
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0021/vcc_baseline.json",
+      "old_float_count": 13920,
+      "bytes": 55680
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0022/vcc_baseline.json",
+      "old_float_count": 11952,
+      "bytes": 47808
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0023/vcc_baseline.json",
+      "old_float_count": 10104,
+      "bytes": 40416
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0024/vcc_baseline.json",
+      "old_float_count": 11160,
+      "bytes": 44640
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0025/vcc_baseline.json",
+      "old_float_count": 11160,
+      "bytes": 44640
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0026/vcc_baseline.json",
+      "old_float_count": 10032,
+      "bytes": 40128
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0027/vcc_baseline.json",
+      "old_float_count": 9744,
+      "bytes": 38976
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0028/vcc_baseline.json",
+      "old_float_count": 10008,
+      "bytes": 40032
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0029/vcc_baseline.json",
+      "old_float_count": 10128,
+      "bytes": 40512
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0030/vcc_baseline.json",
+      "old_float_count": 8496,
+      "bytes": 33984
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0031/vcc_baseline.json",
+      "old_float_count": 12720,
+      "bytes": 50880
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0032/vcc_baseline.json",
+      "old_float_count": 11208,
+      "bytes": 44832
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0033/vcc_baseline.json",
+      "old_float_count": 12816,
+      "bytes": 51264
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0034/vcc_baseline.json",
+      "old_float_count": 6912,
+      "bytes": 27648
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0035/vcc_baseline.json",
+      "old_float_count": 11856,
+      "bytes": 47424
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0036/vcc_baseline.json",
+      "old_float_count": 12984,
+      "bytes": 51936
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0037/vcc_baseline.json",
+      "old_float_count": 7128,
+      "bytes": 28512
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0038/vcc_baseline.json",
+      "old_float_count": 14880,
+      "bytes": 59520
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0039/vcc_baseline.json",
+      "old_float_count": 6624,
+      "bytes": 26496
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0040/vcc_baseline.json",
+      "old_float_count": 9648,
+      "bytes": 38592
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0041/vcc_baseline.json",
+      "old_float_count": 12888,
+      "bytes": 51552
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0042/vcc_baseline.json",
+      "old_float_count": 5808,
+      "bytes": 23232
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0043/vcc_baseline.json",
+      "old_float_count": 10416,
+      "bytes": 41664
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0044/vcc_baseline.json",
+      "old_float_count": 11376,
+      "bytes": 45504
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0045/vcc_baseline.json",
+      "old_float_count": 9144,
+      "bytes": 36576
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0046/vcc_baseline.json",
+      "old_float_count": 12384,
+      "bytes": 49536
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0047/vcc_baseline.json",
+      "old_float_count": 13944,
+      "bytes": 55776
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0048/vcc_baseline.json",
+      "old_float_count": 7200,
+      "bytes": 28800
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0049/vcc_baseline.json",
+      "old_float_count": 5736,
+      "bytes": 22944
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0050/vcc_baseline.json",
+      "old_float_count": 12456,
+      "bytes": 49824
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0051/vcc_baseline.json",
+      "old_float_count": 13632,
+      "bytes": 54528
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0052/vcc_baseline.json",
+      "old_float_count": 7632,
+      "bytes": 30528
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0053/vcc_baseline.json",
+      "old_float_count": 11304,
+      "bytes": 45216
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0054/vcc_baseline.json",
+      "old_float_count": 11688,
+      "bytes": 46752
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0055/vcc_baseline.json",
+      "old_float_count": 10296,
+      "bytes": 41184
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0056/vcc_baseline.json",
+      "old_float_count": 8760,
+      "bytes": 35040
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0057/vcc_baseline.json",
+      "old_float_count": 7344,
+      "bytes": 29376
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0058/vcc_baseline.json",
+      "old_float_count": 9240,
+      "bytes": 36960
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0059/vcc_baseline.json",
+      "old_float_count": 7464,
+      "bytes": 29856
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0060/vcc_baseline.json",
+      "old_float_count": 13680,
+      "bytes": 54720
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0061/vcc_baseline.json",
+      "old_float_count": 11928,
+      "bytes": 47712
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0062/vcc_baseline.json",
+      "old_float_count": 4008,
+      "bytes": 16032
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0063/vcc_baseline.json",
+      "old_float_count": 12216,
+      "bytes": 48864
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0064/vcc_baseline.json",
+      "old_float_count": 12456,
+      "bytes": 49824
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0065/vcc_baseline.json",
+      "old_float_count": 11472,
+      "bytes": 45888
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0066/vcc_baseline.json",
+      "old_float_count": 7536,
+      "bytes": 30144
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0067/vcc_baseline.json",
+      "old_float_count": 10968,
+      "bytes": 43872
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0068/vcc_baseline.json",
+      "old_float_count": 10344,
+      "bytes": 41376
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0069/vcc_baseline.json",
+      "old_float_count": 13800,
+      "bytes": 55200
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0070/vcc_baseline.json",
+      "old_float_count": 10800,
+      "bytes": 43200
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0071/vcc_baseline.json",
+      "old_float_count": 9984,
+      "bytes": 39936
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0072/vcc_baseline.json",
+      "old_float_count": 10488,
+      "bytes": 41952
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0073/vcc_baseline.json",
+      "old_float_count": 11808,
+      "bytes": 47232
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0074/vcc_baseline.json",
+      "old_float_count": 9816,
+      "bytes": 39264
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0075/vcc_baseline.json",
+      "old_float_count": 13872,
+      "bytes": 55488
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0076/vcc_baseline.json",
+      "old_float_count": 13416,
+      "bytes": 53664
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0077/vcc_baseline.json",
+      "old_float_count": 5616,
+      "bytes": 22464
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0078/vcc_baseline.json",
+      "old_float_count": 13152,
+      "bytes": 52608
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0079/vcc_baseline.json",
+      "old_float_count": 12912,
+      "bytes": 51648
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0080/vcc_baseline.json",
+      "old_float_count": 8616,
+      "bytes": 34464
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0081/vcc_baseline.json",
+      "old_float_count": 10296,
+      "bytes": 41184
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0082/vcc_baseline.json",
+      "old_float_count": 11232,
+      "bytes": 44928
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0083/vcc_baseline.json",
+      "old_float_count": 14544,
+      "bytes": 58176
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0084/vcc_baseline.json",
+      "old_float_count": 10272,
+      "bytes": 41088
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0085/vcc_baseline.json",
+      "old_float_count": 10416,
+      "bytes": 41664
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0086/vcc_baseline.json",
+      "old_float_count": 14472,
+      "bytes": 57888
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0087/vcc_baseline.json",
+      "old_float_count": 12000,
+      "bytes": 48000
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0088/vcc_baseline.json",
+      "old_float_count": 10536,
+      "bytes": 42144
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0089/vcc_baseline.json",
+      "old_float_count": 13968,
+      "bytes": 55872
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0090/vcc_baseline.json",
+      "old_float_count": 12648,
+      "bytes": 50592
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0091/vcc_baseline.json",
+      "old_float_count": 9720,
+      "bytes": 38880
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0092/vcc_baseline.json",
+      "old_float_count": 14184,
+      "bytes": 56736
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0093/vcc_baseline.json",
+      "old_float_count": 12888,
+      "bytes": 51552
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0094/vcc_baseline.json",
+      "old_float_count": 11976,
+      "bytes": 47904
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0095/vcc_baseline.json",
+      "old_float_count": 3528,
+      "bytes": 14112
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0096/vcc_baseline.json",
+      "old_float_count": 13920,
+      "bytes": 55680
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0097/vcc_baseline.json",
+      "old_float_count": 10992,
+      "bytes": 43968
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0098/vcc_baseline.json",
+      "old_float_count": 12600,
+      "bytes": 50400
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0099/vcc_baseline.json",
+      "old_float_count": 10872,
+      "bytes": 43488
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_small_0100/vcc_baseline.json",
+      "old_float_count": 11856,
+      "bytes": 47424
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0001/vcc_baseline.json",
+      "old_float_count": 27552,
+      "bytes": 110208
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0002/vcc_baseline.json",
+      "old_float_count": 25608,
+      "bytes": 102432
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0003/vcc_baseline.json",
+      "old_float_count": 15912,
+      "bytes": 63648
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0004/vcc_baseline.json",
+      "old_float_count": 18288,
+      "bytes": 73152
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0005/vcc_baseline.json",
+      "old_float_count": 22344,
+      "bytes": 89376
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0006/vcc_baseline.json",
+      "old_float_count": 25800,
+      "bytes": 103200
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0007/vcc_baseline.json",
+      "old_float_count": 24960,
+      "bytes": 99840
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0008/vcc_baseline.json",
+      "old_float_count": 20928,
+      "bytes": 83712
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0009/vcc_baseline.json",
+      "old_float_count": 26664,
+      "bytes": 106656
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0010/vcc_baseline.json",
+      "old_float_count": 15432,
+      "bytes": 61728
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0011/vcc_baseline.json",
+      "old_float_count": 24576,
+      "bytes": 98304
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0012/vcc_baseline.json",
+      "old_float_count": 16464,
+      "bytes": 65856
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0013/vcc_baseline.json",
+      "old_float_count": 17856,
+      "bytes": 71424
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0014/vcc_baseline.json",
+      "old_float_count": 25464,
+      "bytes": 101856
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0015/vcc_baseline.json",
+      "old_float_count": 23736,
+      "bytes": 94944
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0016/vcc_baseline.json",
+      "old_float_count": 19176,
+      "bytes": 76704
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0017/vcc_baseline.json",
+      "old_float_count": 18888,
+      "bytes": 75552
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0018/vcc_baseline.json",
+      "old_float_count": 19800,
+      "bytes": 79200
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0019/vcc_baseline.json",
+      "old_float_count": 22824,
+      "bytes": 91296
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0020/vcc_baseline.json",
+      "old_float_count": 21528,
+      "bytes": 86112
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0021/vcc_baseline.json",
+      "old_float_count": 17352,
+      "bytes": 69408
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0022/vcc_baseline.json",
+      "old_float_count": 19392,
+      "bytes": 77568
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0023/vcc_baseline.json",
+      "old_float_count": 20136,
+      "bytes": 80544
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0024/vcc_baseline.json",
+      "old_float_count": 26688,
+      "bytes": 106752
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0025/vcc_baseline.json",
+      "old_float_count": 21384,
+      "bytes": 85536
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0026/vcc_baseline.json",
+      "old_float_count": 16872,
+      "bytes": 67488
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0027/vcc_baseline.json",
+      "old_float_count": 20040,
+      "bytes": 80160
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0028/vcc_baseline.json",
+      "old_float_count": 17736,
+      "bytes": 70944
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0029/vcc_baseline.json",
+      "old_float_count": 23808,
+      "bytes": 95232
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0030/vcc_baseline.json",
+      "old_float_count": 25416,
+      "bytes": 101664
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0031/vcc_baseline.json",
+      "old_float_count": 24984,
+      "bytes": 99936
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0032/vcc_baseline.json",
+      "old_float_count": 19656,
+      "bytes": 78624
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0033/vcc_baseline.json",
+      "old_float_count": 20664,
+      "bytes": 82656
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0034/vcc_baseline.json",
+      "old_float_count": 21528,
+      "bytes": 86112
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0035/vcc_baseline.json",
+      "old_float_count": 17760,
+      "bytes": 71040
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0036/vcc_baseline.json",
+      "old_float_count": 26016,
+      "bytes": 104064
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0037/vcc_baseline.json",
+      "old_float_count": 23544,
+      "bytes": 94176
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0038/vcc_baseline.json",
+      "old_float_count": 16296,
+      "bytes": 65184
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0039/vcc_baseline.json",
+      "old_float_count": 18792,
+      "bytes": 75168
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0040/vcc_baseline.json",
+      "old_float_count": 17712,
+      "bytes": 70848
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0041/vcc_baseline.json",
+      "old_float_count": 16440,
+      "bytes": 65760
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0042/vcc_baseline.json",
+      "old_float_count": 18312,
+      "bytes": 73248
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0043/vcc_baseline.json",
+      "old_float_count": 23208,
+      "bytes": 92832
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0044/vcc_baseline.json",
+      "old_float_count": 24984,
+      "bytes": 99936
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0045/vcc_baseline.json",
+      "old_float_count": 22224,
+      "bytes": 88896
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0046/vcc_baseline.json",
+      "old_float_count": 25080,
+      "bytes": 100320
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0047/vcc_baseline.json",
+      "old_float_count": 14928,
+      "bytes": 59712
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0048/vcc_baseline.json",
+      "old_float_count": 19272,
+      "bytes": 77088
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0049/vcc_baseline.json",
+      "old_float_count": 24528,
+      "bytes": 98112
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0050/vcc_baseline.json",
+      "old_float_count": 27384,
+      "bytes": 109536
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0051/vcc_baseline.json",
+      "old_float_count": 15888,
+      "bytes": 63552
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0052/vcc_baseline.json",
+      "old_float_count": 15696,
+      "bytes": 62784
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0053/vcc_baseline.json",
+      "old_float_count": 17688,
+      "bytes": 70752
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0054/vcc_baseline.json",
+      "old_float_count": 16848,
+      "bytes": 67392
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0055/vcc_baseline.json",
+      "old_float_count": 20688,
+      "bytes": 82752
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0056/vcc_baseline.json",
+      "old_float_count": 22848,
+      "bytes": 91392
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0057/vcc_baseline.json",
+      "old_float_count": 18432,
+      "bytes": 73728
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0058/vcc_baseline.json",
+      "old_float_count": 19680,
+      "bytes": 78720
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0059/vcc_baseline.json",
+      "old_float_count": 22320,
+      "bytes": 89280
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0060/vcc_baseline.json",
+      "old_float_count": 19392,
+      "bytes": 77568
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0061/vcc_baseline.json",
+      "old_float_count": 16200,
+      "bytes": 64800
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0062/vcc_baseline.json",
+      "old_float_count": 17592,
+      "bytes": 70368
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0063/vcc_baseline.json",
+      "old_float_count": 18048,
+      "bytes": 72192
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0064/vcc_baseline.json",
+      "old_float_count": 21360,
+      "bytes": 85440
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0065/vcc_baseline.json",
+      "old_float_count": 23904,
+      "bytes": 95616
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0066/vcc_baseline.json",
+      "old_float_count": 15840,
+      "bytes": 63360
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0067/vcc_baseline.json",
+      "old_float_count": 24192,
+      "bytes": 96768
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0068/vcc_baseline.json",
+      "old_float_count": 18192,
+      "bytes": 72768
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0069/vcc_baseline.json",
+      "old_float_count": 21912,
+      "bytes": 87648
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0070/vcc_baseline.json",
+      "old_float_count": 20064,
+      "bytes": 80256
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0071/vcc_baseline.json",
+      "old_float_count": 20424,
+      "bytes": 81696
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0072/vcc_baseline.json",
+      "old_float_count": 25080,
+      "bytes": 100320
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0073/vcc_baseline.json",
+      "old_float_count": 17328,
+      "bytes": 69312
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0074/vcc_baseline.json",
+      "old_float_count": 19464,
+      "bytes": 77856
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0075/vcc_baseline.json",
+      "old_float_count": 20472,
+      "bytes": 81888
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0076/vcc_baseline.json",
+      "old_float_count": 20832,
+      "bytes": 83328
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0077/vcc_baseline.json",
+      "old_float_count": 23328,
+      "bytes": 93312
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0078/vcc_baseline.json",
+      "old_float_count": 18312,
+      "bytes": 73248
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0079/vcc_baseline.json",
+      "old_float_count": 26352,
+      "bytes": 105408
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0080/vcc_baseline.json",
+      "old_float_count": 22200,
+      "bytes": 88800
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0081/vcc_baseline.json",
+      "old_float_count": 26328,
+      "bytes": 105312
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0082/vcc_baseline.json",
+      "old_float_count": 21576,
+      "bytes": 86304
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0083/vcc_baseline.json",
+      "old_float_count": 28056,
+      "bytes": 112224
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0084/vcc_baseline.json",
+      "old_float_count": 17496,
+      "bytes": 69984
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0085/vcc_baseline.json",
+      "old_float_count": 23616,
+      "bytes": 94464
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0086/vcc_baseline.json",
+      "old_float_count": 15336,
+      "bytes": 61344
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0087/vcc_baseline.json",
+      "old_float_count": 25512,
+      "bytes": 102048
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0088/vcc_baseline.json",
+      "old_float_count": 19800,
+      "bytes": 79200
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0089/vcc_baseline.json",
+      "old_float_count": 28536,
+      "bytes": 114144
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0090/vcc_baseline.json",
+      "old_float_count": 20568,
+      "bytes": 82272
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0091/vcc_baseline.json",
+      "old_float_count": 17448,
+      "bytes": 69792
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0092/vcc_baseline.json",
+      "old_float_count": 22704,
+      "bytes": 90816
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0093/vcc_baseline.json",
+      "old_float_count": 22848,
+      "bytes": 91392
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0094/vcc_baseline.json",
+      "old_float_count": 16632,
+      "bytes": 66528
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0095/vcc_baseline.json",
+      "old_float_count": 21576,
+      "bytes": 86304
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0096/vcc_baseline.json",
+      "old_float_count": 18408,
+      "bytes": 73632
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0097/vcc_baseline.json",
+      "old_float_count": 22056,
+      "bytes": 88224
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0098/vcc_baseline.json",
+      "old_float_count": 14448,
+      "bytes": 57792
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0099/vcc_baseline.json",
+      "old_float_count": 24552,
+      "bytes": 98208
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_tall_0100/vcc_baseline.json",
+      "old_float_count": 25776,
+      "bytes": 103104
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0001/vcc_baseline.json",
+      "old_float_count": 37800,
+      "bytes": 151200
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0002/vcc_baseline.json",
+      "old_float_count": 32376,
+      "bytes": 129504
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0003/vcc_baseline.json",
+      "old_float_count": 37416,
+      "bytes": 149664
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0004/vcc_baseline.json",
+      "old_float_count": 35784,
+      "bytes": 143136
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0005/vcc_baseline.json",
+      "old_float_count": 35328,
+      "bytes": 141312
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0006/vcc_baseline.json",
+      "old_float_count": 34920,
+      "bytes": 139680
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0007/vcc_baseline.json",
+      "old_float_count": 35736,
+      "bytes": 142944
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0008/vcc_baseline.json",
+      "old_float_count": 32832,
+      "bytes": 131328
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0009/vcc_baseline.json",
+      "old_float_count": 35736,
+      "bytes": 142944
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0010/vcc_baseline.json",
+      "old_float_count": 34920,
+      "bytes": 139680
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0011/vcc_baseline.json",
+      "old_float_count": 34464,
+      "bytes": 137856
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0012/vcc_baseline.json",
+      "old_float_count": 32568,
+      "bytes": 130272
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0013/vcc_baseline.json",
+      "old_float_count": 28560,
+      "bytes": 114240
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0014/vcc_baseline.json",
+      "old_float_count": 34152,
+      "bytes": 136608
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0015/vcc_baseline.json",
+      "old_float_count": 30048,
+      "bytes": 120192
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0016/vcc_baseline.json",
+      "old_float_count": 33600,
+      "bytes": 134400
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0017/vcc_baseline.json",
+      "old_float_count": 35928,
+      "bytes": 143712
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0018/vcc_baseline.json",
+      "old_float_count": 35616,
+      "bytes": 142464
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0019/vcc_baseline.json",
+      "old_float_count": 32664,
+      "bytes": 130656
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0020/vcc_baseline.json",
+      "old_float_count": 30336,
+      "bytes": 121344
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0021/vcc_baseline.json",
+      "old_float_count": 34584,
+      "bytes": 138336
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0022/vcc_baseline.json",
+      "old_float_count": 35640,
+      "bytes": 142560
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0023/vcc_baseline.json",
+      "old_float_count": 31488,
+      "bytes": 125952
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0024/vcc_baseline.json",
+      "old_float_count": 37056,
+      "bytes": 148224
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0025/vcc_baseline.json",
+      "old_float_count": 36168,
+      "bytes": 144672
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0026/vcc_baseline.json",
+      "old_float_count": 37848,
+      "bytes": 151392
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0027/vcc_baseline.json",
+      "old_float_count": 32352,
+      "bytes": 129408
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0028/vcc_baseline.json",
+      "old_float_count": 31152,
+      "bytes": 124608
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0029/vcc_baseline.json",
+      "old_float_count": 33216,
+      "bytes": 132864
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0030/vcc_baseline.json",
+      "old_float_count": 37536,
+      "bytes": 150144
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0031/vcc_baseline.json",
+      "old_float_count": 30408,
+      "bytes": 121632
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0032/vcc_baseline.json",
+      "old_float_count": 36984,
+      "bytes": 147936
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0033/vcc_baseline.json",
+      "old_float_count": 34944,
+      "bytes": 139776
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0034/vcc_baseline.json",
+      "old_float_count": 35616,
+      "bytes": 142464
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0035/vcc_baseline.json",
+      "old_float_count": 41784,
+      "bytes": 167136
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0036/vcc_baseline.json",
+      "old_float_count": 40512,
+      "bytes": 162048
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0037/vcc_baseline.json",
+      "old_float_count": 36264,
+      "bytes": 145056
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0038/vcc_baseline.json",
+      "old_float_count": 34104,
+      "bytes": 136416
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0039/vcc_baseline.json",
+      "old_float_count": 36480,
+      "bytes": 145920
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0040/vcc_baseline.json",
+      "old_float_count": 33840,
+      "bytes": 135360
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0041/vcc_baseline.json",
+      "old_float_count": 30432,
+      "bytes": 121728
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0042/vcc_baseline.json",
+      "old_float_count": 35328,
+      "bytes": 141312
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0043/vcc_baseline.json",
+      "old_float_count": 41928,
+      "bytes": 167712
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0044/vcc_baseline.json",
+      "old_float_count": 39144,
+      "bytes": 156576
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0045/vcc_baseline.json",
+      "old_float_count": 36720,
+      "bytes": 146880
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0046/vcc_baseline.json",
+      "old_float_count": 38376,
+      "bytes": 153504
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0047/vcc_baseline.json",
+      "old_float_count": 30720,
+      "bytes": 122880
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0048/vcc_baseline.json",
+      "old_float_count": 37776,
+      "bytes": 151104
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0049/vcc_baseline.json",
+      "old_float_count": 38112,
+      "bytes": 152448
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0050/vcc_baseline.json",
+      "old_float_count": 37656,
+      "bytes": 150624
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0051/vcc_baseline.json",
+      "old_float_count": 36864,
+      "bytes": 147456
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0052/vcc_baseline.json",
+      "old_float_count": 35616,
+      "bytes": 142464
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0053/vcc_baseline.json",
+      "old_float_count": 32016,
+      "bytes": 128064
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0054/vcc_baseline.json",
+      "old_float_count": 28608,
+      "bytes": 114432
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0055/vcc_baseline.json",
+      "old_float_count": 35784,
+      "bytes": 143136
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0056/vcc_baseline.json",
+      "old_float_count": 30528,
+      "bytes": 122112
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0057/vcc_baseline.json",
+      "old_float_count": 31512,
+      "bytes": 126048
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0058/vcc_baseline.json",
+      "old_float_count": 33024,
+      "bytes": 132096
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0059/vcc_baseline.json",
+      "old_float_count": 38064,
+      "bytes": 152256
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0060/vcc_baseline.json",
+      "old_float_count": 32664,
+      "bytes": 130656
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0061/vcc_baseline.json",
+      "old_float_count": 36936,
+      "bytes": 147744
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0062/vcc_baseline.json",
+      "old_float_count": 37224,
+      "bytes": 148896
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0063/vcc_baseline.json",
+      "old_float_count": 37296,
+      "bytes": 149184
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0064/vcc_baseline.json",
+      "old_float_count": 37752,
+      "bytes": 151008
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0065/vcc_baseline.json",
+      "old_float_count": 37728,
+      "bytes": 150912
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0066/vcc_baseline.json",
+      "old_float_count": 39744,
+      "bytes": 158976
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0067/vcc_baseline.json",
+      "old_float_count": 38184,
+      "bytes": 152736
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0068/vcc_baseline.json",
+      "old_float_count": 37752,
+      "bytes": 151008
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0069/vcc_baseline.json",
+      "old_float_count": 35520,
+      "bytes": 142080
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0070/vcc_baseline.json",
+      "old_float_count": 33168,
+      "bytes": 132672
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0071/vcc_baseline.json",
+      "old_float_count": 31800,
+      "bytes": 127200
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0072/vcc_baseline.json",
+      "old_float_count": 33120,
+      "bytes": 132480
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0073/vcc_baseline.json",
+      "old_float_count": 34560,
+      "bytes": 138240
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0074/vcc_baseline.json",
+      "old_float_count": 32952,
+      "bytes": 131808
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0075/vcc_baseline.json",
+      "old_float_count": 37680,
+      "bytes": 150720
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0076/vcc_baseline.json",
+      "old_float_count": 36600,
+      "bytes": 146400
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0077/vcc_baseline.json",
+      "old_float_count": 33192,
+      "bytes": 132768
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0078/vcc_baseline.json",
+      "old_float_count": 36816,
+      "bytes": 147264
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0079/vcc_baseline.json",
+      "old_float_count": 38904,
+      "bytes": 155616
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0080/vcc_baseline.json",
+      "old_float_count": 31920,
+      "bytes": 127680
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0081/vcc_baseline.json",
+      "old_float_count": 34008,
+      "bytes": 136032
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0082/vcc_baseline.json",
+      "old_float_count": 31368,
+      "bytes": 125472
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0083/vcc_baseline.json",
+      "old_float_count": 38784,
+      "bytes": 155136
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0084/vcc_baseline.json",
+      "old_float_count": 39792,
+      "bytes": 159168
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0085/vcc_baseline.json",
+      "old_float_count": 34896,
+      "bytes": 139584
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0086/vcc_baseline.json",
+      "old_float_count": 30888,
+      "bytes": 123552
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0087/vcc_baseline.json",
+      "old_float_count": 26976,
+      "bytes": 107904
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0088/vcc_baseline.json",
+      "old_float_count": 32808,
+      "bytes": 131232
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0089/vcc_baseline.json",
+      "old_float_count": 36984,
+      "bytes": 147936
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0090/vcc_baseline.json",
+      "old_float_count": 39288,
+      "bytes": 157152
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0091/vcc_baseline.json",
+      "old_float_count": 36360,
+      "bytes": 145440
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0092/vcc_baseline.json",
+      "old_float_count": 34368,
+      "bytes": 137472
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0093/vcc_baseline.json",
+      "old_float_count": 34848,
+      "bytes": 139392
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0094/vcc_baseline.json",
+      "old_float_count": 39792,
+      "bytes": 159168
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0095/vcc_baseline.json",
+      "old_float_count": 29064,
+      "bytes": 116256
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0096/vcc_baseline.json",
+      "old_float_count": 35472,
+      "bytes": 141888
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0097/vcc_baseline.json",
+      "old_float_count": 35304,
+      "bytes": 141216
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0098/vcc_baseline.json",
+      "old_float_count": 34152,
+      "bytes": 136608
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0099/vcc_baseline.json",
+      "old_float_count": 31656,
+      "bytes": 126624
+    },
+    {
+      "path": "runs/release_v1/regression/bookshelf_thin_0100/vcc_baseline.json",
+      "old_float_count": 34872,
+      "bytes": 139488
+    },
+    {
+      "path": "runs/release_v1/regression/box_0001/vcc_baseline.json",
+      "old_float_count": 26952,
+      "bytes": 107808
+    },
+    {
+      "path": "runs/release_v1/regression/box_0002/vcc_baseline.json",
+      "old_float_count": 30288,
+      "bytes": 121152
+    },
+    {
+      "path": "runs/release_v1/regression/box_0003/vcc_baseline.json",
+      "old_float_count": 29184,
+      "bytes": 116736
+    },
+    {
+      "path": "runs/release_v1/regression/box_0004/vcc_baseline.json",
+      "old_float_count": 30672,
+      "bytes": 122688
+    },
+    {
+      "path": "runs/release_v1/regression/box_0005/vcc_baseline.json",
+      "old_float_count": 28104,
+      "bytes": 112416
+    },
+    {
+      "path": "runs/release_v1/regression/box_0006/vcc_baseline.json",
+      "old_float_count": 27192,
+      "bytes": 108768
+    },
+    {
+      "path": "runs/release_v1/regression/box_0007/vcc_baseline.json",
+      "old_float_count": 29688,
+      "bytes": 118752
+    },
+    {
+      "path": "runs/release_v1/regression/box_0008/vcc_baseline.json",
+      "old_float_count": 30024,
+      "bytes": 120096
+    },
+    {
+      "path": "runs/release_v1/regression/box_0009/vcc_baseline.json",
+      "old_float_count": 31296,
+      "bytes": 125184
+    },
+    {
+      "path": "runs/release_v1/regression/box_0010/vcc_baseline.json",
+      "old_float_count": 31320,
+      "bytes": 125280
+    },
+    {
+      "path": "runs/release_v1/regression/box_0011/vcc_baseline.json",
+      "old_float_count": 29280,
+      "bytes": 117120
+    },
+    {
+      "path": "runs/release_v1/regression/box_0012/vcc_baseline.json",
+      "old_float_count": 27216,
+      "bytes": 108864
+    },
+    {
+      "path": "runs/release_v1/regression/box_0013/vcc_baseline.json",
+      "old_float_count": 29808,
+      "bytes": 119232
+    },
+    {
+      "path": "runs/release_v1/regression/box_0014/vcc_baseline.json",
+      "old_float_count": 27432,
+      "bytes": 109728
+    },
+    {
+      "path": "runs/release_v1/regression/box_0015/vcc_baseline.json",
+      "old_float_count": 25728,
+      "bytes": 102912
+    },
+    {
+      "path": "runs/release_v1/regression/box_0016/vcc_baseline.json",
+      "old_float_count": 30576,
+      "bytes": 122304
+    },
+    {
+      "path": "runs/release_v1/regression/box_0017/vcc_baseline.json",
+      "old_float_count": 30720,
+      "bytes": 122880
+    },
+    {
+      "path": "runs/release_v1/regression/box_0018/vcc_baseline.json",
+      "old_float_count": 31200,
+      "bytes": 124800
+    },
+    {
+      "path": "runs/release_v1/regression/box_0019/vcc_baseline.json",
+      "old_float_count": 30072,
+      "bytes": 120288
+    },
+    {
+      "path": "runs/release_v1/regression/box_0020/vcc_baseline.json",
+      "old_float_count": 29184,
+      "bytes": 116736
+    },
+    {
+      "path": "runs/release_v1/regression/box_0021/vcc_baseline.json",
+      "old_float_count": 30336,
+      "bytes": 121344
+    },
+    {
+      "path": "runs/release_v1/regression/box_0022/vcc_baseline.json",
+      "old_float_count": 27120,
+      "bytes": 108480
+    },
+    {
+      "path": "runs/release_v1/regression/box_0023/vcc_baseline.json",
+      "old_float_count": 30048,
+      "bytes": 120192
+    },
+    {
+      "path": "runs/release_v1/regression/box_0024/vcc_baseline.json",
+      "old_float_count": 30432,
+      "bytes": 121728
+    },
+    {
+      "path": "runs/release_v1/regression/box_0025/vcc_baseline.json",
+      "old_float_count": 30528,
+      "bytes": 122112
+    },
+    {
+      "path": "runs/release_v1/regression/box_0026/vcc_baseline.json",
+      "old_float_count": 27312,
+      "bytes": 109248
+    },
+    {
+      "path": "runs/release_v1/regression/box_0027/vcc_baseline.json",
+      "old_float_count": 29376,
+      "bytes": 117504
+    },
+    {
+      "path": "runs/release_v1/regression/box_0028/vcc_baseline.json",
+      "old_float_count": 26928,
+      "bytes": 107712
+    },
+    {
+      "path": "runs/release_v1/regression/box_0029/vcc_baseline.json",
+      "old_float_count": 29112,
+      "bytes": 116448
+    },
+    {
+      "path": "runs/release_v1/regression/box_0030/vcc_baseline.json",
+      "old_float_count": 30240,
+      "bytes": 120960
+    },
+    {
+      "path": "runs/release_v1/regression/box_0031/vcc_baseline.json",
+      "old_float_count": 27840,
+      "bytes": 111360
+    },
+    {
+      "path": "runs/release_v1/regression/box_0032/vcc_baseline.json",
+      "old_float_count": 28560,
+      "bytes": 114240
+    },
+    {
+      "path": "runs/release_v1/regression/box_0033/vcc_baseline.json",
+      "old_float_count": 29832,
+      "bytes": 119328
+    },
+    {
+      "path": "runs/release_v1/regression/box_0034/vcc_baseline.json",
+      "old_float_count": 30288,
+      "bytes": 121152
+    },
+    {
+      "path": "runs/release_v1/regression/box_0035/vcc_baseline.json",
+      "old_float_count": 29328,
+      "bytes": 117312
+    },
+    {
+      "path": "runs/release_v1/regression/box_0036/vcc_baseline.json",
+      "old_float_count": 27648,
+      "bytes": 110592
+    },
+    {
+      "path": "runs/release_v1/regression/box_0037/vcc_baseline.json",
+      "old_float_count": 29856,
+      "bytes": 119424
+    },
+    {
+      "path": "runs/release_v1/regression/box_0038/vcc_baseline.json",
+      "old_float_count": 28152,
+      "bytes": 112608
+    },
+    {
+      "path": "runs/release_v1/regression/box_0039/vcc_baseline.json",
+      "old_float_count": 29040,
+      "bytes": 116160
+    },
+    {
+      "path": "runs/release_v1/regression/box_0040/vcc_baseline.json",
+      "old_float_count": 27264,
+      "bytes": 109056
+    },
+    {
+      "path": "runs/release_v1/regression/box_0041/vcc_baseline.json",
+      "old_float_count": 28320,
+      "bytes": 113280
+    },
+    {
+      "path": "runs/release_v1/regression/box_0042/vcc_baseline.json",
+      "old_float_count": 30144,
+      "bytes": 120576
+    },
+    {
+      "path": "runs/release_v1/regression/box_0043/vcc_baseline.json",
+      "old_float_count": 29808,
+      "bytes": 119232
+    },
+    {
+      "path": "runs/release_v1/regression/box_0044/vcc_baseline.json",
+      "old_float_count": 25440,
+      "bytes": 101760
+    },
+    {
+      "path": "runs/release_v1/regression/box_0045/vcc_baseline.json",
+      "old_float_count": 30384,
+      "bytes": 121536
+    },
+    {
+      "path": "runs/release_v1/regression/box_0046/vcc_baseline.json",
+      "old_float_count": 28488,
+      "bytes": 113952
+    },
+    {
+      "path": "runs/release_v1/regression/box_0047/vcc_baseline.json",
+      "old_float_count": 30384,
+      "bytes": 121536
+    },
+    {
+      "path": "runs/release_v1/regression/box_0048/vcc_baseline.json",
+      "old_float_count": 28752,
+      "bytes": 115008
+    },
+    {
+      "path": "runs/release_v1/regression/box_0049/vcc_baseline.json",
+      "old_float_count": 25560,
+      "bytes": 102240
+    },
+    {
+      "path": "runs/release_v1/regression/box_0050/vcc_baseline.json",
+      "old_float_count": 26160,
+      "bytes": 104640
+    },
+    {
+      "path": "runs/release_v1/regression/box_0051/vcc_baseline.json",
+      "old_float_count": 29208,
+      "bytes": 116832
+    },
+    {
+      "path": "runs/release_v1/regression/box_0052/vcc_baseline.json",
+      "old_float_count": 30264,
+      "bytes": 121056
+    },
+    {
+      "path": "runs/release_v1/regression/box_0053/vcc_baseline.json",
+      "old_float_count": 27624,
+      "bytes": 110496
+    },
+    {
+      "path": "runs/release_v1/regression/box_0054/vcc_baseline.json",
+      "old_float_count": 29064,
+      "bytes": 116256
+    },
+    {
+      "path": "runs/release_v1/regression/box_0055/vcc_baseline.json",
+      "old_float_count": 30600,
+      "bytes": 122400
+    },
+    {
+      "path": "runs/release_v1/regression/box_0056/vcc_baseline.json",
+      "old_float_count": 28464,
+      "bytes": 113856
+    },
+    {
+      "path": "runs/release_v1/regression/box_0057/vcc_baseline.json",
+      "old_float_count": 29112,
+      "bytes": 116448
+    },
+    {
+      "path": "runs/release_v1/regression/box_0058/vcc_baseline.json",
+      "old_float_count": 28824,
+      "bytes": 115296
+    },
+    {
+      "path": "runs/release_v1/regression/box_0059/vcc_baseline.json",
+      "old_float_count": 28152,
+      "bytes": 112608
+    },
+    {
+      "path": "runs/release_v1/regression/box_0060/vcc_baseline.json",
+      "old_float_count": 29040,
+      "bytes": 116160
+    },
+    {
+      "path": "runs/release_v1/regression/box_0061/vcc_baseline.json",
+      "old_float_count": 28488,
+      "bytes": 113952
+    },
+    {
+      "path": "runs/release_v1/regression/box_0062/vcc_baseline.json",
+      "old_float_count": 30696,
+      "bytes": 122784
+    },
+    {
+      "path": "runs/release_v1/regression/box_0063/vcc_baseline.json",
+      "old_float_count": 29424,
+      "bytes": 117696
+    },
+    {
+      "path": "runs/release_v1/regression/box_0064/vcc_baseline.json",
+      "old_float_count": 27024,
+      "bytes": 108096
+    },
+    {
+      "path": "runs/release_v1/regression/box_0065/vcc_baseline.json",
+      "old_float_count": 28632,
+      "bytes": 114528
+    },
+    {
+      "path": "runs/release_v1/regression/box_0066/vcc_baseline.json",
+      "old_float_count": 29112,
+      "bytes": 116448
+    },
+    {
+      "path": "runs/release_v1/regression/box_0067/vcc_baseline.json",
+      "old_float_count": 27888,
+      "bytes": 111552
+    },
+    {
+      "path": "runs/release_v1/regression/box_0068/vcc_baseline.json",
+      "old_float_count": 26760,
+      "bytes": 107040
+    },
+    {
+      "path": "runs/release_v1/regression/box_0069/vcc_baseline.json",
+      "old_float_count": 30960,
+      "bytes": 123840
+    },
+    {
+      "path": "runs/release_v1/regression/box_0070/vcc_baseline.json",
+      "old_float_count": 28416,
+      "bytes": 113664
+    },
+    {
+      "path": "runs/release_v1/regression/box_0071/vcc_baseline.json",
+      "old_float_count": 28656,
+      "bytes": 114624
+    },
+    {
+      "path": "runs/release_v1/regression/box_0072/vcc_baseline.json",
+      "old_float_count": 32568,
+      "bytes": 130272
+    },
+    {
+      "path": "runs/release_v1/regression/box_0073/vcc_baseline.json",
+      "old_float_count": 29472,
+      "bytes": 117888
+    },
+    {
+      "path": "runs/release_v1/regression/box_0074/vcc_baseline.json",
+      "old_float_count": 26784,
+      "bytes": 107136
+    },
+    {
+      "path": "runs/release_v1/regression/box_0075/vcc_baseline.json",
+      "old_float_count": 28392,
+      "bytes": 113568
+    },
+    {
+      "path": "runs/release_v1/regression/box_0076/vcc_baseline.json",
+      "old_float_count": 29472,
+      "bytes": 117888
+    },
+    {
+      "path": "runs/release_v1/regression/box_0077/vcc_baseline.json",
+      "old_float_count": 27384,
+      "bytes": 109536
+    },
+    {
+      "path": "runs/release_v1/regression/box_0078/vcc_baseline.json",
+      "old_float_count": 28728,
+      "bytes": 114912
+    },
+    {
+      "path": "runs/release_v1/regression/box_0079/vcc_baseline.json",
+      "old_float_count": 29304,
+      "bytes": 117216
+    },
+    {
+      "path": "runs/release_v1/regression/box_0080/vcc_baseline.json",
+      "old_float_count": 28968,
+      "bytes": 115872
+    },
+    {
+      "path": "runs/release_v1/regression/box_0081/vcc_baseline.json",
+      "old_float_count": 30096,
+      "bytes": 120384
+    },
+    {
+      "path": "runs/release_v1/regression/box_0082/vcc_baseline.json",
+      "old_float_count": 26592,
+      "bytes": 106368
+    },
+    {
+      "path": "runs/release_v1/regression/box_0083/vcc_baseline.json",
+      "old_float_count": 27912,
+      "bytes": 111648
+    },
+    {
+      "path": "runs/release_v1/regression/box_0084/vcc_baseline.json",
+      "old_float_count": 29976,
+      "bytes": 119904
+    },
+    {
+      "path": "runs/release_v1/regression/box_0085/vcc_baseline.json",
+      "old_float_count": 30288,
+      "bytes": 121152
+    },
+    {
+      "path": "runs/release_v1/regression/box_0086/vcc_baseline.json",
+      "old_float_count": 27888,
+      "bytes": 111552
+    },
+    {
+      "path": "runs/release_v1/regression/box_0087/vcc_baseline.json",
+      "old_float_count": 27384,
+      "bytes": 109536
+    },
+    {
+      "path": "runs/release_v1/regression/box_0088/vcc_baseline.json",
+      "old_float_count": 29952,
+      "bytes": 119808
+    },
+    {
+      "path": "runs/release_v1/regression/box_0089/vcc_baseline.json",
+      "old_float_count": 28656,
+      "bytes": 114624
+    },
+    {
+      "path": "runs/release_v1/regression/box_0090/vcc_baseline.json",
+      "old_float_count": 29424,
+      "bytes": 117696
+    },
+    {
+      "path": "runs/release_v1/regression/box_0091/vcc_baseline.json",
+      "old_float_count": 28248,
+      "bytes": 112992
+    },
+    {
+      "path": "runs/release_v1/regression/box_0092/vcc_baseline.json",
+      "old_float_count": 29760,
+      "bytes": 119040
+    },
+    {
+      "path": "runs/release_v1/regression/box_0093/vcc_baseline.json",
+      "old_float_count": 27936,
+      "bytes": 111744
+    },
+    {
+      "path": "runs/release_v1/regression/box_0094/vcc_baseline.json",
+      "old_float_count": 26664,
+      "bytes": 106656
+    },
+    {
+      "path": "runs/release_v1/regression/box_0095/vcc_baseline.json",
+      "old_float_count": 30504,
+      "bytes": 122016
+    },
+    {
+      "path": "runs/release_v1/regression/box_0096/vcc_baseline.json",
+      "old_float_count": 30456,
+      "bytes": 121824
+    },
+    {
+      "path": "runs/release_v1/regression/box_0097/vcc_baseline.json",
+      "old_float_count": 28944,
+      "bytes": 115776
+    },
+    {
+      "path": "runs/release_v1/regression/box_0098/vcc_baseline.json",
+      "old_float_count": 29424,
+      "bytes": 117696
+    },
+    {
+      "path": "runs/release_v1/regression/box_0099/vcc_baseline.json",
+      "old_float_count": 25248,
+      "bytes": 100992
+    },
+    {
+      "path": "runs/release_v1/regression/box_0100/vcc_baseline.json",
+      "old_float_count": 27216,
+      "bytes": 108864
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0001/vcc_baseline.json",
+      "old_float_count": 16176,
+      "bytes": 64704
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0002/vcc_baseline.json",
+      "old_float_count": 12792,
+      "bytes": 51168
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0003/vcc_baseline.json",
+      "old_float_count": 15552,
+      "bytes": 62208
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0004/vcc_baseline.json",
+      "old_float_count": 14616,
+      "bytes": 58464
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0005/vcc_baseline.json",
+      "old_float_count": 16560,
+      "bytes": 66240
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0006/vcc_baseline.json",
+      "old_float_count": 15144,
+      "bytes": 60576
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0007/vcc_baseline.json",
+      "old_float_count": 15672,
+      "bytes": 62688
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0008/vcc_baseline.json",
+      "old_float_count": 12840,
+      "bytes": 51360
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0009/vcc_baseline.json",
+      "old_float_count": 17088,
+      "bytes": 68352
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0010/vcc_baseline.json",
+      "old_float_count": 16824,
+      "bytes": 67296
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0011/vcc_baseline.json",
+      "old_float_count": 15048,
+      "bytes": 60192
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0012/vcc_baseline.json",
+      "old_float_count": 15456,
+      "bytes": 61824
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0013/vcc_baseline.json",
+      "old_float_count": 17472,
+      "bytes": 69888
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0014/vcc_baseline.json",
+      "old_float_count": 12288,
+      "bytes": 49152
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0015/vcc_baseline.json",
+      "old_float_count": 16896,
+      "bytes": 67584
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0016/vcc_baseline.json",
+      "old_float_count": 15000,
+      "bytes": 60000
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0017/vcc_baseline.json",
+      "old_float_count": 12504,
+      "bytes": 50016
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0018/vcc_baseline.json",
+      "old_float_count": 15384,
+      "bytes": 61536
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0019/vcc_baseline.json",
+      "old_float_count": 15264,
+      "bytes": 61056
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0020/vcc_baseline.json",
+      "old_float_count": 13992,
+      "bytes": 55968
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0021/vcc_baseline.json",
+      "old_float_count": 12192,
+      "bytes": 48768
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0022/vcc_baseline.json",
+      "old_float_count": 12144,
+      "bytes": 48576
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0023/vcc_baseline.json",
+      "old_float_count": 14304,
+      "bytes": 57216
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0024/vcc_baseline.json",
+      "old_float_count": 14112,
+      "bytes": 56448
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0025/vcc_baseline.json",
+      "old_float_count": 15120,
+      "bytes": 60480
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0026/vcc_baseline.json",
+      "old_float_count": 13224,
+      "bytes": 52896
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0027/vcc_baseline.json",
+      "old_float_count": 15816,
+      "bytes": 63264
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0028/vcc_baseline.json",
+      "old_float_count": 16752,
+      "bytes": 67008
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0029/vcc_baseline.json",
+      "old_float_count": 12960,
+      "bytes": 51840
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0030/vcc_baseline.json",
+      "old_float_count": 12048,
+      "bytes": 48192
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0031/vcc_baseline.json",
+      "old_float_count": 13224,
+      "bytes": 52896
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0032/vcc_baseline.json",
+      "old_float_count": 12648,
+      "bytes": 50592
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0033/vcc_baseline.json",
+      "old_float_count": 16632,
+      "bytes": 66528
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0034/vcc_baseline.json",
+      "old_float_count": 12120,
+      "bytes": 48480
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0035/vcc_baseline.json",
+      "old_float_count": 15528,
+      "bytes": 62112
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0036/vcc_baseline.json",
+      "old_float_count": 16224,
+      "bytes": 64896
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0037/vcc_baseline.json",
+      "old_float_count": 14112,
+      "bytes": 56448
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0038/vcc_baseline.json",
+      "old_float_count": 15384,
+      "bytes": 61536
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0039/vcc_baseline.json",
+      "old_float_count": 14640,
+      "bytes": 58560
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0040/vcc_baseline.json",
+      "old_float_count": 14208,
+      "bytes": 56832
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0041/vcc_baseline.json",
+      "old_float_count": 14808,
+      "bytes": 59232
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0042/vcc_baseline.json",
+      "old_float_count": 15672,
+      "bytes": 62688
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0043/vcc_baseline.json",
+      "old_float_count": 15528,
+      "bytes": 62112
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0044/vcc_baseline.json",
+      "old_float_count": 12432,
+      "bytes": 49728
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0045/vcc_baseline.json",
+      "old_float_count": 12048,
+      "bytes": 48192
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0046/vcc_baseline.json",
+      "old_float_count": 15480,
+      "bytes": 61920
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0047/vcc_baseline.json",
+      "old_float_count": 10896,
+      "bytes": 43584
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0048/vcc_baseline.json",
+      "old_float_count": 16776,
+      "bytes": 67104
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0049/vcc_baseline.json",
+      "old_float_count": 15456,
+      "bytes": 61824
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0050/vcc_baseline.json",
+      "old_float_count": 17520,
+      "bytes": 70080
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0051/vcc_baseline.json",
+      "old_float_count": 14688,
+      "bytes": 58752
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0052/vcc_baseline.json",
+      "old_float_count": 13896,
+      "bytes": 55584
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0053/vcc_baseline.json",
+      "old_float_count": 12936,
+      "bytes": 51744
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0054/vcc_baseline.json",
+      "old_float_count": 15312,
+      "bytes": 61248
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0055/vcc_baseline.json",
+      "old_float_count": 13776,
+      "bytes": 55104
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0056/vcc_baseline.json",
+      "old_float_count": 13320,
+      "bytes": 53280
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0057/vcc_baseline.json",
+      "old_float_count": 12792,
+      "bytes": 51168
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0058/vcc_baseline.json",
+      "old_float_count": 12576,
+      "bytes": 50304
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0059/vcc_baseline.json",
+      "old_float_count": 12384,
+      "bytes": 49536
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0060/vcc_baseline.json",
+      "old_float_count": 12456,
+      "bytes": 49824
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0061/vcc_baseline.json",
+      "old_float_count": 12576,
+      "bytes": 50304
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0062/vcc_baseline.json",
+      "old_float_count": 14760,
+      "bytes": 59040
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0063/vcc_baseline.json",
+      "old_float_count": 12120,
+      "bytes": 48480
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0064/vcc_baseline.json",
+      "old_float_count": 19368,
+      "bytes": 77472
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0065/vcc_baseline.json",
+      "old_float_count": 13440,
+      "bytes": 53760
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0066/vcc_baseline.json",
+      "old_float_count": 14472,
+      "bytes": 57888
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0067/vcc_baseline.json",
+      "old_float_count": 12216,
+      "bytes": 48864
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0068/vcc_baseline.json",
+      "old_float_count": 12792,
+      "bytes": 51168
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0069/vcc_baseline.json",
+      "old_float_count": 16584,
+      "bytes": 66336
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0070/vcc_baseline.json",
+      "old_float_count": 15552,
+      "bytes": 62208
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0071/vcc_baseline.json",
+      "old_float_count": 11520,
+      "bytes": 46080
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0072/vcc_baseline.json",
+      "old_float_count": 15000,
+      "bytes": 60000
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0073/vcc_baseline.json",
+      "old_float_count": 15600,
+      "bytes": 62400
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0074/vcc_baseline.json",
+      "old_float_count": 12816,
+      "bytes": 51264
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0075/vcc_baseline.json",
+      "old_float_count": 12576,
+      "bytes": 50304
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0076/vcc_baseline.json",
+      "old_float_count": 17040,
+      "bytes": 68160
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0077/vcc_baseline.json",
+      "old_float_count": 12624,
+      "bytes": 50496
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0078/vcc_baseline.json",
+      "old_float_count": 14856,
+      "bytes": 59424
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0079/vcc_baseline.json",
+      "old_float_count": 13008,
+      "bytes": 52032
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0080/vcc_baseline.json",
+      "old_float_count": 16032,
+      "bytes": 64128
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0081/vcc_baseline.json",
+      "old_float_count": 16584,
+      "bytes": 66336
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0082/vcc_baseline.json",
+      "old_float_count": 14856,
+      "bytes": 59424
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0083/vcc_baseline.json",
+      "old_float_count": 15096,
+      "bytes": 60384
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0084/vcc_baseline.json",
+      "old_float_count": 13680,
+      "bytes": 54720
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0085/vcc_baseline.json",
+      "old_float_count": 13992,
+      "bytes": 55968
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0086/vcc_baseline.json",
+      "old_float_count": 14280,
+      "bytes": 57120
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0087/vcc_baseline.json",
+      "old_float_count": 14232,
+      "bytes": 56928
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0088/vcc_baseline.json",
+      "old_float_count": 12096,
+      "bytes": 48384
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0089/vcc_baseline.json",
+      "old_float_count": 13704,
+      "bytes": 54816
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0090/vcc_baseline.json",
+      "old_float_count": 15504,
+      "bytes": 62016
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0091/vcc_baseline.json",
+      "old_float_count": 13872,
+      "bytes": 55488
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0092/vcc_baseline.json",
+      "old_float_count": 11640,
+      "bytes": 46560
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0093/vcc_baseline.json",
+      "old_float_count": 16656,
+      "bytes": 66624
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0094/vcc_baseline.json",
+      "old_float_count": 12744,
+      "bytes": 50976
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0095/vcc_baseline.json",
+      "old_float_count": 12504,
+      "bytes": 50016
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0096/vcc_baseline.json",
+      "old_float_count": 13656,
+      "bytes": 54624
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0097/vcc_baseline.json",
+      "old_float_count": 14304,
+      "bytes": 57216
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0098/vcc_baseline.json",
+      "old_float_count": 12072,
+      "bytes": 48288
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0099/vcc_baseline.json",
+      "old_float_count": 16008,
+      "bytes": 64032
+    },
+    {
+      "path": "runs/release_v1/regression/cage_0100/vcc_baseline.json",
+      "old_float_count": 13464,
+      "bytes": 53856
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0001/vcc_baseline.json",
+      "old_float_count": 12264,
+      "bytes": 49056
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0002/vcc_baseline.json",
+      "old_float_count": 13512,
+      "bytes": 54048
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0003/vcc_baseline.json",
+      "old_float_count": 12504,
+      "bytes": 50016
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0004/vcc_baseline.json",
+      "old_float_count": 10464,
+      "bytes": 41856
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0005/vcc_baseline.json",
+      "old_float_count": 14016,
+      "bytes": 56064
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0006/vcc_baseline.json",
+      "old_float_count": 13008,
+      "bytes": 52032
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0007/vcc_baseline.json",
+      "old_float_count": 14616,
+      "bytes": 58464
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0008/vcc_baseline.json",
+      "old_float_count": 12360,
+      "bytes": 49440
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0009/vcc_baseline.json",
+      "old_float_count": 11544,
+      "bytes": 46176
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0010/vcc_baseline.json",
+      "old_float_count": 15384,
+      "bytes": 61536
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0011/vcc_baseline.json",
+      "old_float_count": 14928,
+      "bytes": 59712
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0012/vcc_baseline.json",
+      "old_float_count": 13992,
+      "bytes": 55968
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0013/vcc_baseline.json",
+      "old_float_count": 14472,
+      "bytes": 57888
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0014/vcc_baseline.json",
+      "old_float_count": 13200,
+      "bytes": 52800
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0015/vcc_baseline.json",
+      "old_float_count": 11856,
+      "bytes": 47424
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0016/vcc_baseline.json",
+      "old_float_count": 12744,
+      "bytes": 50976
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0017/vcc_baseline.json",
+      "old_float_count": 14880,
+      "bytes": 59520
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0018/vcc_baseline.json",
+      "old_float_count": 13032,
+      "bytes": 52128
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0019/vcc_baseline.json",
+      "old_float_count": 14784,
+      "bytes": 59136
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0020/vcc_baseline.json",
+      "old_float_count": 12384,
+      "bytes": 49536
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0021/vcc_baseline.json",
+      "old_float_count": 14592,
+      "bytes": 58368
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0022/vcc_baseline.json",
+      "old_float_count": 12264,
+      "bytes": 49056
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0023/vcc_baseline.json",
+      "old_float_count": 14040,
+      "bytes": 56160
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0024/vcc_baseline.json",
+      "old_float_count": 11712,
+      "bytes": 46848
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0025/vcc_baseline.json",
+      "old_float_count": 13944,
+      "bytes": 55776
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0026/vcc_baseline.json",
+      "old_float_count": 13464,
+      "bytes": 53856
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0027/vcc_baseline.json",
+      "old_float_count": 14928,
+      "bytes": 59712
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0028/vcc_baseline.json",
+      "old_float_count": 12840,
+      "bytes": 51360
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0029/vcc_baseline.json",
+      "old_float_count": 13656,
+      "bytes": 54624
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0030/vcc_baseline.json",
+      "old_float_count": 12240,
+      "bytes": 48960
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0031/vcc_baseline.json",
+      "old_float_count": 11544,
+      "bytes": 46176
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0032/vcc_baseline.json",
+      "old_float_count": 12864,
+      "bytes": 51456
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0033/vcc_baseline.json",
+      "old_float_count": 13800,
+      "bytes": 55200
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0034/vcc_baseline.json",
+      "old_float_count": 13824,
+      "bytes": 55296
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0035/vcc_baseline.json",
+      "old_float_count": 14640,
+      "bytes": 58560
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0036/vcc_baseline.json",
+      "old_float_count": 12744,
+      "bytes": 50976
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0037/vcc_baseline.json",
+      "old_float_count": 13776,
+      "bytes": 55104
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0038/vcc_baseline.json",
+      "old_float_count": 10800,
+      "bytes": 43200
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0039/vcc_baseline.json",
+      "old_float_count": 12528,
+      "bytes": 50112
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0040/vcc_baseline.json",
+      "old_float_count": 12768,
+      "bytes": 51072
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0041/vcc_baseline.json",
+      "old_float_count": 12576,
+      "bytes": 50304
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0042/vcc_baseline.json",
+      "old_float_count": 13776,
+      "bytes": 55104
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0043/vcc_baseline.json",
+      "old_float_count": 16200,
+      "bytes": 64800
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0044/vcc_baseline.json",
+      "old_float_count": 13896,
+      "bytes": 55584
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0045/vcc_baseline.json",
+      "old_float_count": 11472,
+      "bytes": 45888
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0046/vcc_baseline.json",
+      "old_float_count": 14976,
+      "bytes": 59904
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0047/vcc_baseline.json",
+      "old_float_count": 11352,
+      "bytes": 45408
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0048/vcc_baseline.json",
+      "old_float_count": 12792,
+      "bytes": 51168
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0049/vcc_baseline.json",
+      "old_float_count": 13896,
+      "bytes": 55584
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0050/vcc_baseline.json",
+      "old_float_count": 12240,
+      "bytes": 48960
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0051/vcc_baseline.json",
+      "old_float_count": 11640,
+      "bytes": 46560
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0052/vcc_baseline.json",
+      "old_float_count": 13536,
+      "bytes": 54144
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0053/vcc_baseline.json",
+      "old_float_count": 12000,
+      "bytes": 48000
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0054/vcc_baseline.json",
+      "old_float_count": 13296,
+      "bytes": 53184
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0055/vcc_baseline.json",
+      "old_float_count": 12672,
+      "bytes": 50688
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0056/vcc_baseline.json",
+      "old_float_count": 14352,
+      "bytes": 57408
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0057/vcc_baseline.json",
+      "old_float_count": 14544,
+      "bytes": 58176
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0058/vcc_baseline.json",
+      "old_float_count": 11952,
+      "bytes": 47808
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0059/vcc_baseline.json",
+      "old_float_count": 11208,
+      "bytes": 44832
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0060/vcc_baseline.json",
+      "old_float_count": 13272,
+      "bytes": 53088
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0061/vcc_baseline.json",
+      "old_float_count": 14424,
+      "bytes": 57696
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0062/vcc_baseline.json",
+      "old_float_count": 15144,
+      "bytes": 60576
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0063/vcc_baseline.json",
+      "old_float_count": 15480,
+      "bytes": 61920
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0064/vcc_baseline.json",
+      "old_float_count": 12552,
+      "bytes": 50208
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0065/vcc_baseline.json",
+      "old_float_count": 14856,
+      "bytes": 59424
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0066/vcc_baseline.json",
+      "old_float_count": 13872,
+      "bytes": 55488
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0067/vcc_baseline.json",
+      "old_float_count": 13632,
+      "bytes": 54528
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0068/vcc_baseline.json",
+      "old_float_count": 11688,
+      "bytes": 46752
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0069/vcc_baseline.json",
+      "old_float_count": 12696,
+      "bytes": 50784
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0070/vcc_baseline.json",
+      "old_float_count": 12864,
+      "bytes": 51456
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0071/vcc_baseline.json",
+      "old_float_count": 13272,
+      "bytes": 53088
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0072/vcc_baseline.json",
+      "old_float_count": 12960,
+      "bytes": 51840
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0073/vcc_baseline.json",
+      "old_float_count": 12648,
+      "bytes": 50592
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0074/vcc_baseline.json",
+      "old_float_count": 14472,
+      "bytes": 57888
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0075/vcc_baseline.json",
+      "old_float_count": 11232,
+      "bytes": 44928
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0076/vcc_baseline.json",
+      "old_float_count": 13800,
+      "bytes": 55200
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0077/vcc_baseline.json",
+      "old_float_count": 14520,
+      "bytes": 58080
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0078/vcc_baseline.json",
+      "old_float_count": 13176,
+      "bytes": 52704
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0079/vcc_baseline.json",
+      "old_float_count": 13632,
+      "bytes": 54528
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0080/vcc_baseline.json",
+      "old_float_count": 11016,
+      "bytes": 44064
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0081/vcc_baseline.json",
+      "old_float_count": 12528,
+      "bytes": 50112
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0082/vcc_baseline.json",
+      "old_float_count": 12264,
+      "bytes": 49056
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0083/vcc_baseline.json",
+      "old_float_count": 15264,
+      "bytes": 61056
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0084/vcc_baseline.json",
+      "old_float_count": 11832,
+      "bytes": 47328
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0085/vcc_baseline.json",
+      "old_float_count": 14376,
+      "bytes": 57504
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0086/vcc_baseline.json",
+      "old_float_count": 12696,
+      "bytes": 50784
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0087/vcc_baseline.json",
+      "old_float_count": 11472,
+      "bytes": 45888
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0088/vcc_baseline.json",
+      "old_float_count": 11280,
+      "bytes": 45120
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0089/vcc_baseline.json",
+      "old_float_count": 12576,
+      "bytes": 50304
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0090/vcc_baseline.json",
+      "old_float_count": 12432,
+      "bytes": 49728
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0091/vcc_baseline.json",
+      "old_float_count": 13848,
+      "bytes": 55392
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0092/vcc_baseline.json",
+      "old_float_count": 13512,
+      "bytes": 54048
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0093/vcc_baseline.json",
+      "old_float_count": 15240,
+      "bytes": 60960
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0094/vcc_baseline.json",
+      "old_float_count": 15336,
+      "bytes": 61344
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0095/vcc_baseline.json",
+      "old_float_count": 12000,
+      "bytes": 48000
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0096/vcc_baseline.json",
+      "old_float_count": 12096,
+      "bytes": 48384
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0097/vcc_baseline.json",
+      "old_float_count": 13368,
+      "bytes": 53472
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0098/vcc_baseline.json",
+      "old_float_count": 12552,
+      "bytes": 50208
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0099/vcc_baseline.json",
+      "old_float_count": 12408,
+      "bytes": 49632
+    },
+    {
+      "path": "runs/release_v1/regression/table_pick_0100/vcc_baseline.json",
+      "old_float_count": 12024,
+      "bytes": 48096
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0001/vcc_baseline.json",
+      "old_float_count": 13968,
+      "bytes": 55872
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0002/vcc_baseline.json",
+      "old_float_count": 13128,
+      "bytes": 52512
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0003/vcc_baseline.json",
+      "old_float_count": 13008,
+      "bytes": 52032
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0004/vcc_baseline.json",
+      "old_float_count": 13896,
+      "bytes": 55584
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0005/vcc_baseline.json",
+      "old_float_count": 13152,
+      "bytes": 52608
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0006/vcc_baseline.json",
+      "old_float_count": 12360,
+      "bytes": 49440
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0007/vcc_baseline.json",
+      "old_float_count": 11664,
+      "bytes": 46656
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0008/vcc_baseline.json",
+      "old_float_count": 10512,
+      "bytes": 42048
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0009/vcc_baseline.json",
+      "old_float_count": 13824,
+      "bytes": 55296
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0010/vcc_baseline.json",
+      "old_float_count": 11856,
+      "bytes": 47424
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0011/vcc_baseline.json",
+      "old_float_count": 11904,
+      "bytes": 47616
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0012/vcc_baseline.json",
+      "old_float_count": 11064,
+      "bytes": 44256
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0013/vcc_baseline.json",
+      "old_float_count": 12480,
+      "bytes": 49920
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0014/vcc_baseline.json",
+      "old_float_count": 11352,
+      "bytes": 45408
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0015/vcc_baseline.json",
+      "old_float_count": 13152,
+      "bytes": 52608
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0016/vcc_baseline.json",
+      "old_float_count": 12576,
+      "bytes": 50304
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0017/vcc_baseline.json",
+      "old_float_count": 14688,
+      "bytes": 58752
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0018/vcc_baseline.json",
+      "old_float_count": 12720,
+      "bytes": 50880
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0019/vcc_baseline.json",
+      "old_float_count": 13896,
+      "bytes": 55584
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0020/vcc_baseline.json",
+      "old_float_count": 10224,
+      "bytes": 40896
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0021/vcc_baseline.json",
+      "old_float_count": 11424,
+      "bytes": 45696
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0022/vcc_baseline.json",
+      "old_float_count": 12936,
+      "bytes": 51744
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0023/vcc_baseline.json",
+      "old_float_count": 11688,
+      "bytes": 46752
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0024/vcc_baseline.json",
+      "old_float_count": 13176,
+      "bytes": 52704
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0025/vcc_baseline.json",
+      "old_float_count": 12624,
+      "bytes": 50496
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0026/vcc_baseline.json",
+      "old_float_count": 14040,
+      "bytes": 56160
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0027/vcc_baseline.json",
+      "old_float_count": 12720,
+      "bytes": 50880
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0028/vcc_baseline.json",
+      "old_float_count": 14280,
+      "bytes": 57120
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0029/vcc_baseline.json",
+      "old_float_count": 14160,
+      "bytes": 56640
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0030/vcc_baseline.json",
+      "old_float_count": 12840,
+      "bytes": 51360
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0031/vcc_baseline.json",
+      "old_float_count": 12264,
+      "bytes": 49056
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0032/vcc_baseline.json",
+      "old_float_count": 14424,
+      "bytes": 57696
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0033/vcc_baseline.json",
+      "old_float_count": 12384,
+      "bytes": 49536
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0034/vcc_baseline.json",
+      "old_float_count": 12000,
+      "bytes": 48000
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0035/vcc_baseline.json",
+      "old_float_count": 13872,
+      "bytes": 55488
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0036/vcc_baseline.json",
+      "old_float_count": 14832,
+      "bytes": 59328
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0037/vcc_baseline.json",
+      "old_float_count": 13800,
+      "bytes": 55200
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0038/vcc_baseline.json",
+      "old_float_count": 15216,
+      "bytes": 60864
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0039/vcc_baseline.json",
+      "old_float_count": 13536,
+      "bytes": 54144
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0040/vcc_baseline.json",
+      "old_float_count": 12792,
+      "bytes": 51168
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0041/vcc_baseline.json",
+      "old_float_count": 11400,
+      "bytes": 45600
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0042/vcc_baseline.json",
+      "old_float_count": 13272,
+      "bytes": 53088
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0043/vcc_baseline.json",
+      "old_float_count": 12864,
+      "bytes": 51456
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0044/vcc_baseline.json",
+      "old_float_count": 11328,
+      "bytes": 45312
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0045/vcc_baseline.json",
+      "old_float_count": 15624,
+      "bytes": 62496
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0046/vcc_baseline.json",
+      "old_float_count": 13848,
+      "bytes": 55392
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0047/vcc_baseline.json",
+      "old_float_count": 13608,
+      "bytes": 54432
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0048/vcc_baseline.json",
+      "old_float_count": 13056,
+      "bytes": 52224
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0049/vcc_baseline.json",
+      "old_float_count": 12216,
+      "bytes": 48864
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0050/vcc_baseline.json",
+      "old_float_count": 12264,
+      "bytes": 49056
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0051/vcc_baseline.json",
+      "old_float_count": 12696,
+      "bytes": 50784
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0052/vcc_baseline.json",
+      "old_float_count": 14592,
+      "bytes": 58368
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0053/vcc_baseline.json",
+      "old_float_count": 10560,
+      "bytes": 42240
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0054/vcc_baseline.json",
+      "old_float_count": 11664,
+      "bytes": 46656
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0055/vcc_baseline.json",
+      "old_float_count": 12624,
+      "bytes": 50496
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0056/vcc_baseline.json",
+      "old_float_count": 11928,
+      "bytes": 47712
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0057/vcc_baseline.json",
+      "old_float_count": 11880,
+      "bytes": 47520
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0058/vcc_baseline.json",
+      "old_float_count": 10536,
+      "bytes": 42144
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0059/vcc_baseline.json",
+      "old_float_count": 13608,
+      "bytes": 54432
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0060/vcc_baseline.json",
+      "old_float_count": 13776,
+      "bytes": 55104
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0061/vcc_baseline.json",
+      "old_float_count": 12336,
+      "bytes": 49344
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0062/vcc_baseline.json",
+      "old_float_count": 13560,
+      "bytes": 54240
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0063/vcc_baseline.json",
+      "old_float_count": 13848,
+      "bytes": 55392
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0064/vcc_baseline.json",
+      "old_float_count": 11760,
+      "bytes": 47040
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0065/vcc_baseline.json",
+      "old_float_count": 15192,
+      "bytes": 60768
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0066/vcc_baseline.json",
+      "old_float_count": 11496,
+      "bytes": 45984
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0067/vcc_baseline.json",
+      "old_float_count": 11736,
+      "bytes": 46944
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0068/vcc_baseline.json",
+      "old_float_count": 11808,
+      "bytes": 47232
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0069/vcc_baseline.json",
+      "old_float_count": 13776,
+      "bytes": 55104
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0070/vcc_baseline.json",
+      "old_float_count": 12336,
+      "bytes": 49344
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0071/vcc_baseline.json",
+      "old_float_count": 12264,
+      "bytes": 49056
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0072/vcc_baseline.json",
+      "old_float_count": 13920,
+      "bytes": 55680
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0073/vcc_baseline.json",
+      "old_float_count": 12432,
+      "bytes": 49728
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0074/vcc_baseline.json",
+      "old_float_count": 12528,
+      "bytes": 50112
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0075/vcc_baseline.json",
+      "old_float_count": 13032,
+      "bytes": 52128
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0076/vcc_baseline.json",
+      "old_float_count": 12240,
+      "bytes": 48960
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0077/vcc_baseline.json",
+      "old_float_count": 13008,
+      "bytes": 52032
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0078/vcc_baseline.json",
+      "old_float_count": 13992,
+      "bytes": 55968
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0079/vcc_baseline.json",
+      "old_float_count": 12024,
+      "bytes": 48096
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0080/vcc_baseline.json",
+      "old_float_count": 12552,
+      "bytes": 50208
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0081/vcc_baseline.json",
+      "old_float_count": 14016,
+      "bytes": 56064
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0082/vcc_baseline.json",
+      "old_float_count": 12600,
+      "bytes": 50400
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0083/vcc_baseline.json",
+      "old_float_count": 13872,
+      "bytes": 55488
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0084/vcc_baseline.json",
+      "old_float_count": 12720,
+      "bytes": 50880
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0085/vcc_baseline.json",
+      "old_float_count": 13272,
+      "bytes": 53088
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0086/vcc_baseline.json",
+      "old_float_count": 12816,
+      "bytes": 51264
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0087/vcc_baseline.json",
+      "old_float_count": 15480,
+      "bytes": 61920
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0088/vcc_baseline.json",
+      "old_float_count": 15936,
+      "bytes": 63744
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0089/vcc_baseline.json",
+      "old_float_count": 13560,
+      "bytes": 54240
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0090/vcc_baseline.json",
+      "old_float_count": 13680,
+      "bytes": 54720
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0091/vcc_baseline.json",
+      "old_float_count": 13368,
+      "bytes": 53472
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0092/vcc_baseline.json",
+      "old_float_count": 14904,
+      "bytes": 59616
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0093/vcc_baseline.json",
+      "old_float_count": 12960,
+      "bytes": 51840
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0094/vcc_baseline.json",
+      "old_float_count": 13224,
+      "bytes": 52896
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0095/vcc_baseline.json",
+      "old_float_count": 14280,
+      "bytes": 57120
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0096/vcc_baseline.json",
+      "old_float_count": 12240,
+      "bytes": 48960
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0097/vcc_baseline.json",
+      "old_float_count": 13680,
+      "bytes": 54720
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0098/vcc_baseline.json",
+      "old_float_count": 14736,
+      "bytes": 58944
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0099/vcc_baseline.json",
+      "old_float_count": 13656,
+      "bytes": 54624
+    },
+    {
+      "path": "runs/release_v1/regression/table_under_pick_0100/vcc_baseline.json",
+      "old_float_count": 11760,
+      "bytes": 47040
+    },
+    {
+      "path": "runs/release_v1/system/bookshelf_thin_0001/vcc_baseline.json",
+      "old_float_count": 37800,
+      "bytes": 151200
+    },
+    {
+      "path": "runs/release_v1/system/box_0001/vcc_baseline.json",
+      "old_float_count": 26952,
+      "bytes": 107808
+    },
+    {
+      "path": "runs/release_v1/system/cage_0001/vcc_baseline.json",
+      "old_float_count": 16176,
+      "bytes": 64704
+    },
+    {
+      "path": "runs/release_v1/system/synthetic_detour_0000/vcc_baseline.json",
+      "old_float_count": 240,
+      "bytes": 960
+    },
+    {
+      "path": "runs/release_v1/system/synthetic_free_0000/vcc_baseline.json",
+      "old_float_count": 0,
+      "bytes": 0
+    },
+    {
+      "path": "runs/final_api_checks_v1/system/synthetic_detour_0000/vcc_baseline.json",
+      "old_float_count": 240,
+      "bytes": 960
+    },
+    {
+      "path": "runs/final_api_checks_v1/system/synthetic_free_0000/vcc_baseline.json",
+      "old_float_count": 0,
+      "bytes": 0
+    }
+  ]
+}

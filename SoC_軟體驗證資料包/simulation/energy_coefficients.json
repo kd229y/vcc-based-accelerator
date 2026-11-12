@@ -1,0 +1,9 @@
+{
+  "source": "No target device or synthesis characterization supplied",
+  "integer_op_pj": null,
+  "sram_read_byte_pj": null,
+  "sram_write_byte_pj": null,
+  "external_read_byte_pj": null,
+  "external_write_byte_pj": null,
+  "static_power_w": null
+}

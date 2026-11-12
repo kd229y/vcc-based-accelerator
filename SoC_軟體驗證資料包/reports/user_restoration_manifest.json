@@ -1,0 +1,167 @@
+{
+  "active_profile": "user_morton_restored_v1",
+  "source_spec": "docs/source/user_hackmd_original.md",
+  "source_spec_sha256": "5b15208d6644b6f85c2289f8808ec3b6593d06ea1d84f9499983f802627954d2",
+  "native_binary": "build/soc_model_6544aefc3b06.dll",
+  "native_binary_sha256": "a11656d9cc04959c2a012c989f0f900b3d7fa7ab8c13a3864ee0f3a12790e342",
+  "configuration_changes": {
+    "coordinate_fraction_bits": {
+      "previous": 13,
+      "restored": 14
+    },
+    "edge_rake": {
+      "previous": null,
+      "restored": 8
+    },
+    "edge_resolution": {
+      "previous": null,
+      "restored": 32
+    },
+    "edge_sweep_margin_m": {
+      "previous": 0.03,
+      "restored": null
+    },
+    "edge_validation_mode": {
+      "previous": "integer_adaptive_interval_certificate",
+      "restored": "vamp_rake"
+    },
+    "fk_margin_m": {
+      "previous": 0.000125,
+      "restored": 6.103515625e-05
+    },
+    "goal_bias_interval": {
+      "previous": null,
+      "restored": 0
+    },
+    "max_range_m": {
+      "previous": 1.6,
+      "restored": 1.19
+    },
+    "notes": {
+      "previous": "Conservative candidate after independent verification exposed a filtered-point path collision. 1.6m cull bound exceeds pinned sphere-chain length plus maximum radius and certificate margin. 4MiB is a verification capacity envelope, not a measured or final SRAM target. Filtered-only and original VCC remain explicit comparison variants.",
+      "restored": "Restored user representative-point design, S=4, Q14, 3.125cm fine / 12.5cm coarse grid. No discarded-point bbox or coverage sphere; only coordinate conversion epsilon and derived FK delta. Range culling follows pinned VCC Panda 1.19m. Rake=8/resolution=32 follows pinned VCC validate.hh. Capacities, Q24 angles/Q30 internal FK and budgets remain explicit software-model choices, not finalized user hardware specifications. Previous assistant variant and results are archived and do not measure this profile."
+    },
+    "raw_point_coverage": {
+      "previous": true,
+      "restored": false
+    },
+    "rounding": {
+      "previous": "IEEE754 binary32 ingress floor to Q13; integer division nearest ties toward positive infinity; angles same nearest rule",
+      "restored": "IEEE754 binary32 ingress truncates toward zero to Q14, as source section 6.2.4; integer division nearest ties toward positive infinity; angles same nearest rule"
+    },
+    "source_spec": {
+      "previous": null,
+      "restored": "docs/source/user_hackmd_original.md"
+    },
+    "status": {
+      "previous": "executable_candidate_not_final_silicon_spec",
+      "restored": "user_spec_restored_no_raw_voxel_coverage"
+    },
+    "version": {
+      "previous": "integer_soc_v1",
+      "restored": "user_morton_restored_v1"
+    }
+  },
+  "module_tests": {
+    "modules": {
+      "tests_run": 22,
+      "passed": 22,
+      "failures": [],
+      "errors": [],
+      "skipped": [],
+      "elapsed_seconds": 1.3870965000023716,
+      "valid": true
+    },
+    "integration": {
+      "tests_run": 7,
+      "passed": 7,
+      "failures": [],
+      "errors": [],
+      "skipped": [],
+      "elapsed_seconds": 0.04049189999932423,
+      "valid": true
+    }
+  },
+  "system_results": {
+    "case_count": 5,
+    "status_counts": {
+      "SUCCESS": 3,
+      "PATH_VALIDATION_FAILED": 1,
+      "BUDGET_EXHAUSTED": 1
+    },
+    "analytic_initially_valid_count": 5,
+    "planner_success_count": 4,
+    "certified_success_count": 3,
+    "independently_rejected_successes": 1,
+    "successful_cpu_total_ns_median": 330166200.0,
+    "successful_cpu_total_ns_p95": 1272665370.0,
+    "note": "CPU timings are functional implementation measurements, not predicted silicon latency. Success/timeout counts are retained."
+  },
+  "regression": {
+    "case_count": 700,
+    "status_counts": {
+      "PATH_VALIDATION_FAILED": 346,
+      "SUCCESS": 214,
+      "BUDGET_EXHAUSTED": 137,
+      "INVALID_GOAL": 3
+    },
+    "analytic_initially_valid_count": 693,
+    "planner_success_count": 560,
+    "certified_success_count": 214,
+    "independently_rejected_successes": 346,
+    "successful_cpu_total_ns_median": 13615200.0,
+    "successful_cpu_total_ns_p95": 44844139.999999985,
+    "note": "CPU timings are functional implementation measurements, not predicted silicon latency. Success/timeout counts are retained."
+  },
+  "native_status_counts": {
+    "SUCCESS": 560,
+    "BUDGET_EXHAUSTED": 137,
+    "INVALID_GOAL": 3
+  },
+  "independent_check_reasons": {
+    "COLLISION": 92,
+    "CERTIFIED_SPHERE_ROBOT_ANALYTIC_SCENE": 214,
+    "WAYPOINT_COLLISION": 254,
+    "NO_SUCCESSFUL_PATH": 140
+  },
+  "baseline_status_counts": {
+    "SUCCESS": 549,
+    "BUDGET_EXHAUSTED": 148,
+    "INVALID_GOAL": 3
+  },
+  "baseline_independent_check_reasons": {
+    "CERTIFIED_SPHERE_ROBOT_ANALYTIC_SCENE": 172,
+    "WAYPOINT_COLLISION": 231,
+    "COLLISION": 116,
+    "NO_SUCCESSFUL_PATH": 151,
+    "GOAL_MISMATCH": 30
+  },
+  "baseline_certified_success_count": 172,
+  "source_sha256": {
+    "runner/baseline_regression.py": "52767c243de89b7b565eecc819678de5c54d9a055396a66f8a273f882aa827b8",
+    "runner/build.py": "35d78bff54e2334eb1a7ccd5c2768ea72033d3f6666081dca60ef2c211e0881f",
+    "runner/compare_variants.py": "c7908daf2a20d744e70a0db40223162f1fe8df0e86e25f469df212687043b5df",
+    "runner/data.py": "eb043298efd6a1ebd1e943bdcaadeba1ba4fcd421967833aac82a98903f25ea1",
+    "runner/design_space.py": "aea377e770b36ce521019d64f49a69aa7ca3a05219fba480f53a7023df08ac54",
+    "runner/model.py": "f33705e193e1a4424d19735d4fa7d32f534e477d06e4d8fc410f004f0e33700c",
+    "runner/run_validation.py": "c2166c1ccc2f5657e9c49fc0d45eb40891de95268ae361e6629a8b90619562b8",
+    "soc_model/core.cpp": "940e9aee0a253b8302e34f24f77c6291b0b5c89bb6516c10555e9df2f3b575ae",
+    "soc_model/float_morton.cpp": "465bf4128d6a896a9838ca1fd0f3bc1ca1b9e253c9e4d920ca524ee6fc33372f",
+    "soc_model/vcc_baseline.cpp": "6fefb50934f96b3f06594892f64516a971540f58b3d34e953cb82a5841b7688b",
+    "reference/oracles.py": "e81591431cb737a214ba004955d0db8ba632d8d040861a411fa3e13d10e2b70a",
+    "reference/trace_check.py": "642eb2d8d75eef4139f59388a8256604bf2a483e8737660801cfbfb108035065",
+    "tests/fixtures/unsafe_filtered_detour.json": "512038bf0a45140631b119963468c84519c61cff7f3002601ca6ec99e3d9ef1c",
+    "tests/test_integration.py": "273c4f08c2e28822664bdf9513e699f045d69ca5c6dd1c3186812c45591cb9ca",
+    "tests/test_modules.py": "a3b211e87d160114a3e54aae2b226df8597ae4373cd9b08867aa4a4d68949a12",
+    "spec/design_v1.json": "c54e8c76740b05df9e9208f08d901a855852bf606917129a181a9b451a1cb4fa",
+    "spec/README.md": "be6f9116a1e6ce668ecf2b41674fac635cba8355bcb4cb01898b9d045a9745ae",
+    "spec/介面與數值規格.md": "55497289df7912f3fbb272b3270eeae82a3e012272be29a60f689fc225254b08",
+    "spec/原方案數值與介面.md": "2fe3e75f3b3cca20fd5922a85482b6be2a6d7239824a54360e91928895dd0cc5"
+  },
+  "limitations": [
+    "RRT DD, balance and exact upstream Connect control are not fully aligned; no full-SoC equivalence claim",
+    "Q24 angles/Q30 internal FK, budgets and SRAM envelope remain explicit software choices",
+    "No extra discarded-point coverage or continuous interval certificates in the active model"
+  ],
+  "old_results_scope": "Archive and all earlier assistant profiles are historical; 6/700 does not measure this restored profile"
+}
