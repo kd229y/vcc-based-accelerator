@@ -68,10 +68,3 @@ python vcc_host.py --port COM4 --bit ..\vivado\out_nexys\vcc_uart_top.bit selfte
 - 100 MHz timing 通過；BRAM 82.6%、LUT 28.5%、DSP 22%。
 - 效能數字、限制與下一步見 `hw/REPORT_meeting.md`。
 
-## 沒有放進 repo 的東西
-
-- `SoC_軟體驗證資料包/` 的 `build/`（DLL 等編譯產物）、`runs/`、`experiments/`、`examples/`、`.venv/`、`manifest.json`：都是產生出來的檔案或大檔。
-- `third_party/`（Eigen 3.4.0、nigh、pdqsort）：只有重建 Windows 軟體模型時才需要，固定版本見 `SoC_軟體驗證資料包/docs/來源與授權.md`。
-- Vivado 輸出與 bitstream：依上面的指令重新產生。
-
-上游程式碼、資料與第三方套件依各自原始授權使用，見 `SoC_軟體驗證資料包/docs/來源與授權.md`。

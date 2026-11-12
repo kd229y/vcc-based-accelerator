@@ -82,7 +82,7 @@ sim/run_all.sh                       # 全部 testbench
 
 註：build 的 `hw_cycles` 包含等待 UART 傳點雲的時間，不代表引擎本身速度（模擬中 s1_shelf 的引擎時間約 3.7 ms）。
 
-## 4. 上板（Windows + Vivado）
+## 4. 上板
 
 ### 4.1 選設定（BRAM 是主要限制）
 
@@ -126,9 +126,7 @@ Vitis 裸機：用 `Xil_Out32/Xil_In32` 依 `vcc_core.v` 開頭的暫存器表�
 ## 5. 已知限制與尚未完成（請在決定下一步時參考）
 
 - UART 流程已在 Nexys A7-100T 實際建置與驗證；Zynq 流程（build_zynq.tcl）尚未實際跑過。
-- 接觸不良對策：UART bridge 有 ~84 ms 閒置逾時（半個命令會被丟棄）；`vcc_host.py --bit <bitfile>` 斷線會自動重連、斷電會自動重燒並重跑該項測試；`program.tcl` 燒錄失敗會重試 8 次。
-- **吞吐量是「先正確」版**：Stage B 每點約 3–5 cycle（spec 目標每 cycle 1 點）；查詢引擎 P = 1 lane、N = 1 個；FK 約 3.3K cycle；規劃 detour 題約 17 ms @100 MHz。效能優化（多 lane、多查詢引擎、FK 平行化）屬 spec 7.4 的 M4/M6。
 - 環境只有一份（未做雙緩衝）；輸入是 fp32 點雲（未做深度影像反投影 6.2.4(b)）。
 - 建構採 **方案 A（hash）**，因為軟體 golden 就是方案 A；spec 6.3.7 建議的方案 B 兩層區塊尚未實作。
 - 規劃器的 goal bias 支援任意間隔；speculative sphere batch（golden 預設關閉）未實作。
-- 經 AXI-Lite / UART 送點雲很慢（spec 6.1.1 也提醒），正式量測請接 AXI DMA → `s_axis`。
+- 經 AXI-Lite / UART 送點雲很慢。
