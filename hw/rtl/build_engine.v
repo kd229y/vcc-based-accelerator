@@ -151,19 +151,12 @@ module build_engine #(
 
   function [14:0] coarse_of;  // coarse Morton key (= fine key >> 6) from {z,y,x}
     input [47:0] p;
-    integer b;
     begin
-      for (b = 0; b < 5; b = b + 1) begin
-        coarse_of[3*b]   = p[11 + b];
-        coarse_of[3*b+1] = p[27 + b];
-        coarse_of[3*b+2] = p[43 + b];
-      end
+      // Direct concatenation is the same interleave as the loop above and is accepted by
+      // both iverilog and Verilator when this engine is integrated with SystemVerilog CSE RTL.
+      coarse_of = {p[47], p[31], p[15], p[46], p[30], p[14], p[45], p[29], p[13],
+                   p[44], p[28], p[12], p[43], p[27], p[11]};
     end
-  endfunction
-
-  function [5:0] low6_of;     // fine key[5:0] = {z1,y1,x1,z0,y0,x0}
-    input [47:0] p;
-    low6_of = {p[42], p[26], p[10], p[41], p[25], p[9]};
   endfunction
 
   // ---------------- prefix / scatter / cellfix registers ----------------
@@ -180,6 +173,8 @@ module build_engine #(
   reg [47:0]        scratch [0:63];
   reg [47:0]        blo, bhi;
   reg [5:0]         ffs;
+  wire [5:0]        p_low6 = {p_rdata[42], p_rdata[26], p_rdata[10],
+                             p_rdata[41], p_rdata[25], p_rdata[9]};
   integer           fi;
   always @* begin
     ffs = 6'd0;
@@ -375,8 +370,8 @@ module build_engine #(
           else begin cj <= cj + 7'd1; st <= CF_ACC; end
         end
         CF_ACC: begin
-          scratch[low6_of(p_rdata)] <= p_rdata;
-          vmask[low6_of(p_rdata)] <= 1'b1;
+          scratch[p_low6] <= p_rdata;
+          vmask[p_low6] <= 1'b1;
           blo <= {umin(blo[47:32], p_rdata[47:32]), umin(blo[31:16], p_rdata[31:16]), umin(blo[15:0], p_rdata[15:0])};
           bhi <= {umax(bhi[47:32], p_rdata[47:32]), umax(bhi[31:16], p_rdata[31:16]), umax(bhi[15:0], p_rdata[15:0])};
           st <= CF_LOAD;
