@@ -29,3 +29,6 @@ SoC_軟體驗證資料包/experiments/
 SoC_軟體驗證資料包/examples/
 SoC_軟體驗證資料包/third_party/
 SoC_軟體驗證資料包/manifest.json
+hw/vectors_v0/
+hw/golden_v0/gen_env_v0
+hw/golden_v0/gen_plan_v0

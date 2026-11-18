@@ -1,0 +1,249 @@
+From 70ba95388b20f693c9f3612725f588f123c1166b Mon Sep 17 00:00:00 2001
+From: kd229y <kevin122901@gmail.com>
+Date: Wed, 18 Nov 2026 19:18:59 +0800
+Subject: [PATCH] Store PTS points as 11-bit offsets from the query-cell origin
+
+Points are stored per query cell, so the cell coordinate (5 bits per axis)
+is known when a point is read: PTS keeps only q & 2047 per axis (48 -> 33
+bits, lossless). The cell token carries gx/gy/gz from S2, S3 records the
+cell of every issued read and adds the origin back. cse_env_mem converts
+full coordinates to offsets when loading traces, so traces are unchanged.
+
+Testbenches: tb_cse_boundary / tb_cse_array_worst / tb_env_mem use the new
+format; tb_cse_worst's far-away points (outside their cells) cannot be
+represented any more, so it now places points at the cell origins and
+expects HIT (the legal no-hit worst case is tb_cse_array_worst).
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+---
+ accel/Makefile                  | 10 ++++++++--
+ accel/rtl/common/ple_cse_pkg.sv |  3 ++-
+ accel/rtl/cse/cse_cu.sv         | 14 +++++++++++---
+ accel/rtl/cse/cse_cu_pkg.sv     |  1 +
+ accel/rtl/cse/cse_env_mem.sv    |  4 ++--
+ accel/scripts/mask_pts.py       |  7 +++++++
+ accel/tb/tb_cse_array_worst.sv  |  2 +-
+ accel/tb/tb_cse_boundary.sv     |  2 +-
+ accel/tb/tb_cse_worst.sv        |  7 +++++--
+ accel/tb/tb_env_mem.sv          |  6 +++---
+ 10 files changed, 41 insertions(+), 15 deletions(-)
+ create mode 100644 accel/scripts/mask_pts.py
+
+diff --git a/accel/Makefile b/accel/Makefile
+index 04f2bca..6160267 100644
+--- a/accel/Makefile
++++ b/accel/Makefile
+@@ -64,15 +64,21 @@ $(BUILD)/tb_env_mem/Vtb_env_mem: $(PKG) rtl/cse/cse_env_mem.sv tb/tb_env_mem.sv
+ 
+ test-env-mem: $(BUILD)/tb_env_mem/Vtb_env_mem
+ 	$< +env0=$(TRACE)/s0_p1 +env1=$(TRACE)/s0_p2 +out=$(BUILD)/tb_env_mem | grep -E 'TB|cse_env_mem'
+-	@for f in dir cell ptx pty ptz; do \
++	@python3 scripts/mask_pts.py $(TRACE) $(BUILD)/tb_env_mem
++	@for f in dir cell; do \
+ 	  cmp -s $(BUILD)/tb_env_mem/buf0_$$f.hex $(TRACE)/s0_p1_$$f.hex && echo "buf0 $$f OK" || echo "buf0 $$f DIFF"; \
+ 	  cmp -s $(BUILD)/tb_env_mem/buf1_$$f.hex $(TRACE)/s0_p2_$$f.hex && echo "buf1 $$f OK" || echo "buf1 $$f DIFF"; done
++	@for f in ptx pty ptz; do \
++	  cmp -s $(BUILD)/tb_env_mem/buf0_$$f.hex $(BUILD)/tb_env_mem/src_p1_$$f.hex && echo "buf0 $$f OK" || echo "buf0 $$f DIFF"; \
++	  cmp -s $(BUILD)/tb_env_mem/buf1_$$f.hex $(BUILD)/tb_env_mem/src_p2_$$f.hex && echo "buf1 $$f OK" || echo "buf1 $$f DIFF"; done
+ 	@mkdir -p $(BUILD)/tb_env_mem_small
+ 	@$(VERI) --binary --timing -Wno-fatal -Irtl/common -Mdir $(BUILD)/tb_env_mem_small -GN_CELL=512 -GN_PT=8192 \
+ 	    --top-module tb_env_mem $(PKG) rtl/cse/cse_env_mem.sv tb/tb_env_mem.sv -o V >/dev/null
+ 	@$(BUILD)/tb_env_mem_small/V +env0=$(TRACE)/s0_p1 +env1=$(TRACE)/s0_p2 +out=$(BUILD)/tb_env_mem_small > /dev/null
+-	@for f in dir cell ptx pty ptz; do \
++	@for f in dir cell; do \
+ 	  cmp -s $(BUILD)/tb_env_mem_small/buf0_$$f.hex $(TRACE)/s0_p1_$$f.hex && echo "depth 512/8192 buf0 $$f OK" || echo "depth 512/8192 buf0 $$f DIFF"; done
++	@for f in ptx pty ptz; do \
++	  cmp -s $(BUILD)/tb_env_mem_small/buf0_$$f.hex $(BUILD)/tb_env_mem/src_p1_$$f.hex && echo "depth 512/8192 buf0 $$f OK" || echo "depth 512/8192 buf0 $$f DIFF"; done
+ 
+ # Full-array golden trace replay with randomized response backpressure.
+ $(BUILD)/tb_cse_trace/Vtb_cse_trace: $(PKG) $(CSE_RTL) tb/ple_cse_if_checker.sv tb/tb_cse_trace.sv
+diff --git a/accel/rtl/common/ple_cse_pkg.sv b/accel/rtl/common/ple_cse_pkg.sv
+index 632749e..61e8509 100644
+--- a/accel/rtl/common/ple_cse_pkg.sv
++++ b/accel/rtl/common/ple_cse_pkg.sv
+@@ -60,7 +60,8 @@ package ple_cse_pkg;
+ 
+   // environment memory ports (INTERFACES.md I3): one read-port set per CU, sync read
+   localparam int ENV_RD_LAT  = 1;                 // address at edge t, data valid after edge t+1
+-  localparam int PT_DATA_W   = 3 * PT_W;          // PTS read data {z, y, x}
++  localparam int PT_DATA_W   = 3 * AOFF_W;        // PTS word {z, y, x}: 11-bit offsets from the query-cell origin
++                                                  // (points are stored per query cell; lossless, 48 -> 33 bits)
+   localparam int CELL_DEPTH  = 1024;              // memory depth (format allows 4096); max seen 651
+   localparam int PT_DEPTH    = 16384;             // memory depth (format allows 65535); max seen 11670
+   localparam int HDR_WORDS   = 9;                 // 0 {err, valid}, 1 n_pts, 2 n_cells, 3-5 glo, 6-8 ghi
+diff --git a/accel/rtl/cse/cse_cu.sv b/accel/rtl/cse/cse_cu.sv
+index 3de17ab..b441243 100644
+--- a/accel/rtl/cse/cse_cu.sv
++++ b/accel/rtl/cse/cse_cu.sv
+@@ -69,6 +69,7 @@ module cse_cu
+   logic s3_ball_active, s3_cell_active, s3_end_seen, s3_hit_seen;
+   cse_ctx_t s3_ctx;
+   logic [PT_AW-1:0] s3_issue_addr;
++  logic [4:0] s3_gx, s3_gy, s3_gz, ret_gx, ret_gy, ret_gz;   // cell of the issued / returning point
+   logic [COUNT_W-1:0] s3_issue_left;
+   logic [PEND_W-1:0] s3_pending;
+   logic pt_issue, pt_return_valid;
+@@ -308,6 +309,9 @@ module cse_cu
+             s2_out_payload.ctx   <= s2_voxel.ctx;
+             s2_out_payload.base  <= cell_word.base;
+             s2_out_payload.count <= cell_word.count;
++            s2_out_payload.gx    <= s2_voxel.gx;
++            s2_out_payload.gy    <= s2_voxel.gy;
++            s2_out_payload.gz    <= s2_voxel.gz;
+             s2_state <= S2_OUT;
+           end
+         end
+@@ -372,14 +376,16 @@ module cse_cu
+       d2_payload     <= '0;
+     end else begin
+       pt_return_valid <= pt_issue;
++      if (pt_issue) begin ret_gx <= s3_gx; ret_gy <= s3_gy; ret_gz <= s3_gz; end
+       d0_valid <= pt_return_valid;
+       d1_valid <= d0_valid;
+       d2_valid <= d1_valid;
+ 
+       if (pt_return_valid) begin
+-        px = $signed({3'b000, mem_pt_data[15:0]});
+-        py = $signed({3'b000, mem_pt_data[31:16]});
+-        pz = $signed({3'b000, mem_pt_data[47:32]});
++        // PTS holds 11-bit offsets: q = {query cell, offset}
++        px = $signed({3'b000, ret_gx, mem_pt_data[10:0]});
++        py = $signed({3'b000, ret_gy, mem_pt_data[21:11]});
++        pz = $signed({3'b000, ret_gz, mem_pt_data[32:22]});
+         d0_payload.dx <= $signed({s3_ctx.cx[COORD_W-1], s3_ctx.cx}) - px;
+         d0_payload.dy <= $signed({s3_ctx.cy[COORD_W-1], s3_ctx.cy}) - py;
+         d0_payload.dz <= $signed({s3_ctx.cz[COORD_W-1], s3_ctx.cz}) - pz;
+@@ -419,6 +425,7 @@ module cse_cu
+             s3_cell_active <= 1'b1;
+             s3_issue_addr  <= cell_payload.base;
+             s3_issue_left  <= cell_payload.count;
++            s3_gx <= cell_payload.gx; s3_gy <= cell_payload.gy; s3_gz <= cell_payload.gz;
+           end else begin
+             s3_cell_active <= 1'b0;
+           end
+@@ -428,6 +435,7 @@ module cse_cu
+           s3_cell_active <= 1'b1;
+           s3_issue_addr  <= cell_payload.base;
+           s3_issue_left  <= cell_payload.count;
++          s3_gx <= cell_payload.gx; s3_gy <= cell_payload.gy; s3_gz <= cell_payload.gz;
+         end
+       end
+ 
+diff --git a/accel/rtl/cse/cse_cu_pkg.sv b/accel/rtl/cse/cse_cu_pkg.sv
+index 114fe6b..b1c3aad 100644
+--- a/accel/rtl/cse/cse_cu_pkg.sv
++++ b/accel/rtl/cse/cse_cu_pkg.sv
+@@ -51,6 +51,7 @@ package cse_cu_pkg;
+     cse_ctx_t        ctx;
+     logic [PT_AW-1:0] base;
+     logic [COUNT_W-1:0] count;
++    logic [4:0]      gx, gy, gz;            // query cell: origin of the points' offsets
+   } cse_cell_token_t;
+ 
+   typedef struct packed {
+diff --git a/accel/rtl/cse/cse_env_mem.sv b/accel/rtl/cse/cse_env_mem.sv
+index 6301947..948bf4e 100644
+--- a/accel/rtl/cse/cse_env_mem.sv
++++ b/accel/rtl/cse/cse_env_mem.sv
+@@ -30,7 +30,7 @@ module cse_env_mem
+     input  logic                          wr_buf,
+     input  env_region_e                   wr_region,
+     input  logic [PT_AW-1:0]              wr_addr,            // HDR: word index; PTS: point index
+-    input  logic [127:0]                  wr_data             // PTS: {z, y, x} in [47:0]
++    input  logic [127:0]                  wr_data             // PTS: 11-bit offsets {z, y, x} in [32:0]
+ );
+ 
+   localparam int CA_W = $clog2(N_CELL);
+@@ -95,7 +95,7 @@ module cse_env_mem
+           $readmemh({pre, "_ptx.hex"}, tx, 0, int'(hdr[1]) - 1);
+           $readmemh({pre, "_pty.hex"}, ty, 0, int'(hdr[1]) - 1);
+           $readmemh({pre, "_ptz.hex"}, tz, 0, int'(hdr[1]) - 1);
+-          for (int i = 0; i < int'(hdr[1]); ++i) ptm[i] = {tz[i], ty[i], tx[i]};
++          for (int i = 0; i < int'(hdr[1]); ++i) ptm[i] = {tz[i][AOFF_W-1:0], ty[i][AOFF_W-1:0], tx[i][AOFF_W-1:0]};
+         end
+         $display("[cse_env_mem] buf%0d <- %s: %0d points, %0d cells", b, pre, hdr[1], hdr[2]);
+       end
+diff --git a/accel/scripts/mask_pts.py b/accel/scripts/mask_pts.py
+new file mode 100644
+index 0000000..017f8d9
+--- /dev/null
++++ b/accel/scripts/mask_pts.py
+@@ -0,0 +1,7 @@
++"""Source PTS trace files masked to the 11-bit in-cell offsets kept by cse_env_mem (format v0 + offsets)."""
++import sys
++trace, out = sys.argv[1], sys.argv[2]
++for p in ("p1", "p2"):
++    for f in ("ptx", "pty", "ptz"):
++        vals = [int(l, 16) & 0x7ff for l in open(f"{trace}/s0_{p}_{f}.hex") if l.strip()]
++        open(f"{out}/src_{p}_{f}.hex", "w").write("".join("%04x\n" % v for v in vals))
+diff --git a/accel/tb/tb_cse_array_worst.sv b/accel/tb/tb_cse_array_worst.sv
+index 26ddfd5..0622998 100644
+--- a/accel/tb/tb_cse_array_worst.sv
++++ b/accel/tb/tb_cse_array_worst.sv
+@@ -85,7 +85,7 @@ module tb_cse_array_worst;
+             cell_word.lo_z = AOFF_W'(off_z); cell_word.hi_z = AOFF_W'(off_z);
+             dut.u_env_mem.g_buf[0].cellm[slot] = cell_word;
+             for (int p = 0; p < 64; ++p)
+-              dut.u_env_mem.g_buf[0].ptm[base+p] = {16'(pz), 16'(py), 16'(px)};
++              dut.u_env_mem.g_buf[0].ptm[base+p] = {11'(off_z), 11'(off_y), 11'(off_x)};
+             base += 64;
+             slot++;
+             if (px < glo_x) glo_x = px; if (px > ghi_x) ghi_x = px;
+diff --git a/accel/tb/tb_cse_boundary.sv b/accel/tb/tb_cse_boundary.sv
+index 0d10564..1a9ea07 100644
+--- a/accel/tb/tb_cse_boundary.sv
++++ b/accel/tb/tb_cse_boundary.sv
+@@ -41,7 +41,7 @@ module tb_cse_boundary;
+   always_ff @(posedge clk) begin
+     mem_dir_data  <= 16'h8000;
+     mem_cell_data <= one_cell;
+-    mem_pt_data   <= {16'd1000, 16'd1000, 16'd1000};
++    mem_pt_data   <= {11'd1000, 11'd1000, 11'd1000};   // offsets in query cell (0,0,0)
+   end
+ 
+   initial begin
+diff --git a/accel/tb/tb_cse_worst.sv b/accel/tb/tb_cse_worst.sv
+index 7ae745a..4c13221 100644
+--- a/accel/tb/tb_cse_worst.sv
++++ b/accel/tb/tb_cse_worst.sv
+@@ -44,7 +44,10 @@ module tb_cse_worst;
+   always_ff @(posedge clk) begin
+     mem_dir_data  <= 16'h8000;
+     mem_cell_data <= dense_cell;
+-    mem_pt_data   <= {16'hffff, 16'hffff, 16'hffff};
++    // PTS holds 11-bit offsets, so every point lies inside its own query cell: a 729-cell sphere can no
++    // longer miss all 64 x 729 points (the old far-away points were outside their cells). Points at the cell
++    // origins: the run ends at the first hit; the legal no-hit worst case is tb_cse_array_worst.
++    mem_pt_data   <= {11'd0, 11'd0, 11'd0};
+   end
+ 
+   always_ff @(posedge clk) begin
+@@ -88,7 +91,7 @@ module tb_cse_worst;
+       if (cycles - accepted_at > 64'(MAX_LAT)) $fatal(1, "CSE exceeded MAX_LAT before response");
+     end
+     latency = cycles - accepted_at;
+-    if (r_payload.tag != 1 || r_payload.user != 16'hbeef || r_payload.status != ST_MISS)
++    if (r_payload.tag != 1 || r_payload.user != 16'hbeef || r_payload.status != ST_HIT)
+       $fatal(1, "wrong dense-workload response");
+     @(posedge clk);
+     if (!cse_idle) @(posedge clk);
+diff --git a/accel/tb/tb_env_mem.sv b/accel/tb/tb_env_mem.sv
+index 958b415..55295fb 100644
+--- a/accel/tb/tb_env_mem.sv
++++ b/accel/tb/tb_env_mem.sv
+@@ -50,9 +50,9 @@ module tb_env_mem #(parameter int N_CELL = ple_cse_pkg::CELL_DEPTH, parameter in
+     for (int i = 0; i < int'(hdr_n_pts[b]); ++i) begin
+       pt_addr[pp] = PT_AW'(i);
+       @(posedge clk); #1;
+-      $fwrite(fx, "%04x\n", pt_data[pp][15:0]);
+-      $fwrite(fy, "%04x\n", pt_data[pp][31:16]);
+-      $fwrite(fz, "%04x\n", pt_data[pp][47:32]);
++      $fwrite(fx, "%04x\n", pt_data[pp][10:0]);     // PTS keeps 11-bit offsets (compared with source & 0x7ff)
++      $fwrite(fy, "%04x\n", pt_data[pp][21:11]);
++      $fwrite(fz, "%04x\n", pt_data[pp][32:22]);
+     end
+     $fclose(fd); $fclose(fc); $fclose(fx); $fclose(fy); $fclose(fz);
+     $display("TB buf%0d valid=%0d err=%0d n_pts=%0d n_cells=%0d glo=%0d,%0d,%0d ghi=%0d,%0d,%0d", b, hdr_valid[b],
+-- 
+2.34.1
+

@@ -1,0 +1,20 @@
+ID 5cb0014b: N_CU=1, 75 MHz
+  p0 build -> buf0: status=0 kept=3935/3935 cells=310/310 (15.7s incl. 1.44 MB over UART)
+  p0 plan  (buf0): result=0 iters=0 path=2 cycles=74024 (0.99 ms @75 MHz) | build cycles=1171448120 -> MATCH
+  p100 build -> buf1: status=0 kept=4209/4209 cells=207/207 (15.7s incl. 1.44 MB over UART)
+  p100 plan  (buf1): result=0 iters=48 path=9 cycles=281781 (3.76 ms @75 MHz) | build cycles=1171442037 -> MATCH
+  p200 build -> buf0: status=0 kept=6821/6821 cells=299/299 (9.2s incl. 0.84 MB over UART)
+  p200 plan  (buf0): result=0 iters=74 path=14 cycles=490845 (6.54 ms @75 MHz) | build cycles=683798642 -> MATCH
+  p300 build -> buf1: status=0 kept=4571/4571 cells=170/170 (9.2s incl. 0.84 MB over UART)
+  p300 plan  (buf1): result=0 iters=114 path=11 cycles=157685 (2.10 ms @75 MHz) | build cycles=683772822 -> MATCH
+  p400 build -> buf0: status=0 kept=11107/11107 cells=581/581 (19.6s incl. 1.80 MB over UART)
+  p400 plan  (buf0): result=0 iters=74 path=9 cycles=90782 (1.21 ms @75 MHz) | build cycles=1463812973 -> MATCH
+  p500 build -> buf1: status=0 kept=11123/11123 cells=477/477 (27.4s incl. 2.52 MB over UART)
+  p500 plan  (buf1): result=0 iters=99 path=7 cycles=81950 (1.09 ms @75 MHz) | build cycles=2048806498 -> MATCH
+  p600 build -> buf0: status=0 kept=5558/5558 cells=245/245 (10.5s incl. 0.96 MB over UART)
+  p600 plan  (buf0): result=0 iters=1527 path=19 cycles=1529128 (20.39 ms @75 MHz) | build cycles=781282946 -> MATCH
+  p542 build -> buf1: status=0 kept=11670/11670 cells=499/499 (27.4s incl. 2.52 MB over UART)
+  p542 plan  (buf1): result=0 iters=37 path=8 cycles=100746 (1.34 ms @75 MHz) | build cycles=2048850890 -> MATCH
+  p482 build -> buf0: status=0 kept=11529/11529 cells=651/651 (19.6s incl. 1.80 MB over UART)
+  p482 plan  (buf0): result=0 iters=175 path=12 cycles=211548 (2.82 ms @75 MHz) | build cycles=1463802370 -> MATCH
+SYSTEST PASS

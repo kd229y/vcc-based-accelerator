@@ -48,6 +48,8 @@ class Uart:
 
     def __init__(self, port, baud=921600, bit=None, vivado=None):
         self.port, self.baud, self.bit, self.vivado = port, baud, bit, vivado
+        self.id_addr = ID          # register checked after a reconnect (top-specific)
+        self.hw_url = None         # hw_server url for re-programming (default localhost:3121)
         self.s = None
         self._open(wait=30)
 
@@ -95,7 +97,7 @@ class Uart:
         self._open(wait=120)
         for _ in range(2):
             try:
-                if self._io(lambda: self._rd(ID)) >> 24 == 0x5C:
+                if self._io(lambda: self._rd(self.id_addr)) >> 24 == 0x5C:
                     return False
             except LinkLost:
                 self._open(wait=120)
@@ -106,9 +108,9 @@ class Uart:
         import subprocess
         here = Path(__file__).resolve().parents[1] / 'vivado'
         subprocess.run([self.vivado, '-mode', 'batch', '-nojournal', '-nolog', '-source', str(here / 'program.tcl'),
-                        '-tclargs', str(Path(self.bit).resolve())], check=True, cwd=str(here))
+                        '-tclargs', str(Path(self.bit).resolve())] + ([self.hw_url] if self.hw_url else []), check=True, cwd=str(here))
         self._open(wait=60)
-        if self._io(lambda: self._rd(ID)) >> 24 != 0x5C:
+        if self._io(lambda: self._rd(self.id_addr)) >> 24 != 0x5C:
             raise LinkLost('re-programmed but the FPGA still does not answer')
         return True
 
