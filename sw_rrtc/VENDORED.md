@@ -25,4 +25,4 @@ for Real-Time Robotic Motion Planning", ICRA'26); no VCC source code was availab
   translated FK/CC code and constants.
 
 ## Regenerating
-`make -C Platform/sw_rrtc regen VAMP_DIR=<vamp checkout> VAMP_PY=<python with vamp installed>`
+`make -C sw_rrtc regen VAMP_DIR=<vamp checkout> VAMP_PY=<python with vamp installed>`

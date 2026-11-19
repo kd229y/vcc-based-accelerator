@@ -1,6 +1,6 @@
-// DPI-C entry points into the golden model for the PLE RTL testbenches (Platform/accel/tb).
+// DPI-C entry points into the golden model for the PLE RTL testbenches (hw/ple-cse/tb).
 // Includes fx_plan.c / fx_pose.c / fx_fk_gen.c so the testbench calls the very same static functions.
-// Built as C with gcc into libfxref.a (Platform/accel/Makefile), linked into the Verilator models.
+// Built as C with gcc into libfxref.a (hw/ple-cse/Makefile), linked into the Verilator models.
 #include "fx_plan.c"
 #include "fx_pose.c"
 #include "fx_fk_gen.c"      // defines macros F / TS / MUL: keep it the last include

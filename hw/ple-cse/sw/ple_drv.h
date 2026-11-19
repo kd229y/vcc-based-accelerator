@@ -1,7 +1,7 @@
-// CPU-side driver for the PLE (Platform/accel/rtl/ple/ple_top.sv, register map in its header).
+// CPU-side driver for the PLE (hw/ple-cse/rtl/ple/ple_top.sv, register map in its header).
 // The base address is a parameter: it is fixed at SoC integration (MMIO.bd), not here.
 // Register access goes through ple_wr32 / ple_rd32: volatile MMIO on the SoC; with PLE_DRV_HOSTSIM the
-// testbench harness provides them (Platform/accel/tb/tb_drv.sv runs this driver against the RTL).
+// testbench harness provides them (hw/ple-cse/tb/tb_drv.sv runs this driver against the RTL).
 #pragma once
 #include <stdint.h>
 

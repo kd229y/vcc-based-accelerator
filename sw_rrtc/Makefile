@@ -169,7 +169,7 @@ run: all
 	@$(MAKE) --no-print-directory host
 	python3 tools/cmp_runs.py --soc $(BOARD_LOG) --host-bin $(HOST_DIR)/rrtc_host
 
-# ---- RTL simulation (model shared via ../hw/tb/sim.mk) ----
+# ---- RTL simulation (CPU model from the SoC repo, see SOC_SIM_MK) ----
 # Own model (64 MB of simulated DDR) in its own SIM_DIR, so the default 2 MB model is untouched.
 SIM_DIR       := $(abspath ../build/sim_rtl_rrtc)
 SIM_DDR_BYTES := 67108864
@@ -226,5 +226,8 @@ clean:
 FORCE:
 .PHONY: all host exp-ab regen validate run sim clean FORCE
 
-# CPU model for sim / fx-sim: present only inside the SoC repo (Platform/hw/tb/sim.mk)
--include ../hw/tb/sim.mk
+# CPU model for sim / fx-sim: only in the SoC repo; pass SOC_SIM_MK=<SoC>/Platform/hw/tb/sim.mk
+SOC_SIM_MK ?=
+ifneq ($(SOC_SIM_MK),)
+include $(SOC_SIM_MK)
+endif

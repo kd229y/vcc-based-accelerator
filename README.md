@@ -8,7 +8,7 @@
 | 部分 | 負責 | 位置 |
 |---|---|---|
 | 點雲前處理：fp32→定點、剔除、Morton 濾波（邊讀邊挑）、建表 | 本 repo | `hw/rtl/stage_a_v0.v`、`hw/rtl/build_engine_v0.v`（整合版，接 PLE-CSE）；`stage_a.v`、`build_engine.v`（獨立版） |
-| RRT-Connect 規劃（PLE）、碰撞查詢（CSE）、CPU | 協作者 | [SyncMeow/PLE-CSE](https://github.com/SyncMeow/PLE-CSE) |
+| RRT-Connect 規劃（PLE）、碰撞查詢（CSE）、CPU | 協作者 | `hw/ple-cse`、`sw_rrtc`（由 [SyncMeow/PLE-CSE](https://github.com/SyncMeow/PLE-CSE) 併入） |
 | 軟體功能模型（golden）與驗證系統 | 本 repo | `SoC_軟體驗證資料包/` |
 
 > **注意**：`hw/rtl/rrt_engine.v`、`hw/rtl/query_engine.v`、`hw/rtl/fk_engine.v` 是為了在 FPGA 上做端到端驗證而寫的**參考實作**。
@@ -71,7 +71,7 @@ SoC_軟體驗證資料包/           整數功能模型、驗證 runner、獨立
 ## 快速開始
 
 ```bash
-git clone --recurse-submodules git@github.com:kd229y/vcc-based-accelerator-.git
+git clone --recurse-submodules git@github.com:kd229y/vcc-based-accelerator.git
 make help
 make sim          # 全部 testbench（需要 iverilog >= 11）
 make vectors      # 重新產生 golden 向量（需要 g++、numpy）

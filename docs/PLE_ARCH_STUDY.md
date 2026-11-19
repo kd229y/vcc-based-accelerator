@@ -125,11 +125,11 @@ FK 只有兩種運算，類似 GPU 的骨架動畫（link 矩陣是骨頭，球�
 
 ## 5. FKU 管線化與吞吐量（量測）
 
-重現用的腳本：`accel/scripts/fku_stats.py`、`accel/scripts/fku_modulo.py`。
+重現用的腳本：`hw/ple-cse/scripts/fku_stats.py`、`hw/ple-cse/scripts/fku_modulo.py`。
 
 ### 5.1 FKU 的運算量
 
-`python3 -I accel/scripts/fku_stats.py sw_rrtc/tools/gen_fx_fku_rtl.py sw_rrtc/fx/fx_fk_gen.c`
+`python3 -I hw/ple-cse/scripts/fku_stats.py sw_rrtc/tools/gen_fx_fku_rtl.py sw_rrtc/fx/fx_fk_gen.c`
 
 | 項目 | 數值 |
 |---|---|
@@ -177,7 +177,7 @@ FK 只有兩種運算，類似 GPU 的骨架動畫（link 矩陣是骨頭，球�
 ### 5.4 讓多個姿態重疊（管線化）
 
 模數排程：每 P 個 cycle 開始一個新姿態，每個單元在「cycle mod P」的每個時段只能用一次。
-`python3 -I accel/scripts/fku_modulo.py sw_rrtc/tools/gen_fx_fku_rtl.py sw_rrtc/fx/fx_fk_gen.c`
+`python3 -I hw/ple-cse/scripts/fku_modulo.py sw_rrtc/tools/gen_fx_fku_rtl.py sw_rrtc/fx/fx_fk_gen.c`
 
 | P（每幾個 cycle 一個姿態） | 單元數 | 乘法器 | 單一姿態延遲 | 同時在途的姿態 | 吞吐量（相對現況） |
 |---|---|---|---|---|---|
@@ -256,7 +256,7 @@ FKU 延遲減少 32%（53 → 36），整體最多只減少 4.1%。
 
 **SCU 怎麼做**：先比 21 組 link 外包球（4 個 entry）。有相交的組，才檢查它底下的球對。每個 entry 是「一顆球 a 對最多 8 顆球 b」（8 條 lane，各 3 個乘法器）。
 
-**時間分布**（`tb_core +scu_trace=<檔>`，理想 CSE，39 個 run，46,456 次檢查；`accel/scripts/scu_trace_stats.py`）：
+**時間分布**（`tb_core +scu_trace=<檔>`，理想 CSE，39 個 run，46,456 次檢查；`hw/ple-cse/scripts/scu_trace_stats.py`）：
 
 | SCU 的 cycle 數 | 比例 |
 |---|---|

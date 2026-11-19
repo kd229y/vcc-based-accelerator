@@ -2,7 +2,7 @@
 // 100 MHz board clock -> MMCM -> 75 MHz system clock (PLE-CSE closes timing at 75 MHz out of context).
 //
 // UART bridge byte address map (uart_bridge commands W / R / P / M):
-//   0x000000-0x000FFF  PLE host interface (AXI-Lite, see PLE-CSE accel/rtl/ple/ple_top.sv)
+//   0x000000-0x000FFF  PLE host interface (AXI-Lite, see hw/ple-cse/rtl/ple/ple_top.sv)
 //   0x010000 BE_CTRL   W  bit0 start build
 //   0x010004 BE_STATUS R  [0] busy [7:4] status (0 ok, 4 capacity, 5 invalid input)
 //   0x010008 BE_NPTS   RW number of raw points of the next build

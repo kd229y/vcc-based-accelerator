@@ -44,7 +44,7 @@ N_CU = 2，75 MHz（13.333 ns），OOC。
 
 ### 2.1 座標與環境格式對齊前處理（`392727a`）
 
-目的：和組員的前處理（`kd229y/vcc-based-accelerator`）用同一套座標和建表規則。
+目的：和組員的前處理（本 repo 的 `hw/`）用同一套座標和建表規則。
 
 - 座標原點改成 −2 m：`w_min` −19497 → −32768。座標 = 世界 Q14 + 32768。
 - 查詢格每軸 20 → 32 格，目錄 8,000 → 32,768 項（`DIR_AW` 13 → 15）。
@@ -109,7 +109,7 @@ N_CU = 2，75 MHz（13.333 ns），OOC。
 | `tb_evu` | 新增一段很慢的 CSE（QD 塞住超過一次 FKU 的時間） |
 | `tb_core +scu_trace=<檔>` | 每次 SCU 檢查的 cycle 數與相交的組 |
 | mutant | 74 → 79 個，全部被抓到 |
-| `accel/scripts/` | `fku_stats.py`、`fku_modulo.py`、`scu_trace_stats.py` |
+| `hw/ple-cse/scripts/` | `fku_stats.py`、`fku_modulo.py`、`scu_trace_stats.py` |
 
 ---
 

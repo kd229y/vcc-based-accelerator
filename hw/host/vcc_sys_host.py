@@ -20,7 +20,7 @@ DEFAULT = [0, 100, 200, 300, 400, 500, 600, 542, 482]
 BE = 0x010000
 BE_CTRL, BE_STATUS, BE_NPTS, BE_WBUF, BE_KEPT, BE_NCELLS, BE_CULLED, BE_CYC, BE_PROBES, BE_PT, BE_ID = (
     BE + 0x00, BE + 0x04, BE + 0x08, BE + 0x0C, BE + 0x10, BE + 0x14, BE + 0x18, BE + 0x1C, BE + 0x20, BE + 0x3C, BE + 0xFC)
-# PLE host interface (PLE-CSE accel/rtl/ple/ple_top.sv)
+# PLE host interface (hw/ple-cse/rtl/ple/ple_top.sv)
 P_CTRL, P_STATUS, P_IRQCLR, P_MODE, P_MAXIT = 0x000, 0x004, 0x008, 0x010, 0x028
 P_START, P_GOAL, P_SHIFT = 0x040, 0x050, 0x060
 P_ITERS, P_SIZES, P_PLEN, P_CYC, P_EDGES, P_DD, P_NN, P_PATH = 0x080, 0x084, 0x088, 0x0C0, 0x0C4, 0x0D8, 0x0DC, 0x400

@@ -446,10 +446,10 @@ DIR、CELL、PTS 都是同步讀取，`ENV_RD_LAT=1`：在 edge t 提供地址�
 目前以下命令均通過：
 
 ```bash
-make -C Platform/accel lint
-make -C Platform/accel test-cse
-make -C Platform/accel test-checker
-make -C Platform/accel test-env-mem
+make -C hw/ple-cse lint
+make -C hw/ple-cse test-cse
+make -C hw/ple-cse test-checker
+make -C hw/ple-cse test-env-mem
 ```
 
 Verilator lint 對 `cse_top`、`cse_system`、`cse_cu`、query FIFO、dispatcher、receiver 與 env memory 均為 0 warning/error。

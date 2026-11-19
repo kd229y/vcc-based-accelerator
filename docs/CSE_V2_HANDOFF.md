@@ -5,7 +5,7 @@
 
 ## 結論
 
-- **CSE 的 RTL 目前不需要為了功能而修改。** 座標、格數、buffer 數的改變都透過 `ple_cse_pkg.sv` 的常數和 `cse_env_mem` 的參數完成，`accel/rtl/cse/cse_cu.sv`、`cse_top.sv` 等檔案沒有被動過，回歸全部通過。
+- **CSE 的 RTL 目前不需要為了功能而修改。** 座標、格數、buffer 數的改變都透過 `ple_cse_pkg.sv` 的常數和 `cse_env_mem` 的參數完成，`hw/ple-cse/rtl/cse/cse_cu.sv`、`cse_top.sv` 等檔案沒有被動過，回歸全部通過。
 - 之後接上前處理的環境記憶體時，格式差異會由我們這邊的一層轉接（只有接線，沒有運算）吸收，CSE 仍然看到現在的 I3 埠。
 - 下面第 3 節是**建議**的資源縮減，由你決定要不要做。
 
@@ -46,7 +46,7 @@ branch `feature/v2-align-preprocessing`（commit `4073cdf` 之後）。從 v1 �
 
 ## 2. 之後接上前處理時的轉接（我們做，供你參考）
 
-前處理的建表引擎（`kd229y/vcc-based-accelerator` 的 `build_engine`）提供的讀取介面和格式 v0 不同，但差異都可以用接線轉換，所以 CSE 的 I3 埠維持不變：
+前處理的建表引擎（本 repo 的 `hw/rtl/build_engine.v`）提供的讀取介面和格式 v0 不同，但差異都可以用接線轉換，所以 CSE 的 I3 埠維持不變：
 
 | I3 訊號 | 來自前處理的 | 轉換 |
 |---|---|---|
@@ -91,9 +91,9 @@ C1–C3 都不應該改變任何查詢的結果，只影響面積。
 ## 5. 驗收條件（如果你做了第 3 節的修改）
 
 1. `bash scripts/sim_regress.sh` 最後一行 `10/10 passed`（`test-env-mem` 現在也檢查所有讀取埠同時讀、寫入期間的讀取、以及 valid 時寫表會被報出）。它包含 `test-cse`（trace 重播 N_CU = 1、2、3、4、8，kill、control、worst、boundary、單元測試、比較器 mutant）和 `test-ple-cse NCU=2`。
-2. 另外跑 `make -C accel test-ple-cse NCU=1` 和 `NCU=4`。
+2. 另外跑 `make -C hw/ple-cse test-ple-cse NCU=1` 和 `NCU=4`。
 3. `make lint` 沒有 warning。
-4. `ple_cse_top` OOC 合成（`accel/scripts/ooc_impl_plecse.tcl`，13.333 ns，N_CU = 2），附上階層報告裡 `u_cse` 的 LUT / FF / DSP 前後對照。
+4. `ple_cse_top` OOC 合成（`hw/ple-cse/scripts/ooc_impl_plecse.tcl`，13.333 ns，N_CU = 2），附上階層報告裡 `u_cse` 的 LUT / FF / DSP 前後對照。
 5. 只影響面積的修改：`TB_CSE_TRACE` 的 `queries`、`responses` 和修改前相同。
 
 ## 6. 還沒定的事

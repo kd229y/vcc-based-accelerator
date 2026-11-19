@@ -1,4 +1,4 @@
-// PLE-internal definitions (golden model: Platform/sw_rrtc/fx, records/20261108-fx-golden.md).
+// PLE-internal definitions (golden model: sw_rrtc/fx, records/20261108-fx-golden.md).
 /* verilator lint_off UNUSEDPARAM */  // each module uses only part of the package
 package ple_pkg;
 

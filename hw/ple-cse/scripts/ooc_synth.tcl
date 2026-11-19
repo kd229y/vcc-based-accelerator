@@ -1,5 +1,5 @@
 # Out-of-context synthesis of PLE modules (resource / RAM inference / post-synth timing estimate).
-# Non-project mode, no bitstream, nothing touches Platform/build/hw/SoC.
+# Non-project mode, no bitstream, nothing touches the SoC repo or hw/vivado.
 #   vivado -mode batch -source scripts/ooc_synth.tcl -tclargs <out_dir> <top> [<top> ...]
 set out  [lindex $argv 0]
 set tops [lrange $argv 1 end]

@@ -54,12 +54,12 @@ PLE K -> kill 廣播控制 -> 所有 CU
 開始寫 RTL 前，閱讀下列本機檔案，路徑均相對 repo 根目錄：
 
 - `records/20261107-ple-cse-design.md` 第 4、5、13 節。
-- `Platform/accel/CSE_GUIDE.md`。
-- `Platform/accel/INTERFACES.md`，尤其 I1、I2、I3、I5。
-- `Platform/accel/rtl/common/ple_cse_pkg.sv`。
-- `Platform/accel/rtl/cse/cse_top.sv`、`cse_env_mem.sv`。
-- `Platform/sw_rrtc/fx/fx_env.c` 的 `fx_cse_ref()`。
-- `Platform/accel/tb/ple_cse_if_checker.sv`。
+- `docs/CSE_GUIDE.md`。
+- `docs/INTERFACES.md`，尤其 I1、I2、I3、I5。
+- `hw/ple-cse/rtl/common/ple_cse_pkg.sv`。
+- `hw/ple-cse/rtl/cse/cse_top.sv`、`cse_env_mem.sv`。
+- `sw_rrtc/fx/fx_env.c` 的 `fx_cse_ref()`。
+- `hw/ple-cse/tb/ple_cse_if_checker.sv`。
 
 PLE 對外合約以設計文件第 4 節及共用 package 為準。本文件規定 CU 內部架構，不能自行改變 Q/R/K 埠、資料格式或 memory 邊界。既有文件中的「v1 忽略 kill」須同步註記為本版已選擇支援外部 kill；既有的 C1–C6 語意不變。
 
@@ -383,11 +383,11 @@ POINT_LANES 本版為 1；不把 8-lane 點供應列入交付。ENV_RD_LAT=1、�
 testbench 必須掛 ple_cse_if_checker；結束拉高 eot，確認全部查詢回應。
 
 ```text
-make -C Platform/accel lint
-make -C Platform/accel test-checker
-make -C Platform/accel test-env-mem
-make -C Platform/sw_rrtc fx
-Platform/build/sw_rrtc_host/rrtc_fx -p 0:9 -n 1 -T <輸出目錄>
+make -C hw/ple-cse lint
+make -C hw/ple-cse test-checker
+make -C hw/ple-cse test-env-mem
+make -C sw_rrtc fx
+build/sw_rrtc_host/rrtc_fx -p 0:9 -n 1 -T <輸出目錄>
 ```
 
 新增 CSE 自測 target，讓 trace、隨機、kill、背壓測試可重跑。至少一個錯誤植入版本（例如 <= 改 <）必須被抓到。RTL lint 0 警告、無 latch。
@@ -409,6 +409,6 @@ Platform/build/sw_rrtc_host/rrtc_fx -p 0:9 -n 1 -T <輸出目錄>
 
 中間先驗證無 kill 路徑只是開發順序；最後交付必須支援 kill。未經使用者改變範圍，不換成中央查詢槽架構或多 CU 工作池。
 
-RTL 放 rtl/cse/cse_*.sv，一檔一模組；測試放 tb；產物放 Platform/build/accel，不進 git。使用 SystemVerilog、Verilator 5.032、--assert 與共用 package。未被要求時不提交 commit、不發布，也不修改 PLE 演算法或建構端格式。
+RTL 放 rtl/cse/cse_*.sv，一檔一模組；測試放 tb；產物放 build/accel，不進 git。使用 SystemVerilog、Verilator 5.032、--assert 與共用 package。未被要求時不提交 commit、不發布，也不修改 PLE 演算法或建構端格式。
 
 交付報告應列明：完成與未完成項目、採用參數、kill 實作、struct/package 與模組邊界、未來 array 的接入方式、trace/隨機/checker/錯誤植入結果、最大回應間隔。硬體資源與時脈只有在完成相應綜合後才能列為實測。

@@ -1,5 +1,5 @@
 # Out-of-context synthesis + place + route of one PLE top (post-route resources and timing).
-# Non-project mode, no bitstream, nothing touches Platform/build/hw/SoC. Only reg-to-reg paths are timed:
+# Non-project mode, no bitstream, nothing touches the SoC repo or hw/vivado. Only reg-to-reg paths are timed:
 # ports have no I/O delay (in the SoC they are registered by the bus / CSE side).
 #   vivado -mode batch -source scripts/ooc_impl.tcl -tclargs <out_dir> <top> [period_ns]
 set out    [lindex $argv 0]

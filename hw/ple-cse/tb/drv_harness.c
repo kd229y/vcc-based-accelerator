@@ -1,4 +1,4 @@
-// Runs the CPU driver (Platform/accel/sw/ple_drv.c, built with PLE_DRV_HOSTSIM) against the ple_top RTL:
+// Runs the CPU driver (hw/ple-cse/sw/ple_drv.c, built with PLE_DRV_HOSTSIM) against the ple_top RTL:
 // the test program below runs as a coroutine (ucontext); every register access switches back to tb_drv.sv,
 // which performs it over AXI-Lite and resumes the coroutine with the read data. Results are compared with
 // golden fx_solve (DPI library). Single-threaded and deterministic.

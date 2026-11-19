@@ -1,5 +1,5 @@
 # Out-of-context synthesis + place + route of PLE + CSE (ple_cse_top) or of the CSE alone (cse_system).
-# Same flow as ooc_impl.tcl (non-project, no bitstream, never touches Platform/build/hw/SoC).
+# Same flow as ooc_impl.tcl (non-project, no bitstream, never touches the SoC repo or hw/vivado).
 # If place/route fails (e.g. the environment memory does not fit), the synthesis reports are still written.
 #   vivado -mode batch -source scripts/ooc_impl_plecse.tcl -tclargs <out_dir> <top> <period_ns> <n_cu> [synth]
 set out    [lindex $argv 0]

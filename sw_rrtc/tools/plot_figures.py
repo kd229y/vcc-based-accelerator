@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Report figures (PNG, light theme, English) from the board log and the host experiments.
 
-  plot_figures.py --board last_rrtc_brute.log --exp Platform/build/sw_rrtc_host/exp2 --out <dir>
+  plot_figures.py --board last_rrtc_brute.log --exp build/sw_rrtc_host/exp2 --out <dir>
 Needs matplotlib. Figures:
   fig1_stage_time      VCC stage time per problem on the SoC, by scene (board)
   fig2_stage_share     share of end-to-end time per stage, overall and by scene (board)

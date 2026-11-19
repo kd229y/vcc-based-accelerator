@@ -1,5 +1,5 @@
-// Cross-check of fx_env_build / fx_cse_ref against the preprocessing golden vectors (core.cpp of
-// vcc-based-accelerator, hw/vectors/<scene>): status, points, directory, cells, global AABB, queries.
+// Cross-check of fx_env_build / fx_cse_ref against the preprocessing golden vectors (core.cpp in
+// SoC_軟體驗證資料包, hw/vectors/<scene>): status, points, directory, cells, global AABB, queries.
 //   fx_envxcheck <vectors_dir> [scene ...]      (default: s0_pkgvec .. s6_dense)
 #include <stdio.h>
 #include <stdlib.h>

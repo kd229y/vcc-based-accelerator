@@ -22,7 +22,7 @@
 - **語意**：HIT ⇔ 存在點 p，`Σ(c − p)² ≤ q_r²`（整數、精確）。每筆被接受的查詢恰好一筆回應，回應可亂序，`r_tag`、`r_user` 原樣送回。KILLED 只代表「沒算」。
 - **雙方義務**：C1–C6（CSE）、P1–P6（PLE），見設計文件 4.5。P2 已釐清：K 握手當下已在 Q 上等待的查詢照常送完。
 - **目前完整 CSE 選擇（2026-11-10）**：預設 4 個完整 CU、Input/Response FIFO 深度各 8，前後 round-robin，跨 CU 回應可亂序。CSE 支援 K(tag) 與 K(all)，`k_ready` 接 1；頂層 generation 加 Input FIFO killed metadata 涵蓋尚未分派及 CU 內工作。預設 `KILL_ENABLE=1`，可設 0 回到「忽略 kill、照常回真正結果」的最低合約。`MAX_LAT` = 65,536 cycles。
-- **驗證**：`tb/ple_cse_if_checker.sv` 是被動監看模組，PLE 測試、CSE 測試、整合測試都掛同一個。它檢查握手穩定性（H1–H3）、C1/C2、C4（逐筆檢查 KILLED 的生命週期）、C5、C6、P2、P5，以及測試結束時是否全部回應。`make -C Platform/accel test-checker` 是它的自測：乾淨流量 0 個錯誤，8 種植入的違規全部被抓到。
+- **驗證**：`tb/ple_cse_if_checker.sv` 是被動監看模組，PLE 測試、CSE 測試、整合測試都掛同一個。它檢查握手穩定性（H1–H3）、C1/C2、C4（逐筆檢查 KILLED 的生命週期）、C5、C6、P2、P5，以及測試結束時是否全部回應。`make -C hw/ple-cse test-checker` 是它的自測：乾淨流量 0 個錯誤，8 種植入的違規全部被抓到。
 - **待辦**：雙方簽核後把狀態改成「凍結 v1.0」。
 
 ## I2：環境格式 v0
@@ -48,7 +48,7 @@
 - **寫入規則**（2026-11-14）：寫入 DIR / CELL / PTS 的那個 cycle 會佔用該表每一份的 port A，偶數編號的讀取埠在那個 cycle 讀到的資料未定義。所以寫表的順序是：把該 buffer 的 HDR valid 清成 0 → **等 `cse_idle`**（valid 只在查詢進入 CU 時檢查一次，已在途的查詢還會讀表）→ 寫表 → 把 valid 設回 1。valid = 1 時寫表，模擬會報 `table written while valid`。HDR 是暫存器，隨時可寫。
 - **寫入埠**（建構引擎用，v1 模擬接 0）：`wr_en`、`wr_buf`、`wr_region`（HDR / DIR / CELL / PTS）、`wr_addr`、`wr_data[127:0]`。HDR 的 word 配置：0 `{err, valid}`、1 點數、2 格數、3–5 glo x/y/z、6–8 ghi x/y/z。
 - **模擬載入**：`+env0=<trace 前綴>`、`+env1=<前綴>`，讀 `<前綴>_{hdr,dir,cell,ptx,pty,ptz}.hex`（golden model `rrtc_fx -T` 產生）。
-- **驗證**：`make -C Platform/accel test-env-mem` 把兩份 trace 載入兩份緩衝，經由不同埠把每個位址讀回並和原檔比對，全部相同；對照組（第 1 份載入錯的 trace）報出 DIFF。
+- **驗證**：`make -C hw/ple-cse test-env-mem` 把兩份 trace 載入兩份緩衝，經由不同埠把每個位址讀回並和原檔比對，全部相同；對照組（第 1 份載入錯的 trace）報出 DIFF。
 
 ## I4：主 CPU ↔ PLE（暫定）
 
@@ -87,7 +87,7 @@
 
 - [ ] I1 雙方簽核，設計文件第 4 節標為 v1.0
 - [ ] CSE 確認最壞服務時間低於 `MAX_LAT`（65,536）
-- [ ] 兩邊的頂層埠與 `rtl/*/…_top.sv` 骨架一致（`make -C Platform/accel lint`）
+- [ ] 兩邊的頂層埠與 `rtl/*/…_top.sv` 骨架一致（`make -C hw/ple-cse lint`）
 - [ ] 兩邊的 testbench 都掛 `ple_cse_if_checker`，且 0 個錯誤
 - [ ] CSE 通過 golden model 的 trace（0 筆不同）
 - [ ] PLE 搭配 CSE BFM 通過整題比對

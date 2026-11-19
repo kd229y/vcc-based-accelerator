@@ -67,7 +67,7 @@ static int pose_fx(const int16_t *q)
 #endif
 }
 
-// same problems as Platform/accel/tb/tb_core.sv
+// same problems as hw/ple-cse/tb/tb_core.sv
 static const int plist[14] = {1, 40, 100, 160, 210, 260, 320, 380, 410, 470, 530, 600, 650, 690};
 
 int main(void)

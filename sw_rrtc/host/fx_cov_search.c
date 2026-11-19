@@ -1,5 +1,5 @@
 // Finds planner configurations that reach the two boundaries random runs almost never hit, for directed
-// RTL tests (Platform/accel/tb/tb_core.sv +directed): every config printed here is re-checked by a full
+// RTL tests (hw/ple-cse/tb/tb_core.sv +directed): every config printed here is re-checked by a full
 // golden run that counts the event (fx_cov_dd_eq / fx_cov_conn0).
 //   dd:    rad^2 == nd2 << 24 in a DD check. Candidates: DD checks on a node whose radius is still the
 //          first-failure value (cfg radius) and nd2 = m^2; rerun with radius = m << 12.

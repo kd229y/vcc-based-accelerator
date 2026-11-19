@@ -3,7 +3,7 @@
 v2 有兩個目標：
 
 1. **降低資源**：縮小 PLE 與 CSE 的 LUT / FF / BRAM。
-2. **對齊前處理介面**：PLE/CSE 直接使用組員 `vcc-based-accelerator` 的 `stage_a` + `build_engine` 建出的環境。
+2. **對齊前處理介面**：PLE/CSE 直接使用組員的 `hw/rtl/stage_a.v` + `build_engine.v` 建出的環境。
 
 狀態：草稿。第 6 節的決定已由使用者確認（2026-11-13）；尚未和 CSE 作者、前處理作者討論。標「估計」的數字都還沒有合成驗證。
 
@@ -20,9 +20,9 @@ v2 有兩個目標：
 
 | 區塊 | 負責 | 我們在 v2 做什麼 |
 |---|---|---|
-| PLE（`accel/rtl/ple`）、golden（`sw_rrtc/fx`）、testbench | 我們 | 直接修改 |
+| PLE（`hw/ple-cse/rtl/ple`）、golden（`sw_rrtc/fx`）、testbench | 我們 | 直接修改 |
 | PLE ↔ CSE 介面、CSE ↔ 環境記憶體介面（`ple_cse_pkg.sv`、埠列表） | 我們定義 | 修改介面定義，寫成規格 |
-| CSE 內部（`accel/rtl/cse`） | 另一位組員 | **不改**。最後打包規格 + pkg 交給他 |
+| CSE 內部（`hw/ple-cse/rtl/cse`） | 另一位組員 | **不改**。最後打包規格 + pkg 交給他 |
 | 環境記憶體、建表引擎（前處理） | 前處理作者 | **不改**。我們只知道它的讀取介面，並以它的格式為準 |
 
 ---
@@ -155,12 +155,12 @@ v2 有兩個目標：
 
 | 檔案 | 改動 |
 |---|---|
-| `accel/rtl/common/ple_cse_pkg.sv` | `W_MIN_LSB` = −32768；`ENV_G` = 32；`DIR_AW` = 15；目錄與 cell 的型別依 3.2；移除 `AOFF_W`、`env_region_e`、HDR 的 word 配置 |
+| `hw/ple-cse/rtl/common/ple_cse_pkg.sv` | `W_MIN_LSB` = −32768；`ENV_G` = 32；`DIR_AW` = 15；目錄與 cell 的型別依 3.2；移除 `AOFF_W`、`env_region_e`、HDR 的 word 配置 |
 | `sw_rrtc/tools/gen_fx_fku_rtl.py` | `W_MIN`，然後重新產生 `ple_fku.sv`（球心 + 32768） |
 | `sw_rrtc/fx/fx_pose.c` | `fx_w_min` |
 | `sw_rrtc/host/fx_envcheck.c` | 寫死的 `w_min = -19497` |
-| `accel/tb/mutants.py` | `fku_m6` 比對的字串 `18'sd19497` |
-| `accel/rtl/ple_cse_top.sv` | 拿掉 `cse_env_mem` 與 `env_wr_*`，改成對外的環境讀取埠 |
+| `hw/ple-cse/tb/mutants.py` | `fku_m6` 比對的字串 `18'sd19497` |
+| `hw/ple-cse/rtl/ple_cse_top.sv` | 拿掉 `cse_env_mem` 與 `env_wr_*`，改成對外的環境讀取埠 |
 | `docs/INTERFACES.md`、設計文件第 3、5.1 節 | I2、I3、常數表 |
 
 PLE 內部不用改的部分：
@@ -195,7 +195,7 @@ PLE 內部不用改的部分：
 - **兩個獨立的 AXI-Lite**：`ple_top` 的位址表不動；建表引擎用組員的 `vcc_axil_top`，只留建表相關的暫存器。
 - **中斷各一條**：建表完成、規劃完成分開。
 - **點雲輸入**：先用 CPU 逐 word 寫暫存器打通流程；`build_engine` 的串流輸入埠保留給之後的 DMA。
-- **驅動程式分開**：`accel/sw/ple_drv.c` 不動，建表另一個檔案。
+- **驅動程式分開**：`hw/ple-cse/sw/ple_drv.c` 不動，建表另一個檔案。
 - `MODE.env_buf` 固定為 0。「PLE 規劃中不能建表」仍由 CPU 軟體遵守，兩個硬體之間沒有握手。
 
 ---

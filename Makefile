@@ -4,7 +4,7 @@ SCENE ?= s1_shelf
 HASH  ?= 15
 
 .PHONY: help vectors consts sim sim-build sim-fk sim-plan sim-uart clean ple-patch vectors-v0 sim-v0 sim-sys sim-sys-all \
-        fx trace lint test-ple test-cse test
+        fx trace lint test-ple test-cse test regress
 
 help: ## List the targets
 	@grep -E '^[a-z0-9-]+:.*## ' $(MAKEFILE_LIST) | sed 's/:.*## /\t/'
@@ -44,9 +44,11 @@ trace: fx ## PLE: environment images + query traces of problems 0..9 (input of t
 lint: ## PLE: lint every PLE/CSE RTL file
 	$(MAKE) -C hw/ple-cse lint
 
-test-ple: ## PLE: unit + core tests, and the PLE with the real CSE (NCU=n, default 2)
+test-ple: ## PLE: unit, core, top (AXI-Lite), CPU driver, and the PLE with the real CSE (NCU=n, default 2)
 	$(MAKE) -C hw/ple-cse test-ple-unit
 	$(MAKE) -C hw/ple-cse test-ple-core
+	$(MAKE) -C hw/ple-cse test-ple-top
+	$(MAKE) -C hw/ple-cse test-ple-drv
 	$(MAKE) -C hw/ple-cse test-ple-cse NCU=$(NCU)
 
 test-cse: trace ## PLE: CSE tests, interface checker, environment memory
@@ -55,6 +57,9 @@ test-cse: trace ## PLE: CSE tests, interface checker, environment memory
 	$(MAKE) -C hw/ple-cse test-cse
 
 test: lint test-ple test-cse ## PLE: everything above
+
+regress: ## PLE + preprocessing: one line per target (PLE tests above, then make sim); logs in build/regress
+	bash hw/ple-cse/scripts/sim_regress.sh
 
 # ---- format-v0 integration (424726b): written for PLE-CSE v1, not verified with the v2 in hw/ple-cse ----
 PLE   := hw/ple-cse

@@ -17,11 +17,11 @@
 路徑相對 repo 根目錄：
 
 - `records/20261107-ple-cse-design.md` 第 4、5、13 節。
-- `Platform/accel/rtl/common/ple_cse_pkg.sv`：對外位寬、編碼及環境格式。
-- `Platform/accel/CSE_GUIDE.md`、`INTERFACES.md`。
-- `Platform/accel/CSE_CU_SPEC.md`：CU 各級功能與驗證細節。
-- `Platform/accel/rtl/cse/cse_env_mem.sv`：實際環境讀取介面。
-- `Platform/sw_rrtc/fx/fx_env.c`：golden `fx_cse_ref()`。
+- `hw/ple-cse/rtl/common/ple_cse_pkg.sv`：對外位寬、編碼及環境格式。
+- `docs/CSE_GUIDE.md`、`INTERFACES.md`。
+- `docs/CSE_CU_SPEC.md`：CU 各級功能與驗證細節。
+- `hw/ple-cse/rtl/cse/cse_env_mem.sv`：實際環境讀取介面。
+- `sw_rrtc/fx/fx_env.c`：golden `fx_cse_ref()`。
 
 PLE Q/R/K 的埠名、方向、位寬與握手規則不變；cse_top 可新增編譯期參數，不新增 PLE 訊號埠。支援 kill 是使用者對原文件「v1 可忽略 kill」的更新，不改變 C1–C6 合約。不要自行改動 PLE、環境格式或 memory 埠/延遲。
 
@@ -327,4 +327,4 @@ Codex 實作時：
 5. 跑代表性配置、trace、隨機/kill/背壓、checker、錯誤植入與最壞時限。
 6. 更新對接文件的本版選擇，交付架構、參數、測試指令/結果與尚未達成項目。
 
-產物放 Platform/build/accel，不進 git。RTL 放 rtl/cse/cse_*.sv，測試放 tb，使用 Verilator 5.032 與 --assert。未被要求時不提交 commit 或發布；本交接要求實作完整 CSE，不以單 CU 或 stub 測試通過作為最終完成。
+產物放 build/accel，不進 git。RTL 放 rtl/cse/cse_*.sv，測試放 tb，使用 Verilator 5.032 與 --assert。未被要求時不提交 commit 或發布；本交接要求實作完整 CSE，不以單 CU 或 stub 測試通過作為最終完成。

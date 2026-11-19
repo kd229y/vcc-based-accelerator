@@ -31,12 +31,12 @@
 
 | 指令 | 用處 |
 |---|---|
-| `make -C Platform/accel lint` | lint（每個 RTL 檔都要 0 個警告） |
-| `make -C Platform/accel test-checker` | 檢查器自測 |
-| `make -C Platform/accel test-env-mem` | 環境記憶體自測 |
-| `make -C Platform/sw_rrtc fx` | 建置 golden model |
-| `Platform/build/sw_rrtc_host/rrtc_fx -p 0:9 -n 1 -T <目錄>` | 產生 10 題的環境影像與查詢 trace |
-| `python3 Platform/sw_rrtc/tools/check_cse_trace.py <目錄> <tag> <queries.txt>` | 獨立檢查 trace，也可當格式說明 |
+| `make -C hw/ple-cse lint` | lint（每個 RTL 檔都要 0 個警告） |
+| `make -C hw/ple-cse test-checker` | 檢查器自測 |
+| `make -C hw/ple-cse test-env-mem` | 環境記憶體自測 |
+| `make -C sw_rrtc fx` | 建置 golden model |
+| `build/sw_rrtc_host/rrtc_fx -p 0:9 -n 1 -T <目錄>` | 產生 10 題的環境影像與查詢 trace |
+| `python3 sw_rrtc/tools/check_cse_trace.py <目錄> <tag> <queries.txt>` | 獨立檢查 trace，也可當格式說明 |
 
 規則：SystemVerilog（Verilator 5.032 能編譯的子集）、單一時脈 `clk`、`rst_n` 低電位有效且同步重置、檔名等於模組名、CSE 的模組用 `cse_` 前綴、註解一行（設計文件第 13 節）。
 
@@ -107,7 +107,7 @@ HIT ⇔ 存在環境中的點 p，使得
 | 局部剔除 | 非空格讀 CELL，得到 AABB：格子原點 `(g << 11)` 加上 lo / hi 偏移。可以用精確的 clamp 距離，或三軸區間比較 |
 | 點距離 | 讀 `base` 起的 `count` 個點，逐點比較；一碰到就回 HIT，提早結束 |
 
-golden model 的 C 參考實作在 `Platform/sw_rrtc/fx/fx_env.c` 的 `fx_cse_ref()`，結構和上表一一對應，可以直接對照。
+golden model 的 C 參考實作在 `sw_rrtc/fx/fx_env.c` 的 `fx_cse_ref()`，結構和上表一一對應，可以直接對照。
 
 ## 5. 環境記憶體（`cse_env_mem`）
 
@@ -115,7 +115,7 @@ golden model 的 C 參考實作在 `Platform/sw_rrtc/fx/fx_env.c` 的 `fx_cse_re
 - **延遲**：1 cycle。位址在第 t 個上升緣送進去，第 t+1 個上升緣之後資料有效。
 - **header**：兩份緩衝的 valid、err、點數、格數、全域 AABB 直接用暫存器輸出，不需要等 cycle。
 - **深度**：CELL 1024、PTS 16384。全部題目最大 651 格、11,670 點。
-- **模擬載入**：`+env0=<trace 前綴>`（第 1 份用 `+env1=`），例如 `+env0=Platform/build/sw_rrtc_host/cse_trace/s0_p1`。
+- **模擬載入**：`+env0=<trace 前綴>`（第 1 份用 `+env1=`），例如 `+env0=build/sw_rrtc_host/cse_trace/s0_p1`。
 - **建構引擎寫入埠**：v1 接 0（`wr_en` = 0）。
 - 詳細埠列表見 `INTERFACES.md` I3 與 `cse_env_mem.sv`。
 
@@ -152,11 +152,11 @@ golden model 的 C 參考實作在 `Platform/sw_rrtc/fx/fx_env.c` 的 `fx_cse_re
 3. **介面**：testbench 掛 `ple_cse_if_checker`，並隨機拉低 `r_ready`、隨機送 K（v1 忽略也必須通過）。結束時要拉高 `eot`，確認所有查詢都有回應。
 4. **對照組**：至少要有一個故意改錯的版本被抓到，例如把 `≤` 改成 `<`、範圍少走最後一格、AABB 少一個 LSB。golden model 用這三種都抓到過。
 
-目前可用 `make -C Platform/accel test-cse-unit` 測 Input FIFO 與兩個 round-robin 控制器；`make -C Platform/accel test-cse` 會額外重播 s0_p1–p3 trace，涵蓋 `N_CU=1/2/3/4/8` 與 depth 1/2/3/4/8/16、kill/背壓/中途 reset、`KILL_ENABLE=0`、`d² == r²`、合法 PT_DEPTH/R_MAX 全域延遲，以及確認嚴格 `<` comparator mutant 會失敗。
+目前可用 `make -C hw/ple-cse test-cse-unit` 測 Input FIFO 與兩個 round-robin 控制器；`make -C hw/ple-cse test-cse` 會額外重播 s0_p1–p3 trace，涵蓋 `N_CU=1/2/3/4/8` 與 depth 1/2/3/4/8/16、kill/背壓/中途 reset、`KILL_ENABLE=0`、`d² == r²`、合法 PT_DEPTH/R_MAX 全域延遲，以及確認嚴格 `<` comparator mutant 會失敗。
 
 ## 9. 交付給 PLE 端前
 
-- [ ] `make -C Platform/accel lint` 0 個警告
+- [ ] `make -C hw/ple-cse lint` 0 個警告
 - [ ] trace（至少 s0_p1–p3，建議 10 題以上）0 筆不同
 - [ ] 隨機球測試 0 筆不同，對照組被抓到
 - [ ] 掛 `ple_cse_if_checker` 0 個錯誤
