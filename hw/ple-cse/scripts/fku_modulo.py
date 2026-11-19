@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """FKU modulo scheduling (docs/PLE_ARCH_STUDY.md): units needed when a new pose starts every P cycles.
-Usage: python3 -I fku_modulo.py ../../sw_rrtc/tools/gen_fx_fku_rtl.py ../../sw_rrtc/fx/fx_fk_gen.c"""
+Usage: python3 -I fku_modulo.py ../../../sw_rrtc/tools/gen_fx_fku_rtl.py ../../../sw_rrtc/fx/fx_fk_gen.c"""
 # modulo scheduling: a new pose starts every P cycles; slot (unit, t mod P) may be used once
 import importlib.util, sys
 spec = importlib.util.spec_from_file_location('g', sys.argv[1]); g = importlib.util.module_from_spec(spec); spec.loader.exec_module(g)

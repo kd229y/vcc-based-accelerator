@@ -2,11 +2,11 @@
 #   vivado -mode batch -source build_v0.tcl [-tclargs <N_CU>]
 set here [file dirname [file normalize [info script]]]
 set rtl  [file normalize $here/../rtl]
-set pc   [file normalize $here/../../ext/PLE-CSE/accel/rtl]
+set pc   [file normalize $here/../ple-cse/rtl]
 set ncu  [expr {[llength $argv] > 0 ? [lindex $argv 0] : 1}]
 set out  $here/out_v0_ncu$ncu
 set f [open $pc/common/ple_cse_pkg.sv]; set pkg [read $f]; close $f
-if {![string match "*3 \\* AOFF_W*" $pkg]} { puts "ERROR: ext/PLE-CSE is not patched (run: make ple-patch)"; exit 1 }
+if {![string match "*3 \\* AOFF_W*" $pkg]} { puts "ERROR: hw/ple-cse is not patched (run: make ple-patch)"; exit 1 }
 file mkdir $out
 read_verilog -sv [list $pc/common/ple_cse_pkg.sv $pc/ple/ple_pkg.sv $pc/ple/ple_robot_pkg.sv $pc/cse/cse_cu_pkg.sv]
 read_verilog -sv [lsearch -all -inline -not -glob [lsort [glob $pc/ple/*.sv]] *_pkg.sv]

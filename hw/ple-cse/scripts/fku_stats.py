@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """FKU schedule statistics (docs/PLE_ARCH_STUDY.md): nodes, multiplies, dependency depth, results_at per (U, L).
-Usage: python3 -I fku_stats.py ../../sw_rrtc/tools/gen_fx_fku_rtl.py ../../sw_rrtc/fx/fx_fk_gen.c"""
+Usage: python3 -I fku_stats.py ../../../sw_rrtc/tools/gen_fx_fku_rtl.py ../../../sw_rrtc/fx/fx_fk_gen.c"""
 import importlib.util, sys
 spec = importlib.util.spec_from_file_location('g', sys.argv[1]); g = importlib.util.module_from_spec(spec); spec.loader.exec_module(g)
 F, TS, tabs, stmts, outs = g.parse(sys.argv[2])

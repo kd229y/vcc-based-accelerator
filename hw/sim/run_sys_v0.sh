@@ -6,8 +6,8 @@ cd "$(dirname "$0")/../.."
 NCU=${1:-1}; shift || true
 PROBS=${@:-0}
 export PATH="$HOME/.conda-envs/verilator/bin:$PATH"
-A=ext/PLE-CSE/accel
-grep -q "3 \* AOFF_W" $A/rtl/common/ple_cse_pkg.sv || { echo "ext/PLE-CSE is not patched: run make ple-patch"; exit 1; }
+A=hw/ple-cse
+grep -q "3 \* AOFF_W" $A/rtl/common/ple_cse_pkg.sv || { echo "hw/ple-cse is not patched: run make ple-patch"; exit 1; }
 B=$PWD/build/sys_v0
 mkdir -p $B
 make -s -C $A BUILD=$B $B/libfxref.a
@@ -19,7 +19,7 @@ if [ ! -x $OBJ/Vtb_sys_v0 ] || [ -n "$(find hw/rtl hw/tb $A/rtl -newer $OBJ/Vtb_
   verilator --binary --timing --assert -Wno-fatal -Wno-lint -Wno-style -I$A/rtl/common -Mdir $OBJ -GN_CU=$NCU \
     --top-module tb_sys_v0 $PKG $PLE $CSE $A/rtl/ple_cse_top.sv \
     hw/rtl/ram_sdp.v hw/rtl/stage_a_v0.v hw/rtl/build_engine_v0.v hw/tb/tb_sys_v0.sv hw/tb/sys_dpi.c \
-    -CFLAGS "-I$PWD/ext/PLE-CSE/sw_rrtc/src -I$PWD/ext/PLE-CSE/sw_rrtc/fx" \
+    -CFLAGS "-I$PWD/sw_rrtc/src -I$PWD/sw_rrtc/fx" \
     -LDFLAGS $B/libfxref.a -LDFLAGS -lm -o Vtb_sys_v0 > $OBJ.build.log 2>&1 || { tail -30 $OBJ.build.log; exit 1; }
 fi
 ARGS=""; i=0; for p in $PROBS; do case $p in +*) ARGS="$ARGS $p";; *) ARGS="$ARGS +p$i=$p"; i=$((i+1));; esac; done

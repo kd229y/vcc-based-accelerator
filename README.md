@@ -29,10 +29,10 @@
 建表引擎的設計：hash 濾波（只存 q，d 由座標重算）→ 每個查詢格 64-bit 佔用遮罩 → 依查詢格 Morton 順序配 slot、寫全部 DIR →
 以遮罩 popcount 算格內名次，點直接寫到 PTS 最終位置（不另存點陣列）→ CELL → HDR。AABB 偏移存 8 bits、往外取整寫出。
 
-**對 PLE-CSE 的修改**（`hw/patches/ple-cse-pts-offset.patch`，用 `make ple-patch` 套用到 `ext/PLE-CSE`）：
+**對 PLE-CSE 的修改**（`hw/patches/ple-cse-pts-offset.patch`，用 `make ple-patch` 套用到 `hw/ple-cse`）：
 PTS 改存「相對查詢格原點的 11-bit 偏移」（48 → 33 bits，無損），CSE S3 讀點後補回格子原點；環境記憶體因此從 62 降到 47 BRAM。
 PLE-CSE 原有測試全部通過（`tb_cse_worst` 的格外點在新格式不合法，改為預期 HIT，合法最壞情況由 `tb_cse_array_worst` 涵蓋）。
-submodule 指向 PLE-CSE 上游的 `7733701`；這份 patch 也是預計給協作者的 PR 內容。
+這份 patch 是針對 PLE-CSE v1（`7733701`）寫的；PLE-CSE 已併入本 repo 的 `hw/ple-cse`（v2），patch 套不上 v2，相關目標尚未對 v2 驗證。這份 patch 也是預計給協作者的 PR 內容。
 
 ```bash
 make ple-patch       # 套用 CSE 修改（整合版必要）
@@ -58,6 +58,10 @@ hw/
   sim/                       run_all.sh 等模擬腳本
   vivado/                    建置 / 燒錄腳本與 xdc（Nexys A7、Arty、Zynq）
   host/                      板上 driver 與自我測試（UART 或 Zynq MMIO）
+  ple-cse/                   PLE-CSE（RRT-Connect 規劃 PLE + 碰撞查詢 CSE）的 RTL、tb、OOC 腳本、C driver
+sw_rrtc/                     PLE-CSE 的定點 golden model（fx）、RTL 產生器、host 工具
+docs/                        PLE-CSE 規格與 v2 計畫
+toolchain.mk                 sw_rrtc 用的 RISC-V GCC 偵測
   REPORT_meeting.md          進度報告
 SoC_軟體驗證資料包/           整數功能模型、驗證 runner、獨立參考、資料
   soc_model/core.cpp         golden model（C ABI）

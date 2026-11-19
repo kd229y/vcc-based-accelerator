@@ -1,5 +1,5 @@
-# Platform/accel -- PLE / CSE RTL (records/20261107-ple-cse-design.md section 13)
-BUILD   ?= $(abspath ../build/accel)
+# hw/ple-cse -- PLE / CSE RTL (records/20261107-ple-cse-design.md section 13)
+BUILD   ?= $(abspath ../../build/accel)
 VERI    ?= verilator
 PKG     := rtl/common/ple_cse_pkg.sv
 CSE_PKG := rtl/cse/cse_cu_pkg.sv
@@ -8,15 +8,15 @@ CSE_RTL := $(CSE_PKG) rtl/cse/cse_fifo.sv rtl/cse/cse_query_fifo.sv rtl/cse/cse_
            rtl/cse/cse_system.sv
 VFLAGS  := -Wall --assert -Irtl/common
 PLE_PKG := rtl/ple/ple_pkg.sv
-FXDIR   := $(abspath ../sw_rrtc/fx)
-FKUGEN  := $(abspath ../sw_rrtc/tools/gen_fx_fku_rtl.py)
-SCUGEN  := $(abspath ../sw_rrtc/tools/gen_fx_scu_rtl.py)
-SWDIR   := $(abspath ../sw_rrtc)
+FXDIR   := $(abspath ../../sw_rrtc/fx)
+FKUGEN  := $(abspath ../../sw_rrtc/tools/gen_fx_fku_rtl.py)
+SCUGEN  := $(abspath ../../sw_rrtc/tools/gen_fx_scu_rtl.py)
+SWDIR   := $(abspath ../../sw_rrtc)
 # testbenches call the golden model through DPI-C (fx_ref.c includes fx_plan.c)
 # golden model as a C library (gcc): DPI needs C linkage, and the golden C is not valid C++
 FXLIB   := $(BUILD)/libfxref.a
-SRCDIR  := $(abspath ../sw_rrtc/src)
-GENDIR  := $(abspath ../sw_rrtc/gen)
+SRCDIR  := $(abspath ../../sw_rrtc/src)
+GENDIR  := $(abspath ../../sw_rrtc/gen)
 FXLIB_SRC := $(FXDIR)/fx_ref.c $(FXDIR)/fx_env.c $(FXDIR)/fx_ref_stub.c $(SRCDIR)/env.c $(GENDIR)/problems_panda.c
 DPI     := -LDFLAGS $(FXLIB) -LDFLAGS -lm
 TBFLAGS := --binary --timing --assert -Wno-fatal -Irtl/common
@@ -56,7 +56,7 @@ test-checker: $(BUILD)/tb_if_checker/Vtb_if_checker $(BUILD)/tb_if_checker_ak0/V
 	@for b in 0 4; do $(BUILD)/tb_if_checker_ak0/Vtb_if_checker +bug=$$b > $(BUILD)/tb_if_checker_ak0/bug$$b.log; grep '^TB' $(BUILD)/tb_if_checker_ak0/bug$$b.log; grep -m1 ERROR $(BUILD)/tb_if_checker_ak0/bug$$b.log; done
 
 # cse_env_mem: load two golden-model traces, read everything back, diff against the source files
-TRACE ?= $(abspath ../build/sw_rrtc_host/cse_trace)
+TRACE ?= $(abspath ../../build/sw_rrtc_host/cse_trace)
 $(BUILD)/tb_env_mem/Vtb_env_mem: $(PKG) rtl/cse/cse_env_mem.sv tb/tb_env_mem.sv
 	@mkdir -p $(BUILD)/tb_env_mem
 	$(VERI) --binary --timing -Wno-fatal -Irtl/common -Mdir $(BUILD)/tb_env_mem \

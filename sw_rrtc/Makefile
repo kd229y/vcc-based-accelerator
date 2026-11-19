@@ -111,7 +111,7 @@ $(HOST_DIR)/fx_envcheck: host/fx_envcheck.c fx/fx_env.c $(FX_CHK_SRCS) $(wildcar
 	$(HOSTCC) $(COMMON) -Ifx -o $@ host/fx_envcheck.c fx/fx_env.c $(FX_CHK_SRCS) -lm
 
 # fx_env_build / fx_cse_ref against the preprocessing golden vectors (vcc-based-accelerator hw/vectors)
-VCC_VECTORS ?= $(abspath ../../vcc-based-accelerator/hw/vectors)
+VCC_VECTORS ?= $(abspath ../hw/vectors)
 $(HOST_DIR)/fx_envxcheck: host/fx_envxcheck.c fx/fx_env.c $(wildcard fx/*.h)
 	@$(MKDIR) $(HOST_DIR)
 	$(HOSTCC) $(COMMON) -Ifx -o $@ host/fx_envxcheck.c fx/fx_env.c -lm

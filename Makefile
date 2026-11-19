@@ -1,9 +1,10 @@
-# VCC Morton accelerator: entry point (make help). hw/ keeps its own scripts.
+# VCC Morton accelerator + PLE/CSE: entry point (make help). hw/ and hw/ple-cse keep their own scripts.
 SHELL := /bin/bash
 SCENE ?= s1_shelf
 HASH  ?= 15
 
-.PHONY: help vectors consts sim sim-build sim-fk sim-plan sim-uart clean ple-patch vectors-v0 sim-v0 sim-sys sim-sys-all
+.PHONY: help vectors consts sim sim-build sim-fk sim-plan sim-uart clean ple-patch vectors-v0 sim-v0 sim-sys sim-sys-all \
+        fx trace lint test-ple test-cse test
 
 help: ## List the targets
 	@grep -E '^[a-z0-9-]+:.*## ' $(MAKEFILE_LIST) | sed 's/:.*## /\t/'
@@ -28,14 +29,41 @@ sim-fk: ## FK against the package's 128 golden cases
 sim-plan: ## RRT-Connect plan through the register bus (detour problem)
 	hw/sim/run_plan.sh s0_pkgvec p0_detour
 
-# ---- integration with PLE-CSE (ext/PLE-CSE submodule) ----
-PLE   := ext/PLE-CSE
+# ---- PLE/CSE (hw/ple-cse RTL, sw_rrtc golden + host tools) ----
+HOST  := $(abspath build/sw_rrtc_host)
+TRACE := $(HOST)/cse_trace
+NCU   ?= 2
+
+fx: ## PLE: build the golden model and host tools (sw_rrtc fx)
+	$(MAKE) -C sw_rrtc fx
+
+trace: fx ## PLE: environment images + query traces of problems 0..9 (input of the CSE tests)
+	@mkdir -p $(TRACE)
+	$(HOST)/rrtc_fx -p 0:9 -n 1 -T $(TRACE) > $(TRACE)/rrtc_fx.log
+
+lint: ## PLE: lint every PLE/CSE RTL file
+	$(MAKE) -C hw/ple-cse lint
+
+test-ple: ## PLE: unit + core tests, and the PLE with the real CSE (NCU=n, default 2)
+	$(MAKE) -C hw/ple-cse test-ple-unit
+	$(MAKE) -C hw/ple-cse test-ple-core
+	$(MAKE) -C hw/ple-cse test-ple-cse NCU=$(NCU)
+
+test-cse: trace ## PLE: CSE tests, interface checker, environment memory
+	$(MAKE) -C hw/ple-cse test-checker
+	$(MAKE) -C hw/ple-cse test-env-mem
+	$(MAKE) -C hw/ple-cse test-cse
+
+test: lint test-ple test-cse ## PLE: everything above
+
+# ---- format-v0 integration (424726b): written for PLE-CSE v1, not verified with the v2 in hw/ple-cse ----
+PLE   := hw/ple-cse
 PATCH := hw/patches/ple-cse-pts-offset.patch
 V0_PROBS ?= 0 100 200 300 400 500 600 542 482
 
-ple-patch: ## Apply our CSE change (PTS as 11-bit in-cell offsets) to ext/PLE-CSE; needed by the integrated design
-	@if git -C $(PLE) apply --reverse --check ../../$(PATCH) 2>/dev/null; then echo "ple-patch: already applied"; \
-	else git -C $(PLE) apply ../../$(PATCH) && echo "ple-patch: applied"; fi
+ple-patch: ## Apply our CSE change (PTS as 11-bit in-cell offsets) to hw/ple-cse (v1 patch); needed by the integrated design
+	@if git apply -p2 --directory=$(PLE) --reverse --check $(PATCH) 2>/dev/null; then echo "ple-patch: already applied"; \
+	else git apply -p2 --directory=$(PLE) $(PATCH) && echo "ple-patch: applied"; fi
 
 vectors-v0: ## Format-v0 golden vectors from PLE-CSE's fx_env_build / fx_ref_solve (hw/vectors_v0)
 	hw/golden_v0/make_vectors_v0.sh $(V0_PROBS)
