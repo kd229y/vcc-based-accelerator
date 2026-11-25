@@ -12,11 +12,14 @@ hw/vivado/detect.tcl
 __pycache__/
 *.pyc
 hw_baseline_board_verified.tgz
+
 # personal notes and local agent setup (not shared)
 CLAUDE.md
 records/
 .claude/
 /docs/figs/
+*.pptx
+
 # Vivado / tool logs written to the working directory (PLE-CSE outputs go to build/)
 /*.log
 
