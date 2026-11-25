@@ -24,6 +24,7 @@ else
         "make -C hw/ple-cse test-checker"
         "make -C hw/ple-cse test-env-mem"
         "make -C hw/ple-cse test-cse"
+        "make -C hw/ddr test"
         "make sim"
     )
 fi

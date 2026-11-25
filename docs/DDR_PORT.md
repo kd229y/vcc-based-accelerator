@@ -1,6 +1,6 @@
-# DDR 移植設計（草稿，尚未實作）
+# DDR 移植設計
 
-狀態：設計已確認（第 10 節），尚未實作，2026-11-25。branch `feature/ddr-port`（從 `feature/ple-cse-v2` 開出）。
+狀態：L1、L2、L3 通過，等待 L4 上板（第 12 節），2026-11-25。branch `feature/ddr-port`（從 `feature/ple-cse-v2` 開出）。
 
 ## 1. 目標和範圍
 
@@ -64,6 +64,8 @@ DDR2 每次 BL8 傳 8 × 16 bit = 128 bit，剛好是一個 AXI beat。
 - 位址的單位是 byte，必須 16 B 對齊；長度的單位是 beat。不支援 narrow 傳輸，部分寫入要用 `wr_strb`。
 - 回應依序：每個方向只用一個 AXI ID（0），所以不需要 reorder buffer。
 - 讀和寫之間**不保證順序**：同一個位址先寫後讀，要等 `wr_done` 之後再送讀命令。
+- 每個方向一次只處理一個命令：寫命令在 `wr_done` 之後、讀命令在最後一個 beat 被取走之後，`*_cmd_ready` 才再拉高。
+- 錯誤的命令（位址沒有 16 B 對齊，或 len = 0）：設定 `err`。位址會向下對齊後照常執行；len = 0 的寫命令立刻送出 `wr_done`，len = 0 的讀命令沒有任何 beat。
 
 ### 4.2 AXI4 端（接 MIG，或之後接 smartconnect）
 
@@ -80,10 +82,10 @@ DDR2 每次 BL8 傳 8 × 16 bit = 128 bit，剛好是一個 AXI beat。
 | 位址 | 名稱 | 說明 |
 |---|---|---|
 | 0x000 | CTRL | W：bit0 開始 BIST |
-| 0x004 | STATUS | R：[0] calib_done [1] busy [2] pass [3] fail [4] axi_err |
+| 0x004 | STATUS | R：[0] calib_done [1] busy [2] pass [3] fail [4] axi_err（`ddr_port` 的 `err`，reset 前一直保持） |
 | 0x008 | BASE | 起始 byte 位址 |
 | 0x00C | LEN | 總 beat 數 |
-| 0x010 | BURST | 每個命令的 beat 數（用來掃 1、4、16、64、256） |
+| 0x010 | BURST | 每個命令的 beat 數（用來掃 1、4、16、64、256；0 當作 1）；MODE 4 時是讀取的次數 |
 | 0x014 | MODE | 0 寫再讀回比對；1 只寫；2 只讀並比對；3 byte-strobe 測試；4 隨機單一 beat 讀（量延遲） |
 | 0x018 | SEED | 樣式的 seed |
 | 0x020 | ERRS | 錯誤的 beat 數 |
@@ -95,6 +97,11 @@ DDR2 每次 BL8 傳 8 × 16 bit = 128 bit，剛好是一個 AXI beat。
 | 0x104 | WIN_DATA | 寫：寫入一個 32-bit word（strobe 只開 4 byte）；讀：讀回那個 word |
 
 MODE 3（strobe）：先整段寫入樣式 A，再用隨機 strobe 寫入樣式 B，最後讀回，檢查每個 byte 是 A 還是 B 都正確。
+
+實作細節（`hw/ddr/rtl/ddr_test.v` 檔頭；`hw/ddr/host/ddr_host.py` 的 `hw()` 是同一個公式）：
+- 樣式：位址 a（byte，4 B 對齊）的 32-bit word = `hw(a >> 2, seed)`。`hw` 是 xorshift(13, 17, 5)，加上 `rot16(seed) + 0x9E3779B9`，最後 `x ^ (x >> 15)`。樣式 A 用 SEED，樣式 B 用 ~SEED，strobe = `hw(a >> 2, SEED ^ 0x5A5AA5A5)` 的低 16 bit（a 是該 beat 的起始位址）。
+- MODE 4：第 i 次讀取的位址 = BASE + 16 × floor(h × LEN / 2^16)，h = `hw({i[8:0], i}, SEED)` 的高 16 bit（index 重複一次，i 小的時候位址才會分散；只用 `hw(i)` 時 200 次讀取只落在 10 個位址）。資料用 SEED 的樣式 A 比對，所以要先用同一個 SEED 寫過那一段。延遲 = 讀命令被接受到資料出現的 cycle 數（包含 `ddr_port` 本身約 4 cycle）。
+- UART 用 115200 baud（`ddr_uart_top` 參數 `BAUD`）。
 
 ## 6. 要改和新增的東西
 
@@ -143,7 +150,7 @@ MODE 3（strobe）：先整段寫入樣式 A，再用隨機 strobe 寫入樣式 
 
 - MIG 的 xdc 依照 prj 裡的腳位名稱（`ddr2_*`）去 `get_ports`，所以頂層的 port 名稱必須和 prj 一致。
 - MIG 開了 XADC 溫度補償，所以設計裡不能再有別的 XADC。
-- L2 的 MIG 模擬很慢（FAST 校準約數分鐘到數十分鐘，估計值），不放進 `make regress`，改成另外執行。
+- L2 的 MIG 模擬很慢（實測整個 `tb_ddr_mig` 約 6 分鐘），不放進 `make regress`，改成另外執行（`make -C hw/ddr sim-mig`）。
 - 板上測試只能由使用者執行（H3 交接），agent 看不到板子的輸出。
 
 ## 10. 已決定（2026-11-25，使用者確認）
@@ -163,3 +170,18 @@ MODE 3（strobe）：先整段寫入樣式 A，再用隨機 strobe 寫入樣式 
 7. L4 PASS → 依 L4 的數字更新第 8 節（cache 結論）→ 使用者同意後 merge 回 `feature/ple-cse-v2`。
 
 L3 排在 L2 之前：先確認 MIG 產生和 build 都沒問題，再花時間跑較慢的 MIG 模擬。
+
+## 12. 實作結果（2026-11-25）
+
+| 層級 | 指令 | 結果 |
+|---|---|---|
+| lint | `make -C hw/ddr lint` | rc=0；`ddr_port` 用 3 組參數（預設、BURST_MAX=256、BURST_MAX=1） |
+| L1 | `make -C hw/ddr test-l1`（`tb/run_l1.sh`） | 5 組參數 × 4 組延遲（min、def、max、slow = 記憶體快而使用者慢）的 20 個 `TB_DDR_PORT` 都是 `errors=0 proto_errors=0`；`TB_DDR_TEST`（MODE 0–4、window、植入錯誤）3 組延遲都是 `errors=0` |
+| L1 mutant | `make -C hw/ddr test-mutants` | 12/12 killed：文件的 4 個（WLAST 早一拍、跨 4 KB、忽略 strobe、讀 FIFO 少一格），加上讀 credit 多一格、wr_done 不等 B、AW 不扣已分配的 beat，和 `ddr_test` 的 5 個 |
+| L2 | `make -C hw/ddr sim-mig`（xsim，整個 `ddr_uart_top` 經 UART） | `TB_DDR_MIG errors=0`；FAST 校準在 108.9 µs 完成；MODE 4 延遲 25–30 cycle |
+| L3 | `make -C hw/ddr build` | WNS +1.405 ns、WHS +0.031 ns（都在 ui_clk），0 個 CRITICAL WARNING。第一版的最差路徑是 `ddr_port` 的 `ar_rem` → burst 長度計算 → `ar_addr`（18 級，+1.080 ns），重新佈線後最差路徑換到 MIG 內部。資源 6,937 LUT（MIG 3,944、`ddr_test` 1,932、`uart_bridge` 569、`ddr_port` 492）、0 BRAM、1 DSP |
+| L4 | 使用者上板 | 尚未執行 |
+
+注意：
+- 「讀 FIFO 少一格」只有在「記憶體快、使用者慢」時才會出現，所以 L1 加了 `slow` 這組延遲；只用 min / def / max 時這個 mutant 會存活。
+- `make regress` 包含 `make -C hw/ddr test`（lint + L1，約 45 秒），不含 mutant 和 L2。
