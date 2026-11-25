@@ -91,14 +91,14 @@ class Test:
             res[k] = l.r(R[k])
         return res
 
-    def result(self, name, res, nbeats, extra=""):
+    def result(self, name, res, nbeats, extra="", wr_passes=1):
         st = res["st"]
         ok = (not res["timeout"]) and (st & 0x1D) == 0x05 and res["ERRS"] == 0
         bw = []
-        for k, lab in (("WR_CYC", "wr"), ("RD_CYC", "rd")):
+        for k, lab, n in (("WR_CYC", "wr", nbeats * wr_passes), ("RD_CYC", "rd", nbeats)):
             c = res.get(k, 0)
             if c:
-                bw.append(f"{lab}={nbeats * 16 / (c / UI_HZ) / 1e6:.0f}MB/s")
+                bw.append(f"{lab}={n * 16 / (c / UI_HZ) / 1e6:.0f}MB/s")
         info = f"status={st:#x} errs={res.get('ERRS')} {' '.join(bw)} {extra}"
         if res["timeout"]:
             info += " TIMEOUT (busy)"
@@ -159,7 +159,7 @@ def main():
                 t.result("MODE4 random reads x10000", res, n, extra)
                 # MODE 3 strobes on 8 MB
                 res = t.run(3, 0x0100_0000, 8 << 16, 64, seed ^ 0xFFFF)
-                t.result("MODE3 strobe 8MB", res, 8 << 16)
+                t.result("MODE3 strobe 8MB", res, 8 << 16, wr_passes=2)   # WR_CYC covers pattern A and B
                 # burst sweep, 1 MB each, odd base offsets
                 for i, bl in enumerate((1, 4, 16, 64, 256)):
                     base = 0x0200_0000 + i * 0x10_0000 + 0x30

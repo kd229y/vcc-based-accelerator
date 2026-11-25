@@ -1,6 +1,6 @@
 # DDR 移植設計
 
-狀態：L1、L2、L3 通過，等待 L4 上板（第 12 節），2026-11-25。branch `feature/ddr-port`（從 `feature/ple-cse-v2` 開出）。
+狀態：L1–L4 全部通過（第 12 節），2026-11-25。等使用者同意後 merge 回 `feature/ple-cse-v2`。branch `feature/ddr-port`（從 `feature/ple-cse-v2` 開出）。
 
 ## 1. 目標和範圍
 
@@ -130,7 +130,7 @@ MODE 3（strobe）：先整段寫入樣式 A，再用隨機 strobe 寫入樣式 
 
 ## 8. 要不要替 DDR 加 cache（研究）
 
-**初步結論：現在不加。** 改用 burst 加 FIFO（多個讀 burst 在途中、寫入緩衝），用 L4 量到的數字做最後確認。
+**結論（L4 確認）：不加。** 改用 burst 加 FIFO（多個讀 burst 在途中、寫入緩衝）。L4 量到：單一 beat 隨機讀平均延遲 L = 26 cycle（347 ns），長命令的串流頻寬寫 899 MB/s、讀 870 MB/s（峰值 1.2 GB/s 的 75% / 72%）。目前規劃的使用者都是串流，所以瓶頸在命令長度，不在命中率（見第 12 節的 burst 掃描）。
 
 | 加速器會做的 DDR 存取 | 存取樣式 | 會重複使用嗎 | cache 有幫助嗎 |
 |---|---|---|---|
@@ -144,7 +144,7 @@ MODE 3（strobe）：先整段寫入樣式 A，再用隨機 strobe 寫入樣式 
 2. **LUT 是瓶頸**：cache 要 tag、資料 BRAM 和控制邏輯，估計會多 1k–2k LUT（估計值）。
 3. **一致性**：SoC 的 dcache 是 write-back，而且沒有硬體一致性。加速器再加一個 cache，就變成兩個互不知道的 cache，CPU 和加速器兩邊都要 flush 或 invalidate，軟體流程更容易出錯。不加 cache 的話，只需要 CPU 在啟動前執行 `fence.i`（SoC 已實作）。
 
-什麼時候要重新考慮：出現「隨機存取而且會重複使用」的使用者時，例如樹超過 1024 個節點、要把舊節點放到 DDR。判斷方式：用 L4 MODE 4 量到的單一 beat 平均延遲 L，如果那個使用者每 L 個 cycle 需要不只一次隨機存取，而且重複使用率高，再評估加一個小的唯讀 cache。
+什麼時候要重新考慮：出現「隨機存取而且會重複使用」的使用者時，例如樹超過 1024 個節點、要把舊節點放到 DDR。判斷方式：用 L4 MODE 4 量到的單一 beat 平均延遲 L（= 26 cycle），如果那個使用者每 L 個 cycle 需要不只一次隨機存取，而且重複使用率高，再評估加一個小的唯讀 cache。
 
 ## 9. 風險
 
@@ -180,8 +180,30 @@ L3 排在 L2 之前：先確認 MIG 產生和 build 都沒問題，再花時間�
 | L1 mutant | `make -C hw/ddr test-mutants` | 12/12 killed：文件的 4 個（WLAST 早一拍、跨 4 KB、忽略 strobe、讀 FIFO 少一格），加上讀 credit 多一格、wr_done 不等 B、AW 不扣已分配的 beat，和 `ddr_test` 的 5 個 |
 | L2 | `make -C hw/ddr sim-mig`（xsim，整個 `ddr_uart_top` 經 UART） | `TB_DDR_MIG errors=0`；FAST 校準在 108.9 µs 完成；MODE 4 延遲 25–30 cycle |
 | L3 | `make -C hw/ddr build` | WNS +1.405 ns、WHS +0.031 ns（都在 ui_clk），0 個 CRITICAL WARNING。第一版的最差路徑是 `ddr_port` 的 `ar_rem` → burst 長度計算 → `ar_addr`（18 級，+1.080 ns），重新佈線後最差路徑換到 MIG 內部。資源 6,937 LUT（MIG 3,944、`ddr_test` 1,932、`uart_bridge` 569、`ddr_port` 492）、0 BRAM、1 DSP |
-| L4 | 使用者上板 | 尚未執行 |
+| L4 | `make -C hw/ddr program` + `ddr_host.py --rounds 3`（Nexys A7-100T，JTAG 序號 210292…） | `DDR_HOST PASS`：3 輪全部 PASS（見下表），log `build/ddr/board/ddr_host_20261125_135804.log` |
 
 注意：
 - 「讀 FIFO 少一格」只有在「記憶體快、使用者慢」時才會出現，所以 L1 加了 `slow` 這組延遲；只用 min / def / max 時這個 mutant 會存活。
 - `make regress` 包含 `make -C hw/ddr test`（lint + L1，約 45 秒），不含 mutant 和 L2。
+
+### L4 板上數字（3 輪結果一致，下表取第 0 輪；峰值 = 16 B × 75 MHz = 1.2 GB/s）
+
+| 測試 | 寫 MB/s | 讀 MB/s | cycle/beat（寫 / 讀） |
+|---|---|---|---|
+| MODE 0，128 MB，命令 256 beat | 899（75%） | 870（72%） | 1.33 / 1.38 |
+| MODE 0，1 MB，命令 1 beat | 169 | 44 | 7.1 / 27.3 |
+| MODE 0，1 MB，命令 4 beat | 362 | 158 | 3.3 / 7.6 |
+| MODE 0，1 MB，命令 16 beat | 498 | 447 | 2.4 / 2.7 |
+| MODE 0，1 MB，命令 64 beat | 790 | 738 | 1.5 / 1.6 |
+| MODE 0，1 MB，命令 256 beat | 909 | 846 | 1.3 / 1.4 |
+| MODE 3 strobe，8 MB | 784（log 顯示 392，見下） | 761 | |
+| MODE 4 隨機讀 10,000 次（全 128 MB） | | | 延遲最小 26、最大 30 / 28 / 36、平均 26.0 cycle |
+
+其他：每輪的 window word 8/8 正確；用 window 讀回的 word 等於 host 的樣式公式（RTL 和 host 的公式一致）；`errs=0`，沒有 AXI 錯誤。
+
+判讀：
+- 和模擬一致：L2 的 MODE 4 延遲 25–30 cycle（平均 26），板上 26–36（平均 26.0）。
+- **短命令的讀取被延遲卡住**：命令 1 beat 時每 beat 27.3 cycle ≈ 延遲 26 + 1；命令 4 beat 時 (26 + 4) / 4 ≈ 7.5，和量到的 7.6 一致。原因是 `ddr_port` 每個方向一次只處理一個命令（第 4.1 節），下一個命令要等上一個做完，延遲沒辦法在命令之間重疊。**加速器應該用 ≥ 64 beat（1 KB）的命令**；如果之後的使用者只能發短命令，要改成讓下一個命令的 AR 提早送出（命令佇列），不是加 cache。
+- MODE 3 的寫頻寬：WR_CYC 包含樣式 A 和 B 兩次寫入，host 原本只用 8 MB 算，所以 log 顯示 392 MB/s，實際約 784 MB/s。`ddr_host.py` 已修正（只影響顯示，不影響 PASS/FAIL）。
+- 第一次上板測試時接錯成 Arty A7-100T（同一顆 xc7a100t，所以燒錄也會成功），結果 UART 0 bytes、LED 全暗。燒錄後要看 `program.log` 的 JTAG 序號：Nexys A7 是 `210292…`，Arty 是 `210319…`。
+
