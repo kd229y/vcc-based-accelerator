@@ -1,6 +1,7 @@
 // One complete CSE compute unit: ball-to-voxel-to-cell-to-point streaming search.
 // Each accepted query gets one of NCTX context entries (LUT/FF, allocated in order at Q, freed when S3 completes it);
-// the stage registers and FIFOs carry only the entry id.
+// the stage registers and FIFOs carry only the entry id. An entry's killed flag is set at accept (birth generation
+// differs from kill_gen) and by every later K that names its tag; it never clears while the entry lives.
 module cse_cu
   import ple_cse_pkg::*;
   import cse_cu_pkg::*;
@@ -20,7 +21,10 @@ module cse_cu
     output logic                       r_valid,
     input  logic                       r_ready,
     output resp_t                      r_payload,
+    // kill_gen includes this cycle's K and is read only at accept; it may change only in a kill_fire cycle (cse_top)
     input  logic [(1<<TAG_W)-1:0][KILL_GEN_W-1:0] kill_gen,
+    input  logic                       kill_fire,                // K handshake this cycle
+    input  kill_t                      kill_payload,
     output logic                       cse_idle,
     output logic                       cse_err,
     output logic                       mem_rd_buf,
@@ -97,11 +101,12 @@ module cse_cu
 
   // ---- context entries
   logic [NCTX-1:0][TAG_W-1:0]      c_tag;
-  logic [NCTX-1:0][KILL_GEN_W-1:0] c_gen;
+  logic [NCTX-1:0]                 c_killed;
   logic [NCTX-1:0]                 c_buf;
   (* ram_style = "distributed" *) bnd_t  c_bnd [NCTX];
   (* ram_style = "distributed" *) pctx_t c_pt  [NCTX];
-  logic [NCTX-1:0] canc;                             // entry i was killed after it was accepted
+  logic [NCTX-1:0] canc;                             // entry i was killed after it entered the CSE
+  logic [NCTX-1:0] k_hit;                            // this cycle's K names entry i's tag
   id_t wp;
   logic [CNT_W-1:0] c_cnt;
   bnd_t  bnd_new, s2_bnd;
@@ -167,7 +172,10 @@ module cse_cu
   assign r_fire  = r_valid && r_ready;
 
   always_comb
-    for (int i = 0; i < NCTX; ++i) canc[i] = KILL_ENABLE && (c_gen[i] != kill_gen[c_tag[i]]);
+    for (int i = 0; i < NCTX; ++i) begin
+      k_hit[i] = KILL_ENABLE && kill_fire && (kill_payload.all || kill_payload.tag == c_tag[i]);
+      canc[i]  = KILL_ENABLE && (c_killed[i] || k_hit[i]);
+    end
 
   // S0: capture a query and compute its exact integer bounding box and voxel range.
   always_comb begin : p_s0_preprocess
@@ -234,15 +242,16 @@ module cse_cu
 
   always_ff @(posedge clk) begin
     if (!rst_n) begin
-      c_tag <= '0;
-      c_gen <= '0;
+      c_tag    <= '0;
+      c_killed <= '0;
       c_buf <= '0;
       wp    <= '0;
       c_cnt <= '0;
     end else begin
-      if (q_fire) begin
-        c_tag[wp] <= q_payload.query.tag;
-        c_gen[wp] <= q_payload.birth_gen;
+      c_killed <= c_killed | k_hit;
+      if (q_fire) begin                                // kill_gen already counts this cycle's K
+        c_tag[wp]    <= q_payload.query.tag;
+        c_killed[wp] <= KILL_ENABLE && (q_payload.birth_gen != kill_gen[q_payload.query.tag]);
         c_buf[wp] <= DBUF && q_payload.query.env_buf;
         wp <= id_next(wp);
       end
@@ -581,6 +590,22 @@ module cse_cu
                              hdr_valid, hdr_err, hdr_n_pts, hdr_glo, hdr_ghi};
 
 `ifndef SYNTHESIS
+`ifndef CSE_NO_SHADOW
+  // shadow of the generation compare this flag replaces: canc must equal birth_gen != kill_gen for every live entry
+  logic [NCTX-1:0][KILL_GEN_W-1:0] sh_gen;
+  logic [NCTX-1:0] sh_live;
+  always_ff @(posedge clk) begin
+    if (!rst_n) sh_live <= '0;
+    else begin
+      for (int i = 0; i < NCTX; ++i)
+        if (sh_live[i] && canc[i] != (KILL_ENABLE && (sh_gen[i] != kill_gen[c_tag[i]])))
+          $error("cse_cu %m: entry %0d killed flag %0d, generation compare says %0d", i, canc[i], !canc[i]);
+      if (s3_complete) sh_live[s3_id] <= 1'b0;
+      if (q_fire) begin sh_live[wp] <= 1'b1; sh_gen[wp] <= q_payload.birth_gen; end
+    end
+  end
+`endif
+
   // entries are freed in allocation order: the completing query must be the oldest one
   id_t rp;
   always_ff @(posedge clk) begin

@@ -159,7 +159,7 @@ module cse_top
         .clk, .rst_n,
         .q_valid(cu_q_valid[i]), .q_ready(cu_q_ready[i]), .q_payload(cu_q_payload[i]),
         .r_valid(cu_r_valid[i]), .r_ready(cu_r_ready[i]), .r_payload(cu_r_payload[i]),
-        .kill_gen(kill_gen_eff),
+        .kill_gen(kill_gen_eff), .kill_fire(k_fire), .kill_payload,
         .cse_idle(cu_idle[i]), .cse_err(cu_err[i]),
         .mem_rd_buf(rd_buf[i]),
         .mem_dir_addr(dir_addr[i]), .mem_dir_data(dir_data[i]),
