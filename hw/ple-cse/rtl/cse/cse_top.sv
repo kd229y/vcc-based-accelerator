@@ -9,7 +9,9 @@ module cse_top
     parameter bit KILL_ENABLE = 1'b1,
     parameter int unsigned CU_VOXEL_FIFO_DEPTH = 2,
     parameter int unsigned CU_CELL_FIFO_DEPTH = 2,
-    parameter int unsigned CU_MAX_PTS_OUTSTANDING = 8
+    parameter int unsigned CU_MAX_PTS_OUTSTANDING = 8,
+    parameter int unsigned CU_NCTX = 4,                 // queries held per CU (context entries)
+    parameter int unsigned N_BUF = 2                    // environment buffers (1: env_buf = 1 answers ERROR)
 ) (
     input  logic                      clk,
     input  logic                      rst_n,
@@ -150,7 +152,9 @@ module cse_top
         .VOXEL_FIFO_DEPTH(CU_VOXEL_FIFO_DEPTH),
         .CELL_FIFO_DEPTH(CU_CELL_FIFO_DEPTH),
         .MAX_PTS_OUTSTANDING(CU_MAX_PTS_OUTSTANDING),
-        .KILL_ENABLE(KILL_ENABLE)
+        .KILL_ENABLE(KILL_ENABLE),
+        .N_BUF(N_BUF),
+        .NCTX(CU_NCTX)
     ) u_cu (
         .clk, .rst_n,
         .q_valid(cu_q_valid[i]), .q_ready(cu_q_ready[i]), .q_payload(cu_q_payload[i]),

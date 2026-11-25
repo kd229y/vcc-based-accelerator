@@ -21,7 +21,7 @@ FXLIB_SRC := $(FXDIR)/fx_ref.c $(FXDIR)/fx_env.c $(FXDIR)/fx_ref_stub.c $(SRCDIR
 DPI     := -LDFLAGS $(FXLIB) -LDFLAGS -lm
 TBFLAGS := --binary --timing --assert -Wno-fatal -Irtl/common
 
-.PHONY: test-ple-cse test-cse test-cse-unit test-cse-mutant test-ple-drv lint test-checker test-env-mem test-ple-unit test-ple-core test-ple-top test-ple-mutants clean
+.PHONY: test-ple-cse test-cse test-cse-unit test-cse-mutant test-cse-ctx-mutants test-ple-drv lint test-checker test-env-mem test-ple-unit test-ple-core test-ple-top test-ple-mutants clean
 
 # every RTL file must lint clean
 lint:
@@ -133,6 +133,12 @@ $(BUILD)/tb_cse_trace_8/Vtb_cse_trace: $(PKG) $(CSE_RTL) tb/ple_cse_if_checker.s
 	$(VERI) $(TBFLAGS) -Mdir $(BUILD)/tb_cse_trace_8 -GNC=8 -GID=16 -GRD=16 \
 	    --top-module tb_cse_trace $(PKG) $(CSE_RTL) tb/ple_cse_if_checker.sv tb/tb_cse_trace.sv -o Vtb_cse_trace >/dev/null
 
+# two environment buffers with different contents (p1 in buffer 0, p2 in buffer 1); 3 context entries per CU
+$(BUILD)/tb_cse_trace_2b/Vtb_cse_trace: $(PKG) $(CSE_RTL) tb/ple_cse_if_checker.sv tb/tb_cse_trace.sv
+	@mkdir -p $(BUILD)/tb_cse_trace_2b
+	$(VERI) $(TBFLAGS) -Mdir $(BUILD)/tb_cse_trace_2b -GNC=2 -GNB=2 -GCX=3 \
+	    --top-module tb_cse_trace $(PKG) $(CSE_RTL) tb/ple_cse_if_checker.sv tb/tb_cse_trace.sv -o Vtb_cse_trace >/dev/null
+
 $(BUILD)/tb_cse_kill/Vtb_cse_kill: $(PKG) $(CSE_RTL) tb/ple_cse_if_checker.sv tb/tb_cse_kill.sv
 	@mkdir -p $(BUILD)/tb_cse_kill
 	$(VERI) $(TBFLAGS) -Mdir $(BUILD)/tb_cse_kill --top-module tb_cse_kill \
@@ -142,6 +148,16 @@ $(BUILD)/tb_cse_kill0/Vtb_cse_kill: $(PKG) $(CSE_RTL) tb/ple_cse_if_checker.sv t
 	@mkdir -p $(BUILD)/tb_cse_kill0
 	$(VERI) $(TBFLAGS) -Mdir $(BUILD)/tb_cse_kill0 -GKE=0 --top-module tb_cse_kill \
 	    $(PKG) $(CSE_RTL) tb/ple_cse_if_checker.sv tb/tb_cse_kill.sv -o Vtb_cse_kill >/dev/null
+
+$(BUILD)/tb_cse_kill2b/Vtb_cse_kill: $(PKG) $(CSE_RTL) tb/ple_cse_if_checker.sv tb/tb_cse_kill.sv
+	@mkdir -p $(BUILD)/tb_cse_kill2b
+	$(VERI) $(TBFLAGS) -Mdir $(BUILD)/tb_cse_kill2b -GNB=2 --top-module tb_cse_kill \
+	    $(PKG) $(CSE_RTL) tb/ple_cse_if_checker.sv tb/tb_cse_kill.sv -o Vtb_cse_kill >/dev/null
+
+$(BUILD)/tb_cse_cu_ctx/Vtb_cse_cu_ctx $(BUILD)/tb_cse_cu_ctx1/Vtb_cse_cu_ctx: $(PKG) $(CSE_PKG) rtl/cse/cse_fifo.sv rtl/cse/cse_cu.sv tb/tb_cse_cu_ctx.sv
+	@mkdir -p $(dir $@)
+	$(VERI) $(TBFLAGS) -Mdir $(dir $@) $(if $(findstring ctx1,$@),-GNCTX=1) --top-module tb_cse_cu_ctx \
+	    $(PKG) $(CSE_PKG) rtl/cse/cse_fifo.sv rtl/cse/cse_cu.sv tb/tb_cse_cu_ctx.sv -o Vtb_cse_cu_ctx >/dev/null
 
 $(BUILD)/tb_cse_control/Vtb_cse_control: $(PKG) $(CSE_RTL) tb/ple_cse_if_checker.sv tb/tb_cse_control.sv
 	@mkdir -p $(BUILD)/tb_cse_control
@@ -172,6 +188,10 @@ $(BUILD)/cse_mutants/Vtb_cse_boundary: $(PKG) $(CSE_PKG) rtl/cse/cse_fifo.sv $(B
 	    $(PKG) $(CSE_PKG) rtl/cse/cse_fifo.sv $(BUILD)/cse_mutants/cse_cu_lt.sv \
 	    tb/tb_cse_boundary.sv -o Vtb_cse_boundary >/dev/null
 
+# context-entry and N_BUF mutants of cse_cu (each one must fail trace, kill or PLE+CSE)
+test-cse-ctx-mutants: $(FXLIB)
+	python3 -I tb/cse_ctx_mutants.py $(BUILD) $(TRACE)
+
 test-cse-mutant: $(BUILD)/cse_mutants/Vtb_cse_boundary
 	@if $< > $(BUILD)/cse_mutants/run.log 2>&1; then \
 	  echo "cse comparator mutant SURVIVED"; exit 1; \
@@ -180,7 +200,8 @@ test-cse-mutant: $(BUILD)/cse_mutants/Vtb_cse_boundary
 test-cse: $(BUILD)/tb_cse_trace/Vtb_cse_trace $(BUILD)/tb_cse_trace_1/Vtb_cse_trace \
           $(BUILD)/tb_cse_trace_2/Vtb_cse_trace $(BUILD)/tb_cse_trace_3/Vtb_cse_trace \
           $(BUILD)/tb_cse_trace_8/Vtb_cse_trace $(BUILD)/tb_cse_kill/Vtb_cse_kill \
-          $(BUILD)/tb_cse_kill0/Vtb_cse_kill $(BUILD)/tb_cse_control/Vtb_cse_control \
+          $(BUILD)/tb_cse_kill0/Vtb_cse_kill $(BUILD)/tb_cse_kill2b/Vtb_cse_kill $(BUILD)/tb_cse_control/Vtb_cse_control \
+          $(BUILD)/tb_cse_cu_ctx/Vtb_cse_cu_ctx $(BUILD)/tb_cse_cu_ctx1/Vtb_cse_cu_ctx $(BUILD)/tb_cse_trace_2b/Vtb_cse_trace \
           $(BUILD)/tb_cse_worst/Vtb_cse_worst \
           $(BUILD)/tb_cse_array_worst/Vtb_cse_array_worst \
           $(BUILD)/tb_cse_boundary/Vtb_cse_boundary test-cse-unit test-cse-mutant
@@ -206,6 +227,21 @@ test-cse: $(BUILD)/tb_cse_trace/Vtb_cse_trace $(BUILD)/tb_cse_trace_1/Vtb_cse_tr
 	@$(BUILD)/tb_cse_kill0/Vtb_cse_kill +env0=$(TRACE)/s0_p1 > $(BUILD)/tb_cse_kill0/run.log || \
 	  { grep -E 'TB_CSE_KILL|if_checker|ERROR' $(BUILD)/tb_cse_kill0/run.log; exit 1; }
 	@grep -E 'TB_CSE_KILL|if_checker' $(BUILD)/tb_cse_kill0/run.log
+	@$(BUILD)/tb_cse_kill2b/Vtb_cse_kill +env0=$(TRACE)/s0_p1 > $(BUILD)/tb_cse_kill2b/run.log || \
+	  { grep -E 'TB_CSE_KILL|if_checker|ERROR' $(BUILD)/tb_cse_kill2b/run.log; exit 1; }
+	@grep -E 'TB_CSE_KILL|if_checker' $(BUILD)/tb_cse_kill2b/run.log
+	@for p in 1 3; do \
+	  $< +env0=$(TRACE)/s0_p$$p +queries=$(TRACE)/s0_p$${p}_seed0_queries.txt +kill=50 \
+	    > $(BUILD)/tb_cse_trace/kill_p$$p.log || exit $$?; \
+	  grep -E 'TB_CSE_TRACE|if_checker' $(BUILD)/tb_cse_trace/kill_p$$p.log; done
+	@for k in 0 50; do \
+	  $(BUILD)/tb_cse_trace_2b/Vtb_cse_trace +env0=$(TRACE)/s0_p1 +queries=$(TRACE)/s0_p1_seed0_queries.txt \
+	    +env1=$(TRACE)/s0_p2 +queries1=$(TRACE)/s0_p2_seed0_queries.txt +kill=$$k > $(BUILD)/tb_cse_trace_2b/k$$k.log || exit $$?; \
+	  grep -E 'TB_CSE_TRACE|if_checker' $(BUILD)/tb_cse_trace_2b/k$$k.log; done
+	@$(BUILD)/tb_cse_cu_ctx/Vtb_cse_cu_ctx > $(BUILD)/tb_cse_cu_ctx/run.log || { cat $(BUILD)/tb_cse_cu_ctx/run.log; exit 1; }
+	@grep TB_CSE_CU_CTX $(BUILD)/tb_cse_cu_ctx/run.log
+	@$(BUILD)/tb_cse_cu_ctx1/Vtb_cse_cu_ctx > $(BUILD)/tb_cse_cu_ctx1/run.log || { cat $(BUILD)/tb_cse_cu_ctx1/run.log; exit 1; }
+	@grep TB_CSE_CU_CTX $(BUILD)/tb_cse_cu_ctx1/run.log
 	@$(BUILD)/tb_cse_control/Vtb_cse_control +env0=$(TRACE)/s0_p1 > $(BUILD)/tb_cse_control/run.log || \
 	  { grep -E 'TB_CSE_CONTROL|if_checker|ERROR' $(BUILD)/tb_cse_control/run.log; exit 1; }
 	@grep -E 'TB_CSE_CONTROL|if_checker' $(BUILD)/tb_cse_control/run.log

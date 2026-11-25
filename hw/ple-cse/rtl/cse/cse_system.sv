@@ -8,7 +8,9 @@ module cse_system
     parameter bit KILL_ENABLE = 1'b1,
     parameter int unsigned CU_VOXEL_FIFO_DEPTH = 2,
     parameter int unsigned CU_CELL_FIFO_DEPTH = 2,
-    parameter int unsigned CU_MAX_PTS_OUTSTANDING = 8
+    parameter int unsigned CU_MAX_PTS_OUTSTANDING = 8,
+    parameter int unsigned CU_NCTX = 4,
+    parameter int unsigned N_BUF = 1
 ) (
     input  logic                      clk,
     input  logic                      rst_n,
@@ -55,7 +57,9 @@ module cse_system
       .KILL_ENABLE(KILL_ENABLE),
       .CU_VOXEL_FIFO_DEPTH(CU_VOXEL_FIFO_DEPTH),
       .CU_CELL_FIFO_DEPTH(CU_CELL_FIFO_DEPTH),
-      .CU_MAX_PTS_OUTSTANDING(CU_MAX_PTS_OUTSTANDING)
+      .CU_MAX_PTS_OUTSTANDING(CU_MAX_PTS_OUTSTANDING),
+      .CU_NCTX(CU_NCTX),
+      .N_BUF(N_BUF)
   ) u_cse (
       .clk, .rst_n,
       .q_valid, .q_ready, .q_tag, .q_user, .q_kill_on_hit, .q_env_buf,
@@ -67,7 +71,7 @@ module cse_system
       .pt_addr, .pt_data, .hdr_valid, .hdr_err, .hdr_n_pts, .hdr_glo, .hdr_ghi
   );
 
-  cse_env_mem #(.NRD(N_CU)) u_env_mem (
+  cse_env_mem #(.NRD(N_CU), .N_BUF(N_BUF)) u_env_mem (
       .clk,
       .rd_buf,
       .dir_addr, .dir_data,

@@ -1,4 +1,6 @@
 // One complete CSE compute unit: ball-to-voxel-to-cell-to-point streaming search.
+// Each accepted query gets one of NCTX context entries (LUT/FF, allocated in order at Q, freed when S3 completes it);
+// the stage registers and FIFOs carry only the entry id.
 module cse_cu
   import ple_cse_pkg::*;
   import cse_cu_pkg::*;
@@ -6,7 +8,9 @@ module cse_cu
     parameter int unsigned VOXEL_FIFO_DEPTH = 2,
     parameter int unsigned CELL_FIFO_DEPTH = 2,
     parameter int unsigned MAX_PTS_OUTSTANDING = 8,
-    parameter bit KILL_ENABLE = 1'b1
+    parameter bit KILL_ENABLE = 1'b1,
+    parameter int unsigned N_BUF = 2,                 // environment buffers: 1 = buffer 0 only (env_buf = 1 answers ERROR)
+    parameter int unsigned NCTX = 4                   // queries held in S0..S3
 ) (
     input  logic                       clk,
     input  logic                       rst_n,
@@ -34,40 +38,101 @@ module cse_cu
 );
 
   localparam int PEND_W = (MAX_PTS_OUTSTANDING <= 1) ? 1 : $clog2(MAX_PTS_OUTSTANDING + 1);
+  localparam int IDW    = (NCTX <= 1) ? 1 : $clog2(NCTX);
+  localparam int CNT_W  = $clog2(NCTX + 1);
+  localparam bit DBUF   = (N_BUF > 1);
   localparam logic signed [18:0] GRID_LAST = 19'(ENV_G-1);
 
+  typedef logic [IDW-1:0] id_t;
   typedef enum logic [1:0] {S2_IDLE, S2_DIR_WAIT, S2_CELL_WAIT, S2_OUT} s2_state_e;
+
+  typedef struct packed {
+    logic [2:0][4:0] lo;
+    logic [2:0][4:0] hi;
+    logic            skip_search;
+  } ball_t;
+
+  typedef struct packed {
+    cse_voxel_kind_e   kind;
+    id_t               id;
+    logic [4:0]        gx;
+    logic [4:0]        gy;
+    logic [4:0]        gz;
+    logic [DIR_AW-1:0] dir_addr;
+  } voxel_t;
+
+  typedef struct packed {
+    cse_cell_kind_e     kind;
+    id_t                id;
+    logic [PT_AW-1:0]   base;
+    logic [COUNT_W-1:0] count;
+  } cell_tok_t;
+
+  typedef struct packed {                            // read by S2
+    logic signed [18:0] bmin_x;
+    logic signed [18:0] bmin_y;
+    logic signed [18:0] bmin_z;
+    logic signed [18:0] bmax_x;
+    logic signed [18:0] bmax_y;
+    logic signed [18:0] bmax_z;
+  } bnd_t;
+
+  typedef struct packed {                            // read by S3 and S4
+    logic signed [COORD_W-1:0] cx;
+    logic signed [COORD_W-1:0] cy;
+    logic signed [COORD_W-1:0] cz;
+    logic [27:0]               r2;
+    logic [USER_W-1:0]         user;
+    logic                      error;
+  } pctx_t;
 
   if (MAX_PTS_OUTSTANDING < 1) begin : g_bad_max_points
     $error("cse_cu: MAX_PTS_OUTSTANDING must be at least one");
   end
+  if (NCTX < 1 || N_BUF < 1 || N_BUF > 2) begin : g_bad_ctx
+    $error("cse_cu: NCTX must be at least one and N_BUF 1 or 2");
+  end
 
   logic q_fire, r_fire;
 
-  cse_ball_t s0_payload, s0_new_payload;
-  logic s0_valid, s0_ready;
+  // ---- context entries
+  logic [NCTX-1:0][TAG_W-1:0]      c_tag;
+  logic [NCTX-1:0][KILL_GEN_W-1:0] c_gen;
+  logic [NCTX-1:0]                 c_buf;
+  (* ram_style = "distributed" *) bnd_t  c_bnd [NCTX];
+  (* ram_style = "distributed" *) pctx_t c_pt  [NCTX];
+  logic [NCTX-1:0] canc;                             // entry i was killed after it was accepted
+  id_t wp;
+  logic [CNT_W-1:0] c_cnt;
+  bnd_t  bnd_new, s2_bnd;
+  pctx_t pt_new, s3c;
 
-  cse_ball_t s1_ball;
+  ball_t s0_payload, s0_new_payload;
+  logic s0_valid, s0_ready;
+  id_t s0_id;
+
+  ball_t s1_ball;
+  id_t s1_id;
   logic s1_active, s1_end;
   logic [4:0] s1_gx, s1_gy, s1_gz;
   logic s1_out_valid, s1_out_ready, s1_out_fire;
-  cse_voxel_t s1_out_payload;
+  voxel_t s1_out_payload;
 
   logic voxel_valid, voxel_ready;
-  cse_voxel_t voxel_payload;
+  voxel_t voxel_payload;
 
   s2_state_e s2_state;
-  cse_voxel_t s2_voxel;
-  cse_cell_token_t s2_out_payload;
+  voxel_t s2_voxel;
+  cell_tok_t s2_out_payload;
   logic s2_out_valid, s2_out_ready;
   dir_t dir_word;
   cell_t cell_word;
 
   logic cell_valid, cell_ready;
-  cse_cell_token_t cell_payload;
+  cell_tok_t cell_payload;
 
   logic s3_ball_active, s3_cell_active, s3_end_seen, s3_hit_seen;
-  cse_ctx_t s3_ctx;
+  id_t s3_id;
   logic [PT_AW-1:0] s3_issue_addr;
   logic [COUNT_W-1:0] s3_issue_left;
   logic [PEND_W-1:0] s3_pending;
@@ -88,18 +153,21 @@ module cse_cu
   logic [7:0] outstanding;
   logic unused_internal;
 
-  function automatic logic ctx_cancelled(input cse_ctx_t ctx);
-    return (KILL_ENABLE && (ctx.birth_gen != kill_gen[ctx.tag])) | (1'b0 & ^ctx);
-  endfunction
-
   function automatic logic [4:0] clamp_grid(input logic signed [18:0] value);
     if (value < 0) return 5'd0;
     if (value > GRID_LAST) return GRID_LAST[4:0];
     return value[4:0];
   endfunction
 
+  function automatic id_t id_next(input id_t p);
+    return (p == id_t'(NCTX - 1)) ? '0 : p + 1'b1;
+  endfunction
+
   assign q_fire  = q_valid && q_ready;
   assign r_fire  = r_valid && r_ready;
+
+  always_comb
+    for (int i = 0; i < NCTX; ++i) canc[i] = KILL_ENABLE && (c_gen[i] != kill_gen[c_tag[i]]);
 
   // S0: capture a query and compute its exact integer bounding box and voxel range.
   always_comb begin : p_s0_preprocess
@@ -107,9 +175,10 @@ module cse_cu
     logic signed [18:0] sx_lo, sy_lo, sz_lo, sx_hi, sy_hi, sz_hi;
     logic signed [18:0] gx_lo, gy_lo, gz_lo, gx_hi, gy_hi, gz_hi;
     logic signed [18:0] hglo_x, hglo_y, hglo_z, hghi_x, hghi_y, hghi_z;
-    logic empty_axis, global_cull;
+    logic empty_axis, global_cull, hb, error;
     logic [27:0] radius_u;
 
+    hb = DBUF ? q_payload.query.env_buf : 1'b0;
     cx = $signed({q_payload.query.cx[COORD_W-1], q_payload.query.cx});
     cy = $signed({q_payload.query.cy[COORD_W-1], q_payload.query.cy});
     cz = $signed({q_payload.query.cz[COORD_W-1], q_payload.query.cz});
@@ -127,55 +196,74 @@ module cse_cu
     gx_hi = sx_hi >>> ENV_QSHIFT;
     gy_hi = sy_hi >>> ENV_QSHIFT;
     gz_hi = sz_hi >>> ENV_QSHIFT;
-    hglo_x = $signed({3'b000, hdr_glo[q_payload.query.env_buf][0]});
-    hglo_y = $signed({3'b000, hdr_glo[q_payload.query.env_buf][1]});
-    hglo_z = $signed({3'b000, hdr_glo[q_payload.query.env_buf][2]});
-    hghi_x = $signed({3'b000, hdr_ghi[q_payload.query.env_buf][0]});
-    hghi_y = $signed({3'b000, hdr_ghi[q_payload.query.env_buf][1]});
-    hghi_z = $signed({3'b000, hdr_ghi[q_payload.query.env_buf][2]});
+    hglo_x = $signed({3'b000, hdr_glo[hb][0]});
+    hglo_y = $signed({3'b000, hdr_glo[hb][1]});
+    hglo_z = $signed({3'b000, hdr_glo[hb][2]});
+    hghi_x = $signed({3'b000, hdr_ghi[hb][0]});
+    hghi_y = $signed({3'b000, hdr_ghi[hb][1]});
+    hghi_z = $signed({3'b000, hdr_ghi[hb][2]});
     global_cull = (sx_hi < hglo_x) || (sx_lo > hghi_x) ||
                   (sy_hi < hglo_y) || (sy_lo > hghi_y) ||
                   (sz_hi < hglo_z) || (sz_lo > hghi_z);
     empty_axis = (sx_hi < 0) || (sy_hi < 0) || (sz_hi < 0) ||
                  (gx_lo > GRID_LAST) || (gy_lo > GRID_LAST) || (gz_lo > GRID_LAST);
+    error = !hdr_valid[hb] || hdr_err[hb] || (!DBUF && q_payload.query.env_buf);
 
-    s0_new_payload = '0;
-    s0_new_payload.ctx.tag         = q_payload.query.tag;
-    s0_new_payload.ctx.user        = q_payload.query.user;
-    s0_new_payload.ctx.kill_on_hit = q_payload.query.kill_on_hit;
-    s0_new_payload.ctx.env_buf     = q_payload.query.env_buf;
-    s0_new_payload.ctx.cx          = q_payload.query.cx;
-    s0_new_payload.ctx.cy          = q_payload.query.cy;
-    s0_new_payload.ctx.cz          = q_payload.query.cz;
-    s0_new_payload.ctx.r2          = radius_u * radius_u;
-    s0_new_payload.ctx.bmin_x      = sx_lo;
-    s0_new_payload.ctx.bmin_y      = sy_lo;
-    s0_new_payload.ctx.bmin_z      = sz_lo;
-    s0_new_payload.ctx.bmax_x      = sx_hi;
-    s0_new_payload.ctx.bmax_y      = sy_hi;
-    s0_new_payload.ctx.bmax_z      = sz_hi;
-    s0_new_payload.ctx.birth_gen   = q_payload.birth_gen;
-    s0_new_payload.ctx.error       = !hdr_valid[q_payload.query.env_buf] || hdr_err[q_payload.query.env_buf];
-    s0_new_payload.lo[0]           = clamp_grid(gx_lo);
-    s0_new_payload.lo[1]           = clamp_grid(gy_lo);
-    s0_new_payload.lo[2]           = clamp_grid(gz_lo);
-    s0_new_payload.hi[0]           = clamp_grid(gx_hi);
-    s0_new_payload.hi[1]           = clamp_grid(gy_hi);
-    s0_new_payload.hi[2]           = clamp_grid(gz_hi);
-    s0_new_payload.skip_search     = s0_new_payload.ctx.error ||
-                                     (hdr_n_pts[q_payload.query.env_buf] == 0) || global_cull || empty_axis;
+    bnd_new = '{bmin_x:sx_lo, bmin_y:sy_lo, bmin_z:sz_lo, bmax_x:sx_hi, bmax_y:sy_hi, bmax_z:sz_hi};
+    pt_new  = '{cx:q_payload.query.cx, cy:q_payload.query.cy, cz:q_payload.query.cz, r2:radius_u * radius_u,
+                user:q_payload.query.user, error:error};
+
+    s0_new_payload.lo[0]       = clamp_grid(gx_lo);
+    s0_new_payload.lo[1]       = clamp_grid(gy_lo);
+    s0_new_payload.lo[2]       = clamp_grid(gz_lo);
+    s0_new_payload.hi[0]       = clamp_grid(gx_hi);
+    s0_new_payload.hi[1]       = clamp_grid(gy_hi);
+    s0_new_payload.hi[2]       = clamp_grid(gz_hi);
+    s0_new_payload.skip_search = error || (hdr_n_pts[hb] == 0) || global_cull || empty_axis;
   end
 
-  assign q_ready = rst_n && (!s0_valid || s0_ready);
+  assign q_ready = rst_n && (!s0_valid || s0_ready) && (c_cnt != CNT_W'(NCTX));
+
+  // context entries: written once when the query is accepted, freed in order when S3 completes it
+  always_ff @(posedge clk) begin
+    if (q_fire) begin
+      c_bnd[wp] <= bnd_new;
+      c_pt[wp]  <= pt_new;
+    end
+  end
+
+  always_ff @(posedge clk) begin
+    if (!rst_n) begin
+      c_tag <= '0;
+      c_gen <= '0;
+      c_buf <= '0;
+      wp    <= '0;
+      c_cnt <= '0;
+    end else begin
+      if (q_fire) begin
+        c_tag[wp] <= q_payload.query.tag;
+        c_gen[wp] <= q_payload.birth_gen;
+        c_buf[wp] <= DBUF && q_payload.query.env_buf;
+        wp <= id_next(wp);
+      end
+      unique case ({q_fire, s3_complete})
+        2'b10: c_cnt <= c_cnt + 1'b1;
+        2'b01: c_cnt <= c_cnt - 1'b1;
+        default: c_cnt <= c_cnt;
+      endcase
+    end
+  end
 
   always_ff @(posedge clk) begin
     if (!rst_n) begin
       s0_valid   <= 1'b0;
       s0_payload <= '0;
+      s0_id      <= '0;
     end else begin
       if (q_fire) begin
         s0_valid   <= 1'b1;
         s0_payload <= s0_new_payload;
+        s0_id      <= wp;
       end else if (s0_ready) begin
         s0_valid <= 1'b0;
       end
@@ -189,7 +277,7 @@ module cse_cu
   always_comb begin
     s1_out_payload = '0;
     s1_out_payload.kind = s1_end ? CSE_VOXEL_END : CSE_VOXEL;
-    s1_out_payload.ctx  = s1_ball.ctx;
+    s1_out_payload.id   = s1_id;
     s1_out_payload.gx   = s1_gx;
     s1_out_payload.gy   = s1_gy;
     s1_out_payload.gz   = s1_gz;
@@ -202,6 +290,7 @@ module cse_cu
       s1_active <= 1'b0;
       s1_end    <= 1'b0;
       s1_ball   <= '0;
+      s1_id     <= '0;
       s1_gx     <= '0;
       s1_gy     <= '0;
       s1_gz     <= '0;
@@ -209,15 +298,16 @@ module cse_cu
       if (!s1_active && s0_valid) begin
         s1_active <= 1'b1;
         s1_ball   <= s0_payload;
+        s1_id     <= s0_id;
         s1_gx     <= s0_payload.lo[0];
         s1_gy     <= s0_payload.lo[1];
         s1_gz     <= s0_payload.lo[2];
-        s1_end    <= s0_payload.skip_search || ctx_cancelled(s0_payload.ctx);
+        s1_end    <= s0_payload.skip_search || canc[s0_id];
       end else if (s1_out_fire) begin
         if (s1_end) begin
           s1_active <= 1'b0;
           s1_end    <= 1'b0;
-        end else if (ctx_cancelled(s1_ball.ctx) ||
+        end else if (canc[s1_id] ||
                      ((s1_gx == s1_ball.hi[0]) && (s1_gy == s1_ball.hi[1]) &&
                       (s1_gz == s1_ball.hi[2]))) begin
           s1_end <= 1'b1;
@@ -235,7 +325,7 @@ module cse_cu
     end
   end
 
-  cse_fifo #(.PAYLOAD_T(cse_voxel_t), .DEPTH(VOXEL_FIFO_DEPTH)) u_voxel_fifo (
+  cse_fifo #(.PAYLOAD_T(voxel_t), .DEPTH(VOXEL_FIFO_DEPTH)) u_voxel_fifo (
       .clk, .rst_n, .in_valid(s1_out_valid), .in_ready(s1_out_ready),
       .in_payload(s1_out_payload), .out_valid(voxel_valid), .out_ready(voxel_ready),
       .out_payload(voxel_payload)
@@ -246,14 +336,15 @@ module cse_cu
   assign cell_word = cell_t'(mem_cell_data);
   assign voxel_ready = (s2_state == S2_IDLE);
   assign s2_out_valid = (s2_state == S2_OUT);
+  assign s2_bnd = c_bnd[s2_voxel.id];
 
   always_comb begin : p_s2_memory
     mem_dir_addr  = '0;
     mem_cell_addr = '0;
     if ((s2_state == S2_IDLE) && voxel_valid && (voxel_payload.kind == CSE_VOXEL) &&
-        !ctx_cancelled(voxel_payload.ctx))
+        !canc[voxel_payload.id])
       mem_dir_addr = voxel_payload.dir_addr;
-    if ((s2_state == S2_DIR_WAIT) && !ctx_cancelled(s2_voxel.ctx) && dir_word.occ)
+    if ((s2_state == S2_DIR_WAIT) && !canc[s2_voxel.id] && dir_word.occ)
       mem_cell_addr = dir_word.slot;
   end
 
@@ -270,19 +361,19 @@ module cse_cu
         S2_IDLE: begin
           if (voxel_valid) begin
             if (voxel_payload.kind == CSE_VOXEL_END) begin
-              s2_out_payload.kind <= CSE_CELL_END;
-              s2_out_payload.ctx  <= voxel_payload.ctx;
-              s2_out_payload.base <= '0;
+              s2_out_payload.kind  <= CSE_CELL_END;
+              s2_out_payload.id    <= voxel_payload.id;
+              s2_out_payload.base  <= '0;
               s2_out_payload.count <= '0;
               s2_state <= S2_OUT;
-            end else if (!ctx_cancelled(voxel_payload.ctx)) begin
+            end else if (!canc[voxel_payload.id]) begin
               s2_voxel <= voxel_payload;
               s2_state <= S2_DIR_WAIT;
             end
           end
         end
         S2_DIR_WAIT: begin
-          if (ctx_cancelled(s2_voxel.ctx) || !dir_word.occ) begin
+          if (canc[s2_voxel.id] || !dir_word.occ) begin
             s2_state <= S2_IDLE;
           end else begin
             s2_state <= S2_CELL_WAIT;
@@ -298,14 +389,14 @@ module cse_cu
           ahi_x = org_x + $signed({8'b0, cell_word.hi_x});
           ahi_y = org_y + $signed({8'b0, cell_word.hi_y});
           ahi_z = org_z + $signed({8'b0, cell_word.hi_z});
-          reject = (s2_voxel.ctx.bmax_x < alo_x) || (s2_voxel.ctx.bmin_x > ahi_x) ||
-                   (s2_voxel.ctx.bmax_y < alo_y) || (s2_voxel.ctx.bmin_y > ahi_y) ||
-                   (s2_voxel.ctx.bmax_z < alo_z) || (s2_voxel.ctx.bmin_z > ahi_z);
-          if (ctx_cancelled(s2_voxel.ctx) || (cell_word.count == 0) || reject) begin
+          reject = (s2_bnd.bmax_x < alo_x) || (s2_bnd.bmin_x > ahi_x) ||
+                   (s2_bnd.bmax_y < alo_y) || (s2_bnd.bmin_y > ahi_y) ||
+                   (s2_bnd.bmax_z < alo_z) || (s2_bnd.bmin_z > ahi_z);
+          if (canc[s2_voxel.id] || (cell_word.count == 0) || reject) begin
             s2_state <= S2_IDLE;
           end else begin
             s2_out_payload.kind  <= CSE_CELL;
-            s2_out_payload.ctx   <= s2_voxel.ctx;
+            s2_out_payload.id    <= s2_voxel.id;
             s2_out_payload.base  <= cell_word.base;
             s2_out_payload.count <= cell_word.count;
             s2_state <= S2_OUT;
@@ -318,7 +409,7 @@ module cse_cu
     end
   end
 
-  cse_fifo #(.PAYLOAD_T(cse_cell_token_t), .DEPTH(CELL_FIFO_DEPTH)) u_cell_fifo (
+  cse_fifo #(.PAYLOAD_T(cell_tok_t), .DEPTH(CELL_FIFO_DEPTH)) u_cell_fifo (
       .clk, .rst_n, .in_valid(s2_out_valid), .in_ready(s2_out_ready),
       .in_payload(s2_out_payload), .out_valid(cell_valid), .out_ready(cell_ready),
       .out_payload(cell_payload)
@@ -327,15 +418,18 @@ module cse_cu
   // The memory port set has one shared buffer select. The interface contract keeps it fixed while busy.
   always_comb begin
     mem_rd_buf = 1'b0;
-    if (s3_ball_active) mem_rd_buf = s3_ctx.env_buf;
-    else if (s2_state != S2_IDLE) mem_rd_buf = s2_voxel.ctx.env_buf;
-    else if (voxel_valid) mem_rd_buf = voxel_payload.ctx.env_buf;
-    else if (s1_active) mem_rd_buf = s1_ball.ctx.env_buf;
+    if (DBUF) begin
+      if (s3_ball_active) mem_rd_buf = c_buf[s3_id];
+      else if (s2_state != S2_IDLE) mem_rd_buf = c_buf[s2_voxel.id];
+      else if (voxel_valid) mem_rd_buf = c_buf[voxel_payload.id];
+      else if (s1_active) mem_rd_buf = c_buf[s1_id];
+    end
   end
 
   // S3: issue at most one point per cycle and drain a fixed D0-D3 distance pipeline.
+  assign s3c = c_pt[s3_id];
   assign cell_ready = !s3_ball_active || (!s3_cell_active && !s3_end_seen);
-  assign pt_issue = s3_cell_active && !ctx_cancelled(s3_ctx) && !s3_hit_seen &&
+  assign pt_issue = s3_cell_active && !canc[s3_id] && !s3_hit_seen &&
                     ((s3_pending < PEND_W'(MAX_PTS_OUTSTANDING)) || d2_valid);
   assign mem_pt_addr = s3_issue_addr;
   assign d0_dx_ext = {{19{d0_payload.dx[18]}}, d0_payload.dx};
@@ -345,7 +439,7 @@ module cse_cu
   assign d0_sq_y = $unsigned(d0_dy_ext * d0_dy_ext);
   assign d0_sq_z = $unsigned(d0_dz_ext * d0_dz_ext);
   assign d1_sum  = {2'b0, d1_payload.sx} + {2'b0, d1_payload.sy} + {2'b0, d1_payload.sz};
-  assign d2_hit  = d2_payload.d2 <= {12'b0, s3_ctx.r2};
+  assign d2_hit  = d2_payload.d2 <= {12'b0, s3c.r2};
   assign s3_drain_done = (s3_pending == PEND_W'(d2_valid)) && !pt_issue;
   assign s3_hit_after  = s3_hit_seen || (d2_valid && d2_hit);
   assign s4_can_accept = !s4_valid || r_ready;
@@ -359,7 +453,7 @@ module cse_cu
       s3_cell_active <= 1'b0;
       s3_end_seen    <= 1'b0;
       s3_hit_seen    <= 1'b0;
-      s3_ctx         <= '0;
+      s3_id          <= '0;
       s3_issue_addr  <= '0;
       s3_issue_left  <= '0;
       s3_pending     <= '0;
@@ -380,9 +474,9 @@ module cse_cu
         px = $signed({3'b000, mem_pt_data[15:0]});
         py = $signed({3'b000, mem_pt_data[31:16]});
         pz = $signed({3'b000, mem_pt_data[47:32]});
-        d0_payload.dx <= $signed({s3_ctx.cx[COORD_W-1], s3_ctx.cx}) - px;
-        d0_payload.dy <= $signed({s3_ctx.cy[COORD_W-1], s3_ctx.cy}) - py;
-        d0_payload.dz <= $signed({s3_ctx.cz[COORD_W-1], s3_ctx.cz}) - pz;
+        d0_payload.dx <= $signed({s3c.cx[COORD_W-1], s3c.cx}) - px;
+        d0_payload.dy <= $signed({s3c.cy[COORD_W-1], s3c.cy}) - py;
+        d0_payload.dz <= $signed({s3c.cz[COORD_W-1], s3c.cz}) - pz;
       end
       if (d0_valid) begin
         d1_payload.sx <= d0_sq_x;
@@ -407,15 +501,15 @@ module cse_cu
         s3_hit_seen    <= 1'b1;
         s3_cell_active <= 1'b0;
       end
-      if (s3_ball_active && ctx_cancelled(s3_ctx)) s3_cell_active <= 1'b0;
+      if (s3_ball_active && canc[s3_id]) s3_cell_active <= 1'b0;
 
       if (cell_valid && cell_ready) begin
         if (!s3_ball_active) begin
           s3_ball_active <= 1'b1;
-          s3_ctx         <= cell_payload.ctx;
+          s3_id          <= cell_payload.id;
           s3_hit_seen    <= 1'b0;
           s3_end_seen    <= (cell_payload.kind == CSE_CELL_END);
-          if ((cell_payload.kind == CSE_CELL) && !ctx_cancelled(cell_payload.ctx)) begin
+          if ((cell_payload.kind == CSE_CELL) && !canc[cell_payload.id]) begin
             s3_cell_active <= 1'b1;
             s3_issue_addr  <= cell_payload.base;
             s3_issue_left  <= cell_payload.count;
@@ -424,7 +518,7 @@ module cse_cu
           end
         end else if (cell_payload.kind == CSE_CELL_END) begin
           s3_end_seen <= 1'b1;
-        end else if (!ctx_cancelled(s3_ctx) && !s3_hit_after) begin
+        end else if (!canc[s3_id] && !s3_hit_after) begin
           s3_cell_active <= 1'b1;
           s3_issue_addr  <= cell_payload.base;
           s3_issue_left  <= cell_payload.count;
@@ -453,14 +547,14 @@ module cse_cu
       if (r_fire) s4_valid <= 1'b0;
       if (s3_complete) begin
         s4_valid        <= 1'b1;
-        s4_payload.tag  <= s3_ctx.tag;
-        s4_payload.user <= s3_ctx.user;
-        if (s3_ctx.error) begin
+        s4_payload.tag  <= c_tag[s3_id];
+        s4_payload.user <= s3c.user;
+        if (s3c.error) begin
           s4_payload.status <= ST_ERROR;
           cse_err <= 1'b1;
         end else if (s3_hit_after) begin
           s4_payload.status <= ST_HIT;
-        end else if (ctx_cancelled(s3_ctx)) begin
+        end else if (canc[s3_id]) begin
           s4_payload.status <= ST_KILLED;
         end else begin
           s4_payload.status <= ST_MISS;
@@ -483,9 +577,20 @@ module cse_cu
 
   assign cse_idle = (outstanding == 0);
   assign unused_internal = ^{s1_ball.skip_search, s2_voxel.kind, s2_voxel.dir_addr,
-                             dir_word.rsvd, cell_word.rsvd};
+                             dir_word.rsvd, cell_word.rsvd, q_payload.query.kill_on_hit, c_buf,
+                             hdr_valid, hdr_err, hdr_n_pts, hdr_glo, hdr_ghi};
 
 `ifndef SYNTHESIS
+  // entries are freed in allocation order: the completing query must be the oldest one
+  id_t rp;
+  always_ff @(posedge clk) begin
+    if (!rst_n) rp <= '0;
+    else if (s3_complete) begin
+      if (s3_id != rp || c_cnt == 0) $error("cse_cu %m: S3 completed entry %0d, oldest is %0d (count %0d)", s3_id, rp, c_cnt);
+      rp <= id_next(rp);
+    end
+  end
+
   longint unsigned stat_queries, stat_responses, stat_dir_reads, stat_cell_reads, stat_point_reads;
   always_ff @(posedge clk) begin
     if (!rst_n) begin
@@ -498,8 +603,8 @@ module cse_cu
       if (q_fire) stat_queries <= stat_queries + 1;
       if (r_fire) stat_responses <= stat_responses + 1;
       if ((s2_state == S2_IDLE) && voxel_valid && (voxel_payload.kind == CSE_VOXEL) &&
-          !ctx_cancelled(voxel_payload.ctx)) stat_dir_reads <= stat_dir_reads + 1;
-      if ((s2_state == S2_DIR_WAIT) && !ctx_cancelled(s2_voxel.ctx) && dir_word.occ)
+          !canc[voxel_payload.id]) stat_dir_reads <= stat_dir_reads + 1;
+      if ((s2_state == S2_DIR_WAIT) && !canc[s2_voxel.id] && dir_word.occ)
         stat_cell_reads <= stat_cell_reads + 1;
       if (pt_issue) stat_point_reads <= stat_point_reads + 1;
     end

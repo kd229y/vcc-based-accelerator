@@ -1,7 +1,8 @@
 // Passive monitor of the PLE <-> CSE interface: handshake rules (4.3) and invariants (4.5).
 // Checks H1-H3 (valid/payload stability), C1/C2 (exactly once, echoed tag/user), C4 (KILLED only after a
 // kill), C5 (response gap <= MAX_LAT), C6 (cse_idle => nothing outstanding), P2 (no query after kill until
-// the tag retires), P5 (q_r <= R_MAX), and drain at end of test. Errors are counted in `errors` (first 20 printed).
+// the tag retires), P4 (q_env_buf changes only while the CSE is idle), P5 (q_r <= R_MAX), and drain at end of test.
+// Errors are counted in `errors` (first 20 printed).
 module ple_cse_if_checker
   import ple_cse_pkg::*;
 #(
@@ -41,6 +42,7 @@ module ple_cse_if_checker
   longint unsigned now = 1;
   int unsigned out_tag[NTAG];                 // outstanding per tag
   bit k_block[NTAG];                          // P2: K(T) sent, T not retired yet
+  bit last_buf, any_query;                    // P4: env_buf of the last accepted query
   bit k_allow[NTAG];                          // P2: the query already on Q at the K handshake may still go
   int unsigned total_out = 0, gap = 0;
 
@@ -74,7 +76,7 @@ module ple_cse_if_checker
         out_tag[t] = 0; k_block[t] = 1'b0;
         k_allow[t] = 1'b0; last_k[t] = 0; last_kh[t] = 0; un_lo[t].delete(); un_hi[t].delete();
       end
-      total_out = 0; gap = 0; now = 1;
+      total_out = 0; gap = 0; now = 1; any_query = 1'b0;
     end else begin
       int unsigned out_before;
       out_before = total_out;
@@ -141,6 +143,9 @@ module ple_cse_if_checker
           else fail($sformatf("P2 new query on tag %0d after K before the tag retired", q_tag));
         end
         if (q_r > R_MAX) fail($sformatf("P5 q_r=%0d > R_MAX", q_r));
+        if (any_query && q_env_buf != last_buf && (out_before != 0 || !cse_idle))
+          fail($sformatf("P4 q_env_buf changed to %0d with %0d queries in flight", q_env_buf, out_before));
+        last_buf = q_env_buf; any_query = 1'b1;
         k = mk(q_tag, q_user);
         if ((pend.exists(k) == 0)) pend[k] = 0;
         if ((pend_koh.exists(k) == 0)) pend_koh[k] = 0;

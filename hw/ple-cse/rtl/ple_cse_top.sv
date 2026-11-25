@@ -4,7 +4,8 @@ module ple_cse_top
   import ple_cse_pkg::*;
 #(
     parameter int unsigned N_CU  = 2,
-    parameter int          N_BUF = 1       // environment buffers (1 or 2); MODE.env_buf must be 0 when 1
+    parameter int          N_BUF = 1,      // environment buffers (1 or 2); MODE.env_buf must be 0 when 1
+    parameter int unsigned Q_DEPTH = 2     // CSE input FIFO depth (2 was faster than 8 on tb_core, records/20261125-cse-resource.md)
 ) (
     input  logic              clk,
     input  logic              rst_n,
@@ -61,7 +62,7 @@ module ple_cse_top
       .q_valid, .q_ready, .q_tag, .q_user, .q_kill_on_hit, .q_env_buf, .q_cx, .q_cy, .q_cz, .q_r,
       .r_valid, .r_ready, .r_tag, .r_user, .r_status, .k_valid, .k_ready, .k_all, .k_tag, .cse_idle, .cse_err);
 
-  cse_top #(.N_CU(N_CU)) u_cse (
+  cse_top #(.N_CU(N_CU), .N_BUF(N_BUF), .INPUT_FIFO_DEPTH(Q_DEPTH)) u_cse (
       .clk, .rst_n,
       .q_valid, .q_ready, .q_tag, .q_user, .q_kill_on_hit, .q_env_buf, .q_cx, .q_cy, .q_cz, .q_r,
       .r_valid, .r_ready, .r_tag, .r_user, .r_status, .k_valid, .k_ready, .k_all, .k_tag, .cse_idle, .cse_err,

@@ -1,6 +1,7 @@
 // Directed kill-generation, same-cycle Q/K, K(all), error, and held-response tests.
 module tb_cse_kill #(
-    parameter bit KE = 1'b1
+    parameter bit KE = 1'b1,
+    parameter int unsigned NB = 1                        // environment buffers (2: the CU's buffer-select path)
 );
   import ple_cse_pkg::*;
 
@@ -31,7 +32,7 @@ module tb_cse_kill #(
   bit expected_seen[16];
   int unsigned n_expected, n_recv, errors;
 
-  cse_system #(.KILL_ENABLE(KE)) dut (.*);
+  cse_system #(.KILL_ENABLE(KE), .N_BUF(NB)) dut (.*);
   ple_cse_if_checker #(.AUTO_KILL(1'b0)) u_checker (.*);
 
   task automatic expect_response(input int tag_i, input int user_i, input status_e status_i);

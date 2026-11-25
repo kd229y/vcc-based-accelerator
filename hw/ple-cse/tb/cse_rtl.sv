@@ -65,7 +65,13 @@ module cse_rtl
   logic [PT_AW-1:0] wr_addr = '0;
   logic [127:0] wr_data = '0;
 
-  cse_top #(.N_CU(N_CU)) u_top (
+`ifndef CSE_QDEPTH
+`define CSE_QDEPTH 2
+`endif
+`ifndef CSE_NCTX
+`define CSE_NCTX 4
+`endif
+  cse_top #(.N_CU(N_CU), .N_BUF(1), .INPUT_FIFO_DEPTH(`CSE_QDEPTH), .CU_NCTX(`CSE_NCTX)) u_top (
       .clk, .rst_n,
       .q_valid, .q_ready, .q_tag, .q_user, .q_kill_on_hit, .q_env_buf, .q_cx, .q_cy, .q_cz, .q_r,
       .r_valid, .r_ready, .r_tag, .r_user, .r_status,
@@ -117,6 +123,18 @@ module cse_rtl
     end else if (err_on && err_at < 0) begin
       wr(ENV_HDR, 0, 128'(hdr0));
       err_on = 0;
+    end
+  end
+
+  // per-CU histogram of queries in the CU (accepted, response not yet taken), counted every cycle
+  for (genvar i = 0; i < N_CU; ++i) begin : g_inflight
+    longint unsigned h[16];
+    initial foreach (h[k]) h[k] = 0;
+    always @(posedge clk) if (rst_n) h[u_top.g_cu[i].u_cu.outstanding > 15 ? 15 : u_top.g_cu[i].u_cu.outstanding]++;
+    final begin
+      string line = $sformatf("CSE_INFLIGHT cu=%0d qdepth=%0d", i, `CSE_QDEPTH);
+      foreach (h[k]) line = {line, $sformatf(" %0d:%0d", k, h[k])};
+      $display("%s", line);
     end
   end
 
